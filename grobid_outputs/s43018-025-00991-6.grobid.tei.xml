@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Development and validation of an autonomous artificial intelligence agent for clinical decision-making in oncology</title>
+				<funder ref="#_FK7kdRy">
+					<orgName type="full">German Federal Joint Committee</orgName>
+				</funder>
+				<funder ref="#_bg9MKWC">
+					<orgName type="full">TUM School of Medicine and Health Clinician Scientist Program</orgName>
+				</funder>
+				<funder ref="#_SjyYK7k">
+					<orgName type="full">German Academic Exchange Service</orgName>
+				</funder>
+				<funder ref="#_BNuNS7g">
+					<orgName type="full">German Federal Ministry of Health (DEEP LIVER</orgName>
+				</funder>
+				<funder ref="#_FcWPBdF">
+					<orgName type="full">German Federal Ministry of Education and Research (TRANSFORM LIVER</orgName>
+				</funder>
+				<funder ref="#_QYC3d4c #_ckxrYzz">
+					<orgName type="full">European Union</orgName>
+				</funder>
+				<funder ref="#_CsAEeTv">
+					<orgName type="full">German Federal Ministry of Health</orgName>
+				</funder>
+				<funder ref="#_kktzZ4q">
+					<orgName type="full">Max-Eder Program of the German Cancer Aid</orgName>
+				</funder>
+				<funder ref="#_jvaznCK">
+					<orgName type="full">German Research Foundation</orgName>
+				</funder>
+				<funder ref="#_jGskdn4">
+					<orgName type="full">German Cancer Aid</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">DKTK School of Oncology Fellowship</orgName>
+				</funder>
+				<funder ref="#_8eTurqX">
+					<orgName type="full">ERA-NET Transcan)</orgName>
+				</funder>
+				<funder ref="#_EyqZYG5">
+					<orgName type="full">Mildred-Scheel-Postdoktorandenprogramm of the German Cancer Aid</orgName>
+				</funder>
+				<funder ref="#_aSgpRCv #_YhGp42z">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Lothian NHS</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Leeds Biomedical Research Center</orgName>
+				</funder>
+				<funder ref="#_n5s78wk">
+					<orgName type="full">German Federal Ministry of Education and Research</orgName>
+				</funder>
+				<funder ref="#_sZmpUjn">
+					<orgName type="full">German Federal Ministry of Education and Research (SWAG</orgName>
+				</funder>
+				<funder ref="#_gfg27Xg">
+					<orgName type="full">National Institute for Health and Care Research (NIHR</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Springer Science and Business Media LLC</publisher>
+				<availability status="unknown"><p>Copyright Springer Science and Business Media LLC</p>
+				</availability>
+				<date type="published" when="2025-06-06">6 June 2025</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Dyke</forename><surname>Ferber</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Omar</forename><forename type="middle">S M</forename><surname>El Nahhas</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Georg</forename><surname>Wölflein</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Isabella</forename><forename type="middle">C</forename><surname>Wiest</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jan</forename><surname>Clusmann</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Marie-Elisabeth</forename><surname>Leßmann</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Sebastian</forename><surname>Foersch</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Jacqueline</forename><surname>Lammert</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Maximilian</forename><surname>Tschochohei</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Dirk</forename><surname>Jäger</surname></persName>
+							<idno type="ORCID">0000-0002-1276-7802</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Manuel</forename><surname>Salto-Tellez</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Nikolaus</forename><surname>Schultz</surname></persName>
+							<idno type="ORCID">0000-0002-0131-4904</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Daniel</forename><surname>Truhn</surname></persName>
+							<idno type="ORCID">0000-0002-9605-0728</idno>
+						</author>
+						<author>
+							<persName><forename type="first">Jakob</forename><forename type="middle">Nikolas</forename><surname>Kather</surname></persName>
+							<idno type="ORCID">0000-0002-3730-5348</idno>
+						</author>
+						<author>
+							<affiliation>
+								<orgName>1 Department of Medical Oncology, National Center for Tumor Diseases (NCT), Heidelberg University Hospital, </orgName>
+								<address><addrLine>Heidelberg, Germany. Dresden, Germany. St Andrews, UK. Mannheim, Germany. Aachen, Germany. Dresden, Germany. Mainz, Germany. Munich, Germany. Munich, Germany. Munich, Germany. Munich, Germany. Munich, Germany. London, UK. New York, NY, USA. Aachen, Germany.</addrLine></address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 2 Else Kroener Fresenius Center for Digital Health, Technical University Dresden, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 3 School of Computer Science, University of St Andrews, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 4 Department of Medicine II, Medical Faculty Mannheim, Heidelberg University, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 5 Department of Medicine III, University Hospital RWTH Aachen, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 6 Department of Medicine I, University Hospital Dresden, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 7 Institute of Pathology, University Medical Center Mainz, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 8 Department of Gynecology and Center for Hereditary Breast and Ovarian Cancer, University Hospital rechts der Isar, Technical University of Munich (TUM), </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 9 Center for Personalized Medicine (ZPM), University Hospital rechts der Isar, Technical University of Munich (TUM), </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 10 German Cancer Consortium (DKTK), </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 11 European Network for Rare Cancers (EURACAN) Initiative, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 12 Google Cloud, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 13 Integrated Pathology Unit, Institute for Cancer Research and Royal Marsden Hospital, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 14 Department of Epidemiology and Biostatistics, Memorial Sloan Kettering Cancer Center, </orgName>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation>
+								<orgName> 15 Department of Diagnostic and Interventional Radiology, University Hospital Aachen,</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Development and validation of an autonomous artificial intelligence agent for clinical decision-making in oncology</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Nature Cancer</title>
+						<title level="j" type="abbrev">Nat Cancer</title>
+						<idno type="eISSN">2662-1347</idno>
+						<imprint>
+							<publisher>Springer Science and Business Media LLC</publisher>
+							<biblScope unit="volume">6</biblScope>
+							<biblScope unit="issue">8</biblScope>
+							<biblScope unit="page" from="1337" to="1349"/>
+							<date type="published" when="2025-06-06">6 June 2025</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">D564C04C107F1FD94DDE13F859C62CE3</idno>
+					<idno type="DOI">10.1038/s43018-025-00991-6</idno>
+					<note type="submission">Received: 13 August 2024 Accepted: 29 April 2025</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.0" ident="GROBID" when="2026-03-17T17:40+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Clinical decision-making in oncology is complex, requiring the integration of multimodal data and multidomain expertise. We developed and evaluated an autonomous clinical artificial intelligence (AI) agent leveraging GPT-4 with multimodal precision oncology tools to support personalized clinical decision-making. The system incorporates vision transformers for detecting microsatellite instability and KRAS and BRAF mutations from histopathology slides, MedSAM for radiological image segmentation and web-based search tools such as OncoKB, PubMed and Google. Evaluated on 20 realistic multimodal patient cases, the AI agent autonomously used appropriate tools with 87.5% accuracy, reached correct clinical conclusions in 91.0% of cases and accurately cited relevant oncology guidelines 75.5% of the time. Compared to GPT-4 alone, the integrated AI agent drastically improved decision-making accuracy from 30.3% to 87.2%. These findings demonstrate that integrating language models with precision oncology and search tools substantially enhances clinical accuracy, establishing a robust foundation for deploying AI-driven personalized oncology support systems.</p><p>The field of large language models (LLMs) 1 has witnessed remarkable advancements in recent years. Models such as GPT-4 (ref. 2) have demonstrated capabilities that closely mimic human reasoning and problem-solving abilities and have shown knowledge across various professional disciplines. In the medical field, for instance, GPT-4 has achieved a passing score on the United States Medical Licensing Examination and is able to provide detailed explanations for its responses 3 . In oncology, where clinical decision-making is increasingly complex, LLMs can serve as a rapid and reliable reference tool, for instance, by providing medical recommendation suggestions from official medical guidelines 4 . This capability could not only aid in daily decision-making processes but also educate oncologists to stay updated with the latest treatment recommendations.</p><p>However, similar to the medical domain itself, where doctors rely on information through speech, written text and imaging, the future of medical artificial intelligence (AI) is multimodal 5 . Recently, several such AI systems have been introduced <ref type="bibr" target="#b5">6</ref> . Examples include models that analyze radiology images together with clinical data 7 or integrate information from histopathology with genomic 8 or text-based information 9 . These advancements have fueled anticipations for the advent of generalist multimodal AI systems <ref type="bibr" target="#b9">10,</ref><ref type="bibr" target="#b10">11</ref> , characterized by their ability to concurrently analyze and reason across any dimension of medical information.</p><p>However, it remains to be investigated whether such generalist multipurpose AI models alone are suitable for medical applications. The distribution of human diseases is wide and complex, which is not</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Article</head><p>https://doi.org/10.1038/s43018-025-00991-6 would facilitate the opportunity of accessing the information repositories that currently exist in hospital systems, allowing for a true model for integrated patient care <ref type="bibr" target="#b19">20</ref> .</p><p>In this study, we build and evaluate an AI agent tailored to interact with and draw conclusions from multimodal patient data through tools in oncology. Contrarily to the philosophy of an all-encompassing multimodal generalist foundation model, we see the achievements that specialist unimodal deep learning models have brought to precision medicine <ref type="bibr" target="#b20">21</ref> as a viable template even in the future by equipping an LLM, specifically GPT-4, with additional functions and resources. These could be precision oncology deep learning models or the ability to perform web search, all referred to herein as tools. Specifically, this study includes the vision model application programming interface (API) dedicated to generating radiology reports from magnetic resonance imaging (MRI) and computed tomography (CT) scans, MedSAM <ref type="bibr" target="#b21">22</ref> for medical image segmentation and in-house developed vision transformer models trained to detect the presence of genetic alterations directly from routine histopathology slides <ref type="bibr" target="#b22">23</ref> , in particular, to distinguish between tumors with microsatellite instability (MSI) and microsatellite stability (MSS) <ref type="bibr" target="#b23">24</ref> and to detect the presence or absence of mutations in KRAS and BRAF. Additionally, the system encompasses a basic calculator, capabilities for conducting web searches through Google and PubMed, as well as access to the precision oncology database OncoKB <ref type="bibr" target="#b24">25</ref> . To ground the model's reasoning on medical evidence, we compile a repository of roughly 6,800 medical documents and clinical scores from a collection of six different official sources, specifically tailored to oncology.</p><p>To quantitatively test the performance of our proposed system, we devise a benchmark strategy on realistic, simulated patient case journeys. Existing biomedical benchmarks and evaluation datasets are captured in current performance benchmarks, where these models are predominantly evaluated on a single specific task at a time. In contrast, real-world clinical decision-making often requires multistep reasoning, planning and repeated interactions with data to uncover new insights to make informed and personalized decisions.</p><p>Despite advances with models such as Med-PaLM M <ref type="bibr" target="#b10">11</ref> or Med-Gemini <ref type="bibr" target="#b11">12</ref> , the complexities to develop a generalist foundation LLM that truly performs on par with precision medicine tools remain a substantial challenge. Additionally, at present, regulatory policies in the United States and the European Union restrict the approval of a universal multipurpose AI model, given the philosophy that medical devices should fulfill a singular purpose <ref type="bibr" target="#b12">13</ref> .</p><p>Previous work has shown that some of these limitations can partially be overcome by enriching LLMs with domain-specific information. This can be achieved through fine-tuning <ref type="bibr" target="#b13">14</ref> or retrieval-augmented generation (RAG) <ref type="bibr" target="#b14">15</ref> , a process that temporarily enhances an LLM's knowledge by incorporating relevant text excerpts from authoritative sources into the model, such as medical guidelines <ref type="bibr" target="#b15">16</ref> or textbooks. Yet, this strategy, concentrating on augmenting the knowledge base of the models, positions LLMs as mere information extraction tools only, rather than serving as true clinical assistants. Ideally, such a system would engage in reasoning, strategizing and performing actions on patient records and retrieve or synthesize new information to enable customized decision-making. Outside of the medical field, several such autonomous AI systems, also termed agents, have been proposed. Equipping an LLM with a suite of tools, such as calculators or web search, has proven superiority in tasks that require multistep reasoning and planning <ref type="bibr" target="#b16">17,</ref><ref type="bibr" target="#b17">18</ref> . Similarly, in biomedical research, Arasteh et al. used the integrated data analysis tools of an LLM to analyze scientific data, achieving results on par with human researchers <ref type="bibr" target="#b18">19</ref> . Such an approach A schematic overview of our LLM agent pipeline. At its core, our system accesses a curated knowledge database comprising medical documents, clinical guidelines and scoring tools. This database is refined from a broader collection through keyword-based search, with the selected documents undergoing text embeddings for efficient storage and retrieval (1). The framework is further augmented with a suite of medical tools, including specialized web search capabilities through platforms such as Google, PubMed and access to the OncoKB API. The agent's capabilities are further expanded through the integration of a vision model tailored for generating detailed reports from CT and MRI scans, alongside MedSAM, a stateof-the-art medical image segmentation model and access to a simple calculator.</p><p>Additionally, the system uses vision transformers specifically developed for the prediction of MSI versus MSS and the detection of KRAS and BRAF mutations in microscopic tumor samples (2). Given a simulated patient case, all tools are selected autonomously by the agent (3) with a maximum of ten per invocation and can be used either in parallel or in a sequential chain (4). This way, the agent can generate relevant patient information on demand and use this knowledge to query relevant documents within its database ( <ref type="formula">4</ref>). This enables it to generate a highly specific and patient-focused response that integrates the initial clinical data with newly acquired insights, all while being substantiated by authoritative medical documentation (5).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Article</head><p>https://doi.org/10.1038/s43018-025-00991-6</p><p>designed for one or two data modalities <ref type="bibr" target="#b25">26</ref> and are restricted to closed question-and-answer formats. Recent advancements have been made with the introduction of new datasets by Zakka et al. <ref type="bibr" target="#b15">16</ref> , targeting the enhancement of open-ended responses, and LongHealth <ref type="bibr" target="#b26">27</ref> , focusing on patient-related content. Yet, these datasets are limited to text and do not capture multimodal data, such as the combination of CT or MRI images with microscopic and genetic data, alongside textual reports. Therefore, in the present study, we develop and assess our agent using a dataset comprising 20 realistic and multidimensional patient cases, which we generate with a focus on gastrointestinal oncology. For each patient case, the agent follows a two-stage process. Upon receiving the clinical vignette and corresponding questions, it autonomously selects and applies relevant tools to derive supplementary insights about the patient's condition, which is followed by the document retrieval step to base its responses on substantiated medical evidence, duly citing the relevant sources. To evaluate the results, we designed a blinded manual evaluation by four human experts, focusing on three areas: the agent's use of tools, the quality and completeness of the textual outputs and the precision in providing relevant citations. For effective tool application, the agent must first recognize the utility of a tool, comprehend the necessary inputs and then extract these inputs from the provided patient information. We provide an overview of our entire pipeline in Fig. <ref type="figure" target="#fig_0">1</ref>. A detailed description of our methodology is provided in the Methods.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Tool use and retrieval improve LLM responses</head><p>To first demonstrate the superiority of combining medical tools and retrieval with an LLM, we compared our agent to GPT-4 alone. As an illustration, in Fig. <ref type="figure">2a</ref>, we highlight three examples where tools and retrieval enabled the LLM to accurately solve cases, whereas, without these enhancements, GPT-4 either stated that it could not solve the patient case and provided hypothetical answers instead or drew incorrect conclusions, such as falsely assuming 'disease progression' or 'no evidence of disease' (in red). In contrast, the agent, by using tools, correctly identified treatment response and the presence of disease progression (in green). To quantify this, we assessed the model's ability to develop a comprehensive treatment plan for each patient, specifying appropriate therapies on the basis of recognizing disease progression, response or stability, mutational profile and all other relevant information, much like an oncologist would. Therefore, we compiled a set of 109 statements (completeness) for 20 different patient cases. We show that GPT-4 alone only provided 30.3% of the expected answers. However, our agent's responses achieved a 87.2% success rate, with only 14 instances not being covered (Fig. <ref type="figure">2b</ref>). Overall, our results demonstrate that enhancing LLMs with tools drastically improves their ability to generate precise solutions for complex, realistic medical cases instead of providing only generic or even wrong responses when using LLMs in an out-of-the-box manner.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>GPT-4 handles complex chains of tool use</head><p>We next investigated the overall capabilities and limitations of our agent across a panel of benchmarks in greater depth. To provide better guidance, we present one complete, simulated patient case and detail every step, from input over tool usage to the model's final output in Fig. <ref type="figure">3</ref>. All tasks for the model and all answers are shown in Supplementary Note 1. First, we evaluated the agent's ability to recognize and successfully use tools (Fig. <ref type="figure" target="#fig_5">4</ref>). Of 64 required tool invocations to fully solve all given patient cases, the agent correctly used 56, achieving an overall success rate of 87.5%, with no failures among the required tools. The remaining 12.5% of tools were required but missed by the model. There were two instances where the model tried to call superfluous tools without the necessary data available, which resulted in failures (Fig. <ref type="figure" target="#fig_5">4</ref>, 'tool use'). We provide an overview of each tool's invocation status in Supplementary Table 1. To provide an illustrative example, in the patient case from Fig. <ref type="figure">3</ref>, GPT-4 used its tools to evaluate the patient's conditions by first identifying tumor localization from patient data and generating segmentation masks with MedSAM. It calculated tumor progression by measuring the segmented area's growth and referenced the OncoKB database for mutation information. The model then performed literature searches and histological modeling to select Based on the provided data and tool results, Mrs. Chen's metastatic colorectal cancer has demonstrated progression from February to June 2024. The significant increase in the size of lung metastases, as quantified by the segmentation tool results showing an increase in the overall area of the lesions from 702 to 2798 square units, indicates that the disease is not adequately controlled under the current regimen of FOLFIRI and bevacizumab [Tool]. Furthermore, the genetic mutation analysis revealing MSS status and the absence of BRAF and KRAS mutations provides valuable information for guiding future treatment decisions [Tool]. Given the progression of disease despite current systemic therapy, and considering Mrs. Chen's stable ECOG performance status of 1, which suggests she remains in relatively good condition to tolerate treatment, the following treatment plan is proposed: ... Fig. <ref type="figure">2</ref> | Tool use and RAG improves LLM performance. a, Top, to demonstrate the superiority of our approach compared to a standard LLM, we highlight three cases where GPT-4 without tool use either fails to detect the current state of the disease for a given patient or provides very generic responses. Bottom, in contrast, tool access and retrieval enable the model to provide detailed information, such as measuring tumor surface and making appropriate decisions. b, The performance comparison shows a higher fraction of responses being evaluated as complete on our completeness benchmark for the agent with tool use and RAG versus GPT-4 alone.     targets of interest, ultimately producing the final response through data retrieval with RAG. We additionally benchmarked GPT-4 against two state-of-the-art open-weights models, Llama-3 70B (Meta) <ref type="bibr" target="#b27">28</ref> and Mixtral 8x7B (Mistral) <ref type="bibr" target="#b28">29</ref> , for which we show exemplary results in Fig. <ref type="figure">5a</ref> and quantitative evaluations in Fig. <ref type="figure">5b</ref>. We provide results for each patient in Supplementary Tables <ref type="table">2</ref> and<ref type="table">3</ref>. Given substantial shortcomings in the latter two, we decided to only focus on GPT-4 as it demonstrated reliable and highly effective performance in identifying relevant tools and applying them correctly to patient cases. Additionally, we observed that GPT-4 is capable of chaining sequential tool calls, using the output from one tool as input for the next. For example, in the tool results for patient G in Supplementary Note 2, GPT-4 invoked the MedSAM tool twice to obtain segmentation masks from two images taken at different time points. Subsequently, GPT-4 used the calculator function with the appropriate values from MedSAM to determine that the tumor had grown by a factor of 2.14. As another example, for patient W (Supplementary Note 2), the model used vision transformer models to assess the patient's mutational status, confirming the presence of a suspected BRAF mutation. The model   <ref type="figure">3</ref>. For the metric 'tool use', we report four ratios: represents the proportion of tools that were expected to be used to solve a patient case and that ran successfully (56/64), with no failures among the required tools. Required/unused (8/64) are tools that the LLM agent did not use despite being considered necessary. Additionally, there are two instances where a tool that was not required was used, resulting in failures. 'Correctness' (223/245), 'wrongness' (16/245) and 'harmfulness' (6/245) represent the respective ratios of accurate, incorrect (yet not detrimental) and damaging (harmful) responses relative to the total number of responses. Here, a response is constituted by individual paragraphs per answer. 'Completeness' (95/109) measures the proportion of experts' expected answers, as predetermined by keywords, that the model accurately identifies or proposes. 'Helpfulness' quantifies the ratio of subquestions the model actually answers to all questions or instructions given by the user (63/67). Lastly, we measure whether a provided reference is correct (194/257), irrelevant (59/257, where the reference's content does not mirror the model's statement) or wrong (4/257). Results shown here are obtained from the majority vote across all observers, selecting the least favorable response in cases of a tie.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>GPT-4</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Article</head><p>https://doi.org/10.1038/s43018-025-00991-6 then queried the OncoKB database to retrieve medical information on appropriate management regarding the mutation.</p><p>Additionally, we assessed the robustness of the agent across multiple repetitions and diverse patient populations, specifically considering different combinations in sex (Extended Data Fig. <ref type="figure" target="#fig_7">1a</ref>), age (Extended Data Fig. <ref type="figure" target="#fig_7">1b</ref>) and origin (Extended Data Fig. <ref type="figure" target="#fig_7">1c</ref>). Our evaluation showed that the primary source of performance variation was the number of tools required for each patient case, rather than intrinsic patient factors (Extended Data Fig. <ref type="figure" target="#fig_7">1d</ref>).</p><p>In summary, we can demonstrate that GPT-4 can effectively manage complex scenarios by sequentially using multiple tools, integrating their results and drawing informed conclusions on subsequent tool usage on the basis of prior information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Radiology tools improve GPT-4's treatment accuracy</head><p>Second, we investigated the use of radiology processing tools by the agent. In our scenario, GPT-4 had two options: using the GPT-4 Vision (GPT-4V) API to generate comprehensive radiology reports (useful when no radiology report was provided for a patient) or using MedSAM for image segmentation to generate surface segmentation masks of the described tumor reference lesions when localizations of reference lesions were included in the patient case vignette. For both options, the model first had to identify the location where the images were stored on the filesystem, extract the order in which the images were taken (by date, indicated in the image file names) and send them to the appropriate tool. In our evaluations, we found that, despite occasional omissions, extraneous details, lack of information or making mistakes (highlighted in red in Supplementary Note 2), GPT-4V could nonetheless effectively guide the agent's decision.</p><p>Similarly, for MedSAM as a tool, the expected workflow for GPT-4 involved first locating the relevant patient images on the system, identifying their chronological order and receiving the locations of described reference lesions from the patient case vignette. After sending a request to MedSAM and receiving the results (tumor segmentation sizes), the model was usually expected to use the calculator to determine the percentage change according to RECIST criteria. This process is schematically illustrated in Fig. <ref type="figure">3</ref>, with a detailed example provided in Supplementary Note 2 for patient G. We show that, in all instances, MedSAM received information on all relevant tumor locations and returned results that were helpful to GPT-4 to determine the appropriate next steps on the basis of calculating whether the patient showed progressive disease or remained in a stable condition.</p><p>In summary, we show that our pipeline is able to autonomously handle multiple steps, such as determining the need for specific tools, locating the relevant data, understanding their chronological order, sending requests to the appropriate tool, receiving results and integrating these into the next steps of its decision-making, for instance, using a calculator to compare tumor sizes over time. All of these steps are managed fully autonomously, without human supervision, by the LLM agent.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Evaluations show accurate, helpful and reliable responses</head><p>Thirdly, a central point in our analysis was the assessment of response accuracy (correctness). To evaluate this, we segmented the responses into smaller, evaluable items on the basis of the appearance of citations or transitions in topic within subsequent sentences, resulting in a total of 245 assessable statements. Our evaluations found 223 (91.0%) of these to be factually correct and 16 (6.5%) to be incorrect, while 6 (2.4%) were flagged as potentially harmful. Detailed instances of erroneous and harmful responses are provided in Supplementary Table <ref type="table">4</ref> for review.</p><p>Remarkably, the agent was capable of resolving issues, even in instances where contradictory information was provided in a patient's description, such as discrepancies in reported mutations versus results of testing such mutations using tools. In such cases, the agent pointed out these inconsistencies, recommended further genetic confirmation and outlined potential treatment options based on the results (patients D and X). An illustrative example of the model's response is presented in Fig. <ref type="figure">3</ref>.</p><p>Next, we assessed the degree of helpfulness of the agent by evaluating the proportion of subquestions it answered sophistically according to the human evaluators. Among the aggregate of 67 queries, 63 (94.0%) were categorized as having been effectively addressed.</p><p>Fourth, aiming to ensure transparency in the decision-making process, we instigated its adherence to citing relevant sources. Through manual review, we determined that, of the 257 citations provided in the models' responses, 194 (75.5%) were accurately aligned with the model's assertions, while 59 (23.0%) were found to be unrelated and merely 4 (1.6%) were found to be in conflict with the model's statement. These findings are promising, highlighting that instances of erroneous extrapolation (so-termed hallucinations) by the model are limited. Supplementary Notes 2 and 3 respectively display the unprocessed complete results from using the tools and the entire model outputs. Detailed evaluation results from each human observer are elaborated on in Supplementary Tables 4-6. Evaluation results for GPT-4 without tools and retrieval that we benchmarked for completeness can be found in Supplementary Table <ref type="table">7</ref> and Supplementary Note 3.</p><p>Overall, our results show that GPT-4 with tools and RAG can deliver highly accurate, helpful and well-cited responses, which enhances its ability to handle complex medical scenarios and provide support for clinical decision-making.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head><p>Our results demonstrate that combining precision medicine tools with an LLM enhances its capabilities in problem solving, aligning with the concept of using LLMs as 'reasoning engines' (ref. 30). As we have shown, GPT-4 alone only generates very generic or wrong responses. However, integrating three core elements (a reasoning engine, a knowledge database and tools) enables us to effectively address this limitation, greatly improving accuracy and reliability. Additionally, using tools has several further advantages. Despite the potential future development of a generalist medical multimodal foundation model <ref type="bibr" target="#b9">10</ref> , its efficacy in addressing very specialized medical queries, such as predicting rare mutations or measuring disease development on the millimeter scale compared to narrower, domain-specific models, remains uncertain. Moreover, maintaining the alignment of such a generalist model with the evolving medical knowledge and updates in treatment guidelines is challenging, as it requires retraining model components on new data. Our tool-based approach, however, addresses all of these issues. It allows for the rapid update of medical knowledge by simply replacing documents in the database or searches through Google or PubMed, eliminating the need for direct modifications to the core model itself. Similarly, state-of-the-art medical devices that are approved by regulatory authorities can be included in our setup. Additionally, by using RAG, our system effectively addresses a major limitation in current LLMs, which often tend to hallucinate by providing wrong but seemingly correct or plausible answers to questions beyond their knowledge <ref type="bibr" target="#b3">4</ref> . Mitigating this issue is particularly critical in sensitive domains such as healthcare. We show that our approach demonstrates a high capability in delivering accurate answers, supported by relevant citations from authoritative sources, which also facilitates quick fact-checking as the agent returns the exact original text from the guideline documents.</p><p>Our work has several limitations. The most notable is the small sample size for evaluation. Constructing these cases from real-world data requires careful manual crafting and evaluation while adhering to data protection standards, especially for cloud-based processing. We, therefore, consider our work as a proof-of-concept study for agentic AI workflows in oncology and encourage future efforts to develop larger-scale benchmark cases.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Article</head><p>https://doi.org/10.1038/s43018-025-00991-6</p><p>An important aspect beyond the scope of our study, which should be addressed in future research, is the selection of medical tools. While the core focus of our work lies in the tool-using abilities of language model agents, it is essential to recognize that individual tools require better independent optimization and validation. For example, we do not possess annotated ground-truth segmentation masks for comparison to MedSAM but use clinical endpoints such as progressive disease or tumor shrinkage as our primary metric to measure outcomes, which even more closely reflects the clinical workflow. As another example, vision transformers in our study were trained and tested on data from The Cancer Genome Atlas (TCGA) and some radiology images available online may have been included in the pretraining of GPT-4V. In a production environment, however, such tools would simply be replaced with better-validated and extensively tested alternatives, such as the clinical-grade MSIntuit model <ref type="bibr" target="#b30">31</ref> . Overall, we believe that, by prioritizing clinical endpoints to validate our agent pipeline, we can offer new, directly relevant evidence and metrics to address the current scarcity of objective measures for AI agents in healthcare.</p><p>Regarding the agent, although equipped with a broad array of tools compared to other frameworks <ref type="bibr" target="#b16">17</ref> , it remains in an experimental stage, thus limiting clinical applicability. One notable restriction for instance lies in the provision of only a singular slice of radiology images and the yet limited capabilities of GPT-4V (ref. 32) in interpreting medical images. We anticipate great progress in generalist foundation models with greatly enhanced capabilities in interpreting three-dimensional (3D) images, including medical images. In this regard, we expect the development of more advanced, specialized medical image-text models, similar to the recently introduced Merlin model for 3D CT imaging <ref type="bibr" target="#b32">33</ref> , which would allow adding these models as additional tools instead of simple ones such as MedSAM into our pipeline. Furthermore, an image-text model for radiology could also incorporate information on patient history and previous therapies to evaluate the current state of the disease like a radiologist would, instead of relying on lesion size changes only.</p><p>Moreover, our current agent architecture is a static design choice. Medical professionals, however, have access to an extensive array of   -The percentage change in tumor size was calculated as approximately 0.96%.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Fig. 5 | Benchmarking of tool use for Llama-3 70B, Mixtral 8x7B (both openweight models) and GPT-4 (proprietary)</head><p>. a, Example tool results from three stateof-the-art LLMs (Llama-3, Mixtral and GPT-4). While the former two demonstrate failures in calling tools (or performing meaningless superfluous calculations in the case of Llama), GPT-4 successfully uses image segmentation on the MRI images and uses the calculator to calculate tumor changes in size. b, Tool benchmarking calling performance for these three models in a similar fashion to Fig. <ref type="figure" target="#fig_5">4</ref>. Overall, our findings reveal that both open-weight models demonstrate only extremely poor function-calling performance. First, both models struggle to identify necessary tools for a given patient context (18.8% of required tools remain unused by Llama and even 42.2% for Mistral). Next, even in instances where the correct tool was identified, the model frequently failed to supply the necessary and accurate function arguments ('required, failed'). This deficiency results in invalid requests that disrupt program functionality (Llama, 42.2%; Mixtral, 50.0%), ultimately leading to crashes. We saw none of these cases for GPT-4. Consequently, for Llama and Mixtral, the overall success rates were low, registering only 39.1% (Llama) and 7.8% (Mixtral) ('required, successful'). Moreover, we saw that the Llama model frequently used superfluous tools, for example, performing random calculations on nonsense values or hallucinating (inventing) tumor locations during imaging analysis that did not exist. This led to 62 unnecessary tool calls and failures ('not required, failed') across all 20 patient cases evaluated. The major shortcoming of the Mixtral model was its frequent disregard for tool use, resulting in fewer than one in ten tools running successfully.</p><p>https://doi.org/10.1038/s43018-025-00991-6 complex tools and can alternate between tool usage and knowledge retrieval. For AI agents, integrating RAG and tool use concurrently could also be complementary, as RAG could assist in guiding the agent through complicated steps of tool application for specific diagnostic or treatment decisions. This synergy might help improve complex workflows with more and more challenging tools, which remains an area of further exploration.</p><p>Additionally, despite being implemented as a multiturn chat agent, our evaluation is currently confined to a single interaction. As a next step, we aim to incorporate multiturn conversations, including human feedback for refinement, akin to a 'human-in-the-loop' concept <ref type="bibr" target="#b33">34</ref> .</p><p>Furthermore, we restricted our patient scenarios to oncological use cases only, yet it is important to note that the underlying framework could be adapted to virtually any medical specialty, given the appropriate tools and data.</p><p>Next, regarding data protection in real-world settings, current regulatory restrictions make GPT-4 unsuitable because of its cloud-based nature, which necessitates transferring sensitive patient data to proprietary commercial servers. Consequently, we regard GPT-4 as a best-in-class model for proof-of-concept purposes and aim to explore open-weight models that can be deployed on local servers in the near future. Newer and better models, especially Llama-3 405B (ref. 35), might be promising candidates.</p><p>Moreover, medically fine-tuned models or models broadly optimized for tool use, such as Hermes-3-Llama-3.1 (ref. 36), also show considerable potential as local solutions.</p><p>Additionally, while our model receives relevant context from the RAG pipeline to provide accurate citations, there are several modifications and potential improvements to the retrieval process that we suggest exploring in future work. For instance, we used generalist embedding, retrieval and reranking models, whereas Xiong et al. <ref type="bibr" target="#b36">37</ref> demonstrated that domain-specific models can enhance retrieval performance. Moreover, for rare terms (such as rare diseases), exact match keyword searches can outperform similarity searches in embedding space and both can even be combined (also termed hybrid search <ref type="bibr" target="#b37">38</ref> ).</p><p>Moreover, modeling long context dependencies could be further improved by using models with larger context windows, such as Gemini 1.5 (ref. 39). This capability is especially crucial when scaling our approach to settings where patient information is not restricted to a single one-page case vignette but distributed across hundreds of documents.</p><p>Lastly, from a production setting perspective, another critical aspect is to consider how the LLM handles temporal dependencies in treatment recommendations. For instance, in lung cancer, molecular targeted treatments are subject to rapid changes and official guidelines are not always updated at the same pace as the latest trial results. In such a setting, our multitool agent could cross-reference information from official medical guidelines with more up-to-date information received through internet and PubMed searches. Previous work already showed that LLMs can reliably identify temporal differences in medical documents <ref type="bibr" target="#b3">4</ref> .</p><p>Looking ahead, we anticipate more progress in the development of AI agents with even improved capabilities through further scaling. As a parallel step in this direction, Zhou et al. <ref type="bibr" target="#b39">40</ref> developed MedVersa, an AI system for medical image interpretation that leverages an LLM as a central 'orchestrator'. This model is fully trainable to determine whether tasks can be completed independently or should be delegated to a specialist vision model and has demonstrated superior performance across multiple medical imaging benchmarks, often surpassing state-of-the-art models. The training of such a system holds immense potential, as it might allow models to learn critical concepts such as uncertainty, enabling them to recognize their limitations and delegate tasks to specialist models whenever appropriate. Although our model currently shows a strong ability to use given tools, task-specific fine-tuning and few-shot prompting <ref type="bibr" target="#b40">41</ref> (providing examples to the model) could further improve performance, particularly when increasing complexity with the addition of more and more complex tools. Additionally, we could enhance the system by incorporating human feedback on edge cases where the initial model performed poorly, similar to a human-in-the-loop approach. In the medical context, this method was already shown to improve prediction accuracy, as demonstrated in the context of molecular tumor board recommendations <ref type="bibr" target="#b41">42</ref> .</p><p>To summarize, in the near future, we envision a framework that embodies characteristics akin to the GMAI model with the added ability to access precision medicine tools tailored to answer any kind of specialized clinical questions. This approach has multiple benefits. It enables medical AI models to assist clinicians in solving real-world patient scenarios using precision medicine tools, each tailored to specific tasks. Such a strategy facilitates circumventing data availability constraints inherent in the medical domain, where data are not uniformly accessible across all disciplines, preventing a singular entity from developing an all-encompassing foundational model. Instead, entities can leverage smaller, specialized models developed by those with direct access to the respective data, which could greatly improve discovering therapeutic options for personalized treatments. Moreover, this modular approach allows for individual validation, updating and regulatory compliance of each tool. In cases where existing tools are unsatisfactory or completely absent, the agent could rely on its internal strong medical domain knowledge and either refine or innovate entirely new tools from scratch. Crucially, this modular approach also offers far superior explainability compared to a large, generalist black-box model, as physicians can investigate the output from each individual tool separately. Herein, our study could serve as a blueprint, providing evidence that agent-based generalist medical AI is within reach.</p><p>To fully leverage the potential of AI agents in the near future, it will be crucial to integrate them as deeply into routine clinical practice as possible, ideally through direct incorporation into existing clinical information systems for live access to patient data with only minimal workflow disruption for clinicians. However, this first necessitates addressing many deployment challenges, including concerns regarding interoperability with existing systems, data privacy laws such as GDPR and HIPAA (in case of cloud-based models), liability and accountability issues and the need for regulatory approvals as medical devices <ref type="bibr" target="#b43">44</ref> , which will also require much broader validation studies to show safety and benefits in actual clinical workflows. Lastly, there will be a critical need to educate medical professionals to effectively collaborate with AI agents while maintaining full authority over the final clinical decision-making.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p>This study did not include confidential patient information. All research procedures were conducted exclusively on publicly accessible, anonymized patient data and in accordance with the Declaration of Helsinki, maintaining all relevant ethical standards. The overall analysis was approved by the Ethics Commission of the Medical Faculty of the Technical University Dresden (BO-EK-444102022).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dataset composition and data collection</head><p>The pipeline's primary goal is to compile a comprehensive dataset from high-quality medical sources, ensuring three main components: correctness, up-to-dateness and contextual relevance, with a particular emphasis on including knowledge across all medical domains while additionally encompassing information specifically tailored to oncology. We restricted our data access to six sources: MDCalc (https:// www.mdcalc.com/) for clinical scores, UpToDate and MEDITRON for general-purpose medical recommendations and the Clinical Practice Guidelines from the American Society of Clinical Oncology <ref type="bibr" target="#b44">45</ref> , the European Society of Medical Oncology and the German and English subset of the Onkopedia guidelines from the German Society for Article https://doi.org/10.1038/s43018-025-00991-6</p><p>Hematology and Medical Oncology. We retrieved and downloaded the relevant documents as either HTML extracted text or raw PDF files. To reduce the number of documents for the embedding step, we applied a keyword-based filtering of the document contents, targeting terms relevant to our specific use case. Medical guidelines that were obtained from the MEDITRON project were directly accessible as preprocessed jsonlines files.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Information extraction and data curation from PDF files</head><p>The critical challenge in text extraction from PDF documents arises from the inherent nature of PDF files, which are organized primarily for the user's ease of reading and display while not adhering to a consistent hierarchical structure, thus complicating the extraction process. For instance, upon text mining with conventional tools such as PyPDF2 or PyMuPDF, headers, subheaders and key information from the main text may be irregularly placed, with titles occasionally embedded within paragraphs and critical data abruptly interspersed within unrelated text. However, maintaining the integrity of the original document's structure is crucial in the medical field to ensure that extracted information remains contextually coherent, preventing any conflation or misinterpretation. To overcome these limitations, we used GROBID (generation of bibliographic data), a Java application and machine learning library specifically developed for the conversion of unstructured PDF data into a standardized TEI <ref type="bibr" target="#b45">46</ref> format. Through its particular training on scientific and technical articles, GROBID enables the effective parsing of medical documents, preserving text hierarchy and generating essential metadata such as document and journal titles, authorship, pagination, publication dates and download URLs.</p><p>We next programmatically retrieved the raw document text from the generated XML fields in the TEI files, concurrently implementing data cleansing. This process encompasses the removal of extraneous and irrelevant information such as hyperlinks, graphical elements and tabular data that was corrupted during the extraction with GROBID, as well as any malformed characters or data such as inadvertently extracted IP addresses. The diversity of source materials presented a further challenge because of their varied formatting schemes. To address this, we meticulously reformatted and standardized the text from all sources, denoting headers with a preceding hash symbol (#) and inserting blank lines for the separation of paragraphs. The purified text, along with its corresponding metadata, was archived in jsonlines format for subsequent processing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agent composition: RAG</head><p>Below, we delineate the detailed architecture of our agent in a two-step process, beginning with the creation of our RAG <ref type="bibr" target="#b14">15</ref> database, followed by an overview of the agent's tool use and concluding with an examination of the final retrieval and response generation modules. Additionally, we highlight the structure of our model in detail in Supplementary Note 4.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Embedding creation and indexing</head><p>We leveraged RAG to synergize the generative capabilities of LLMs with document retrieval to provide domain-specific medical knowledge (context) to a model. The RAG framework has greatly evolved in complexity recently; thus, we break down its architecture into three major components (embeddings, indexing and retrieval) and outline the implementation details of the first two in the next section. In RAG, we begin with the conversion of raw text data into numerical (vector) representations, also termed embeddings, which are consequently stored in a vector database alongside metadata and the corresponding original text (indexing). In more detail, we compute vector embeddings using OpenAI's 'text-embedding-3-large' model from text segments of varying lengths (512, 256 and 128 tokens), each featuring a 50-token overlap, from the curated guideline cleaned main texts in our dataset, alongside their associated metadata for potential filtering operations. For storage, we use an instance of a local vector database (Chroma) that also facilitates highly efficient lookup operations using vector-based similarity measures such as cosine similarity (dense retrieval). We store documents from different sources in the same collection.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agent composition: tools</head><p>To endow the LLM with agentic capabilities, we equipped it with an array of tools, including the ability to conduct web searches through the Google custom search API and formulate custom PubMed queries. Information retrieved through Google search underwent text extraction and purification and was integrated directly as context within the model, while responses from PubMed were processed akin to the above-described RAG procedure in a separate database.</p><p>For the interpretation of visual data, such as CT or MRI scans, the LLM agent has access to two different tools. It can either call the GPT-4 Vision (GPT-4V) model, which is instructed to generate a comprehensive, detailed and structured report, or use MedSAM, which we explain in detail below. For both tasks, we primarily use representative slices from in-house CT and MRI chest and abdomen series, although a few cases are from public datasets, as highlighted in Supplementary Note 1. Our in-house slices were selected by an experienced radiologist from our team, who was blinded to the rest of the study at the time of image selection. In scenarios involving multiple images to model disease development over time, the model first investigates and reports on each image separately before synthesizing a comparative analysis. Because of the stringent adherence of OpenAI to ethical guidelines, particularly concerning the management of medical image data, we framed our patient cases as hypothetical scenarios when presenting them to the model. However, instances of refusal still arose, prompting us to discard the respective run entirely and initiate a new one from the beginning. Additionally, tasks that require the ability of the model to precisely measure the size of lesions and compare them over time can be solved using MedSAM <ref type="bibr" target="#b21">22</ref> . MedSAM produces a segmentation mask for a given region of interest on the basis of an image and pixel-wise bounding box coordinates, enabling the calculation of the overall surface area. Herein, MedSAM processes each image independently; however, GPT-4 can track the results from MedSAM back to the original image date, as it has access to image file names that are based on date. This capability ensures accurate decision-making of lesion development over time. An example of this is demonstrated in Supplementary Note 2 under tool results for patient G. A potential limitation of the vision tool approach is that, for both scenarios, we currently restrict the use to single-slice images that additionally need to be taken at the same magnification.</p><p>Moreover, we provide access to a simplified calculation tool that allows elementary arithmetic operations such as addition, subtraction, multiplication and division by executing code locally using the Python interpreter.</p><p>To facilitate addressing queries related to precision oncology, the LLM leverages the OncoKB <ref type="bibr" target="#b24">25</ref> database to access critical information on medical evidence for treating a vast panel of genetic anomalies, including mutations, copy-number alterations and structural rearrangements. More specifically, GPT-4 can send the HUGO symbol, the change of interest (mutation, amplification or variant) and a specific alteration of interest (such as BRAF V600E ) if applicable to the OncoKB API that returns a structured JSON object containing potential Food and Drug Administration-approved or investigational drug options including evidence levels. This enables querying any type of genetic arrangement, given it is listed on OncoKB and an appropriate license is acknowledged by the user.</p><p>Lastly, GPT-4 is also equipped to engage specialized vision transformer models for the histopathological analysis of phenotypic alterations underlying MSI <ref type="bibr" target="#b23">24</ref> or KRAS and BRAF mutations. For the KRAS and BRAF mutation prediction models, we used a setup similar to Wagner et al. <ref type="bibr" target="#b22">23</ref> . These models were obtained by training a vision classifier model using histopathology features extracted from images of colorectal cancer tissue from TCGA. For feature extraction, we used CTranspath <ref type="bibr" target="#b46">47</ref> , Article https://doi.org/10.1038/s43018-025-00991-6 a state-of-the-art transformer model trained through self-supervised learning. To optimize time and computational resources, features were pre-extracted with CTranspath, which is a common procedure in computational pathology pipelines <ref type="bibr" target="#b47">48</ref> . Consequently, instead of the original images, GPT-4 transmits these pre-extracted features to the MSI, KRAS, and BRAF vision transformers; however, it is important to note that this implementation detail is hidden from GPT-4 and, thus, has no influence on our overall pipeline. It, however, allows us to reduce the time and hardware requirements for each run in a research setting. For deployment purposes, one could easily, without making changes to the LLM agent itself, hide additional logic to extract features on the fly from the original images.</p><p>During each invocation, GPT-4 has to determine the availability of histopathology images for a patient, locate them within the system and select the targets (one, two or all three) for testing. It then receives a binary prediction (MSI versus MSS, KRAS mutant versus wild type or BRAF mutant versus wild type) along with the mutation probability in percentage.</p><p>All necessary information for calling the designated tools is derivable or producible from the given patient context. Unlike the retrieval phase, which we manually enforced at each invocation, the decision regarding the use and timing of tools is dependent only on the agent's reasoning. However, manual intervention to prompt tool usage is possible, as demonstrated in patients D and X. The specifications for all tools are delineated in JSON format, which is provided to the model and encompasses a brief textual description of each tool's function along with the required input parameters. From a procedural point of view, given an input comprising a variable-length textual patient context and a text query, the agent generates an initial action plan, followed by a series of iterative tool applications. The deployment of these tools can be executed either independently in parallel or sequentially, wherein the output from one tool serves as the input for another in subsequent rounds; for instance, the size of the segmentation areas obtained from two images through MedSAM can be used to compute a ratio and, thus, define disease progression, stability or response, as shown schematically in Fig. <ref type="figure" target="#fig_0">1</ref> and the patient case from Fig. <ref type="figure">3</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Agent composition: combine, retrieve and generate responses</head><p>The final retrieval and response generation pipeline is implemented using DSPy <ref type="bibr" target="#b48">49</ref> , a library that allows for a modular composition of LLM calls. All instructions to the model can be found in our official GitHub repository. Firstly, the model receives the original patient context, the posed question and the outcomes from the tool applications as input. In a method similar to that described by Xiong et al. <ref type="bibr" target="#b49">50</ref> , we used chain-of-thought reasoning <ref type="bibr" target="#b50">51</ref> to let the model decompose the initial user query into up to 12 more granular subqueries derived from both the initial patient context and the outcomes from tool applications. This facilitates the retrieval of documents from the vector database that more closely align with each aspect of a multifaceted user query. Precisely, for each generated subquery we extract the top k most analogous document passages from the collection. Subsequently, these data are combined, deduplicated, reranked and finally forwarded to the LLM. We highlight this process in more detail as pseudocode in Supplementary Note 4. Each request sent by the LLM to the RAG pipeline is transformed into a numerical representation using the same embedding model applied to the medical guidelines. We next use cosine distance (lower is better) to compare the query with any embedded chunk from the medical guidelines in the vector database, sorting in ascending order to retrieve the top 40 vectors, each mapped to their respective original text passage. Then, we use Cohere's reranking model (Cohere Rerank 3 English) to reorder the retrieved text passages on the basis of their semantic similarity to the LLM's query. This step filters out passages that exhibit falsely high similarity (low distance) in embedding space but are contextually irrelevant. For example, a query such as 'Which drug is approved for NSCLC?' and text from a guideline saying 'Drug A is not approved for non-small cell lung cancer' may show high cosine similarity (low distance), yet the former is irrelevant to the query. The reranking step helps to rank such passages lower. From the reranked results, we keep only the top ten relevant passages and repeat this entire process for each subquery (subtopic) generated by the model on the basis of the provided patient information. To reduce token usage, we remove duplicates from the entire collection of guideline text chunks, prefixed each with an enumeration of 'Source [x]: …' to allow for accurate citations and then sent the data back to the LLM.</p><p>Before generating the final answer, we instruct the LLM to generate a step-by-step strategy to build a structured response including identifying missing information that could help refine and personalize the recommendations. The resulting model output is then synthesized on the basis of all available information, strictly following the strategy as a hierarchical blueprint. To enhance the system's reliability and enable thorough fact-checking, both of which are fundamental in real-world medical applications, the model was programmatically configured to incorporate citations for each statement (as defined as a maximum of two consecutive sentences) using DSPy suggestions <ref type="bibr" target="#b48">49</ref> . On the implementation level, the LLM performs a self-evaluation step, wherein it compares its own output to the respective context from our database in a window of one to two sentences. We perform a single iteration over this procedure. All prompts are implemented using DSPy's signatures.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>LLM tool use benchmarking: Llama-3 70B and Mixtral 8x7B</head><p>We additionally performed comparisons of GPT-4 with two state-of-the-art open-weight LLMs, namely Llama-3 70B from Meta AI <ref type="bibr" target="#b27">28</ref> and Mixtral 8x7B from Mistral <ref type="bibr" target="#b28">29</ref> . On the basis of initial evidence from testing, we slightly simplified and shortened the original prompt from GPT-4 but left all other parameters with respect to the original tool composition unaltered. We evaluated the performance of function calling against GPT-4 on the 20 patient cases, reporting the following metrics: the fraction of required tool calls that were completed successfully (required/successful) and those that were required but failed (required/failed). Additionally, we assessed the fraction of necessary tool calls that the model failed to invoke (required/unused). Lastly, we measured the ratio of superfluous tool calls that the models invoked and that failed (not required/failed).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model specifications</head><p>In our study, we consistently used the following models through the official OpenAI Python API for all experiments. The core framework for the agent and all tools involving an LLM is the gpt-4-0125-preview model (GPT-4). For tasks requiring visual processing, the gpt-4-vision-preview (GPT-4V) model was used through the chat completions endpoint. The temperature value for both models was empirically set to 0.2 for the agent phase and 0.1 during RAG upon initial experimentation and no further modifications of model hyperparameters were performed. Additionally, for generating text embeddings, we used the latest version of OpenAI's embedding models, specifically the text-embedding-3-large model, which produces embeddings with a dimensionality of 3,072. To establish a baseline for comparison without tools and retrieval, we also evaluated GPT-4 with identical hyperparameters using a chain-of-thought reasoning module. Additionally, for model benchmarking, we used the Meta Llama-3 70B model (llama3-70b-8192) and Mistral's Mixtral 8x7B model (mixtral-8x7b-32768) through the Groq API, setting temperature values to 0.2 and the maximum number of output tokens to 4096.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Clinical case generation</head><p>To address the limitations in current biomedical benchmarks, we compiled a collection of 20 distinct multimodal patient cases, primarily focusing on gastrointestinal oncology, including colorectal, pancreatic, cholangiocellular and hepatocellular cancers. Each case provided a comprehensive but entirely fictional patient profile, which includes Article https://doi.org/10.1038/s43018-025-00991-6 a concise medical history overview encompassing diagnoses, notable medical events and previous treatments. We paired each patient with either a single or two slices of CT or MRI imaging that served as either sequential follow-up staging scans of the liver or lungs or simultaneous staging scans of both the liver and the lungs at a single point in time. Images were obtained predominantly from internal sources from the Department of Diagnostic and Interventional Radiology, University Hospital Aachen, but we included a few samples from the web and the Cancer Imaging Archive <ref type="bibr" target="#b51">52,</ref><ref type="bibr" target="#b52">53</ref> . We highlight these cases in Supplementary Note 1. Histology images were obtained from TCGA. We additionally included information into genomic variations (mutations and gene fusions) in several patient descriptions. To evaluate our model's proficiency in handling complex information, we decided to not pose a single straightforward question but instead structured each query with multiple subtasks, subquestions and instructions, necessitating the model to handle an average of three to four subtasks in each round. To evaluate the robustness of the model in using tools across various patient factors (Extended Data Fig. <ref type="figure" target="#fig_0">1</ref>), we generated 15 random combinations of age, sex and origin for each of the 20 base cases, resulting in a total of 300 combinations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Human results evaluation</head><p>To enhance the assessment of free-text output, we developed a structured evaluation framework, drawing inspiration from the methodology of Singhal et al. <ref type="bibr" target="#b53">54</ref> . Our evaluation focused on three primary aspects: the use of tools by the agent, the quality of the text output produced by the model and the adherence in providing accurate citations.</p><p>In reference to the former, we established a manual baseline for the expected use of tools necessary for generating additional patient information that is crucial for resolving the patient's task. We measured this by the ratio of actual versus expected (required) tool uses. The requirement of tool use was defined as either the model is directly instructed to use a certain tool or the output of a tool is essential to proceed in answering the question, which is the default setting in almost all situations. Additionally, we assessed the helpfulness of the model, quantified by the proportion of user instructions and subquestions directly addressed and resolved by the model.</p><p>In assessing the textual outputs, our evaluation first encompassed factual correctness, defined by the proportion of correct replies relative to all model outputs. To segment answers into more manageable units, we split each reply according to statement (where a statement is considered a segment that concludes with either a reference to literature or is followed by a shift in topic in the subsequent sentence). Correspondingly, we distinguished between incorrectness and harmfulness in responses. Incorrect responses may include suggestions for superfluous diagnostic procedures or contain requests for irrelevant patient information. Conversely, harmful responses, while also incorrect, were determined by clinical judgment as potentially deleterious, such as advising suboptimal or contraindicated treatments. Furthermore, we assessed the completeness of the responses. For this purpose, we identified multiple specific keywords and terms for each unique medical scenario. These keywords represent expected interventions, such as treatments or diagnostic procedures and were carefully selected for their case relevance and crafted to be as specific as possible (for example, precise treatment combinations such as 'FOLFOX and bevacizumab' instead of 'chemotherapy and antiangiogenic drugs'). This criterion, which we term 'completeness', was supposed to measure the extent to which the agent's response aligns with the essential information that oncologists would anticipate in a human-generated answer under similar conditions.</p><p>Lastly, we evaluated the alignment of the responses with the original document segments used by the model through RAG. For each reference in the model's output, we investigated the corresponding reference by its source identifier. Our evaluation encompassed three critical dimensions: citation correctness, ensuring the model's statements faithfully mirror the content of the original document, irrelevance, identifying instances where the model's assertions are not substantiated by the source material, and incorrect citation, detecting discrepancies where the information attributed to a source diverges from its actual content.</p><p>All evaluations described here were performed independently by four certified clinicians with expertise in oncology. For all benchmarks, we reported the majority vote. In cases of a tie, we selected the most adverse outcome, adhering to a hierarchical schema: correct, irrelevant and wrong for citations and correct, wrong and harmful for the correctness evaluation.</p><p>Data were analyzed using the pandas library and visualized with matplotlib in Python.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Statistics and reproducibility</head><p>Data distribution was assumed to be normal but this was not formally tested. Sample sizes were set at n = 20. No statistical methods were used to predetermine sample sizes. Experiments were not randomized, as only one test group (the AI agent) existed in this proof-of-concept study. The investigators were not blinded to allocation during experiments and outcome assessment; however, they were blinded to the model responses while establishing the ground truth for the necessity of tool use and the completeness of the responses. Experiments were limited to n = 1 per case because of stringent rate and access limitations at the time of experimentation, when access to GPT-4V was available only as a preview. No data were excluded in the analysis. Reproducibility of the study's findings may be affected by silent changes implemented to the model by its developers, which may not always be publicly disclosed, as well as by potential future model deprecations. Despite these factors, the results are expected to remain reproducible when using other current state-of-the-art models. Additionally, built-in guardrails designed to prevent potentially harmful content occasionally led to refusals and to inadequately addressing medical queries. In these instances, we reran each sample in newly instantiated settings until no such refusals occurred.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Reporting summary</head><p>Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.</p><p>Extended Data Fig. <ref type="figure" target="#fig_0">1</ref> | Patient case population and bias investigation. We show more details on the simulated patient cases from our benchmarking experiments including the sex (A) and age (B) distribution for all 20 cases. The pie chart in C shows the proportions of patient origins by country and ethnicity. For 55% of the patients, we did not provide this information in the patient case vignette (n/a), while the remaining 45% included diverse information on patient origin. (D) To investigate whether gender, age, and origin influence the models' tool-calling behavior, we conducted an additional experiment with 15 random permutations on all 20 patient cases (300 in total). Notably, we observed that in contrary to patient cases requiring relatively fewer tools (for example, patients Adams, Lopez and Williams), there was higher variability in tool-calling behavior in situations requiring more tools (for example, patient Ms Xing), regardless of the combinations of age, sex, and ethnicity/origin. Heatmaps are annotated on the x-axis as 'age-sex-ethnicity/country of origin'.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 |</head><label>1</label><figDesc>Fig.1| High-level overview of the LLM agent framework. A schematic overview of our LLM agent pipeline. At its core, our system accesses a curated knowledge database comprising medical documents, clinical guidelines and scoring tools. This database is refined from a broader collection through keyword-based search, with the selected documents undergoing text embeddings for efficient storage and retrieval (1). The framework is further augmented with a suite of medical tools, including specialized web search capabilities through platforms such as Google, PubMed and access to the OncoKB API. The agent's capabilities are further expanded through the integration of a vision model tailored for generating detailed reports from CT and MRI scans, alongside MedSAM, a stateof-the-art medical image segmentation model and access to a simple calculator.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>6 Stage 2</head><label>62</label><figDesc>Article https://doi.org/10.1038/s43018-025-00991is one single hypointense lesion in the left lobe of the liver, measuring approximately 0.4 cm in its greatest dimension (Location: [475, 250, 490, 275]). Highly suggestive for recurrence of the known cholangiocellular carcinoma. (* …) Lymph Nodes: There is no enlargement of the abdominal or pelvic lymph nodes. Peritoneum: No evidence of peritoneal implants or significant fluid accumulation is present. Strong suspicion of a recurrence of the known CCC due to a solitary metastasis in the left liver. Molecular report summary: Microsatellite-Instability High, Mutation in BRAF V600E and CD74-ROS1 variant fusion. No alterations in NTRK or FGFR2. *** Please investigate the current state of the disease. What does the new MRI scan show? Did the metastasis grow? In case of progress, what (targeted) treatment options could we suggest for the molecular tumor board tomorrow? Be aware that the patient is extremely young and we need all options we could find. Also check any options you can find on google or pubmed.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>2 .FFig. 3 |</head><label>23</label><figDesc>Fig. 3 | Details of the agent's pipeline in patient case evaluation. The full agent's pipeline for the simulated patient X, showcasing the complete input process and the collection of tools deployed by the agent. We abridge the patient description for readability (* …). The complete text is available in Supplementary Note 1. a,b, In the initial 'tools' phase, the model identifies tumor localization from patient data and uses MedSAM for the generation of segmentation masks.Measuring the area of the segmented region enables the calculation of tumor progression over time as the model calculates an increase by a factor of 3.89. The agent also references the OncoKB database for mutation information from the patient's context (BRAF V600E and CD74-ROS1) and performs literature searches through PubMed and Google. For histological modeling, we must note here that we streamlined the processing. The original STAMP pipeline consists of two steps, where the first is the timely and computationally intensive calculation of feature vectors, which we performed beforehand for convenience. The second step is performed by the agent by selecting targets of interest and the location of the patient's data and executing the respective vision transformer (**). c, The subsequent phase involves data retrieval through RAG and the production of the final response.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head></head><label></label><figDesc>Articlehttps://doi.org/10.1038/s43018-025-00991-6</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5"><head>Fig. 4 |</head><label>4</label><figDesc>Fig.4| Performance of the agent's pipeline in patient case evaluation. Results from benchmarking the LLM agent through manual evaluation conducted by a panel of four medical experts. a-c, Steps in the agent's workflow as outlined in Fig.3. For the metric 'tool use', we report four ratios: represents the proportion of tools that were expected to be used to solve a patient case and that ran successfully (56/64), with no failures among the required tools. Required/unused (8/64) are tools that the LLM agent did not use despite being considered necessary. Additionally, there are two instances where a tool that was not required was used, resulting in failures. 'Correctness' (223/245), 'wrongness' (16/245) and 'harmfulness' (6/245) represent the respective ratios of accurate, incorrect (yet not detrimental) and damaging (harmful) responses</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_6"><head></head><label></label><figDesc>Example tool results from three state-of-the-art LLMs Tool-calling performance of GPT-4, llama-3 70B and mixtral 8×7B</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_7"><head>1 .</head><label>1</label><figDesc>Segmentation of MRI images: The MRI images from December 3, 2023, and February 28, 2024, were analyzed to determine the size of the hepatocellular carcinoma (HCC) lesion. The segmentation tool provided the sizes of the regions of interest as follows: -December 3, 2023, MRI: The area was 2077 square units. -February 28, 2024, MRI: The area was 2057 square units.2. Calculation of tumor volume change: The change in the tumor's size was calculated to determine if the disease had progressed according to RECIST criteria. The calculations revealed: -The di erence in tumor size between the two dates was -20 square units, indicating a slight decrease in size.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head></head><label></label><figDesc>The latest MRI scan from February 2024 reveals that the metastatic lesion in Ms. Xing's left liver lobe has notably enlarged, growing from an area of 133 in September 2023 to 518, signifying a progression in her condition. This significant increase highlights the critical need to consider further treatment avenues for Ms. Xing. Given Ms. Xing's medical history and the molecular characteristics of her tumor, including the BRAF V600E mutation and CD74-ROS1 variant fusion, several targeted therapy options emerge: 1. Dabrafenib and Trametinib: This combination is recommended for BRAF V600E-mutated tumors, including cholangiocellular carcinoma, based on their e ectiveness in other cancers with similar genetic alterations[Tool]. The combination has FDA approval for BRAF V600E mutant unresectable or metastatic melanoma and other solid tumors excluding colorectal cancer, with noted e ectiveness in biliary tract cancer[Tool].</figDesc><table><row><cell></cell><cell></cell><cell>Extract location from text</cell></row><row><cell></cell><cell></cell><cell>09/2023</cell><cell>Divide</cell></row><row><cell></cell><cell></cell><cell>02/2024</cell><cell>Med SAM</cell><cell>518/133 = 3.89 Segmented area</cell></row><row><cell></cell><cell></cell><cell></cell><cell>Patient context</cell></row><row><cell></cell><cell></cell><cell></cell><cell>+ question</cell></row><row><cell></cell><cell></cell><cell></cell><cell>+ tool results</cell></row><row><cell>Select tools</cell><cell>Collect clinical and</cell><cell></cell><cell>RAG</cell></row><row><cell></cell><cell>genomic information</cell><cell>Define queries: targeted treatment</cell></row><row><cell></cell><cell></cell><cell>options for</cell></row><row><cell></cell><cell></cell><cell>cholangiocellular cancer with BRAFV600E mutation and CD74-ROS1</cell><cell>Patient context + question + tool results</cell></row><row><cell></cell><cell></cell><cell>fusion?</cell><cell>+ medical context</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>https://doi.org/10.1038/s43018-025-00991-6 Extended Data Fig. 1 | See next page for caption.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><p>Acknowledgements J.N.K. is supported by the <rs type="funder">German Federal Ministry of Health (DEEP LIVER</rs>, <rs type="grantNumber">ZMVI1-2520DAT111</rs>; SWAG, <rs type="grantNumber">01KD2215B</rs>), the <rs type="funder">Max-Eder Program of the German Cancer Aid</rs> (<rs type="grantNumber">70113864</rs>), the <rs type="funder">German Federal Ministry of Education and Research</rs> (PEARL, <rs type="grantNumber">01KD2104C</rs>; CAMINO, 01EO2101; SWAG, 01KD2215A; TRANSFORM LIVER, 031L0312A; TANGERINE, <rs type="grantNumber">01KT2302</rs> through <rs type="funder">ERA-NET Transcan)</rs>, the <rs type="funder">German Academic Exchange Service</rs> (<rs type="grantNumber">57616814</rs>), the <rs type="funder">German Federal Joint Committee</rs> (Transplant.KI, <rs type="grantNumber">01VSF21048</rs>), the <rs type="funder">European Union</rs>'s <rs type="programName">Horizon Europe and Innovation program</rs> (ODELIA, 101057091; GENIAL, 101096312) and the <rs type="funder">National Institute for Health and Care Research (NIHR</rs>, <rs type="grantNumber">NIHR213331</rs>), <rs type="funder">Leeds Biomedical Research Center</rs>. D.T. is funded by the <rs type="funder">German Federal Ministry of Education and Research (TRANSFORM LIVER</rs>, <rs type="grantNumber">031L0312A</rs>), the <rs type="funder">European Union</rs>'s <rs type="programName">Horizon Europe and Innovation program</rs> (ODELIA, <rs type="grantNumber">101057091</rs>) and the <rs type="funder">German Federal Ministry of Health</rs> (SWAG, <rs type="grantNumber">01KD2215B</rs>). G.W. is supported by <rs type="funder">Lothian NHS</rs>. J.C. is supported by the <rs type="funder">Mildred-Scheel-Postdoktorandenprogramm of the German Cancer Aid</rs> (<rs type="grantNumber">70115730</rs>). J.L. is supported by the <rs type="funder">TUM School of Medicine and Health Clinician Scientist Program</rs> (project no. <rs type="grantNumber">H-08</rs>). J.L. receives intellectual and financial support through the <rs type="funder">DKTK School of Oncology Fellowship</rs>. S.F. is supported by the <rs type="funder">German Federal Ministry of Education and Research (SWAG</rs>, <rs type="grantNumber">01KD2215A</rs>), the <rs type="funder">German Cancer Aid</rs> (DECADE, <rs type="grantNumber">70115166</rs>) and the <rs type="funder">German Research Foundation</rs> (<rs type="grantNumber">504101714</rs>). The views expressed are those of the authors and not those of the <rs type="institution">NHS</rs>, the <rs type="institution">NIHR</rs> or the <rs type="institution">Department of Health and Social Care</rs>. No other funding is disclosed by any of the authors.</p><p>In accordance with the Committee on Publication Ethics position statement of 13 February 2023 (https://publicationethics.org/copeposition-statements/ai-author), the authors hereby disclose the use of the following AI models during the writing of this article: <rs type="grantNumber">GPT-4</rs> (<rs type="affiliation">OpenAI</rs>) for checking spelling and grammar.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_BNuNS7g">
+					<idno type="grant-number">ZMVI1-2520DAT111</idno>
+				</org>
+				<org type="funding" xml:id="_kktzZ4q">
+					<idno type="grant-number">01KD2215B</idno>
+				</org>
+				<org type="funding" xml:id="_n5s78wk">
+					<idno type="grant-number">70113864</idno>
+				</org>
+				<org type="funding" xml:id="_aSgpRCv">
+					<idno type="grant-number">01KD2104C</idno>
+				</org>
+				<org type="funding" xml:id="_8eTurqX">
+					<idno type="grant-number">01KT2302</idno>
+				</org>
+				<org type="funding" xml:id="_SjyYK7k">
+					<idno type="grant-number">57616814</idno>
+				</org>
+				<org type="funding" xml:id="_FK7kdRy">
+					<idno type="grant-number">01VSF21048</idno>
+				</org>
+				<org type="funding" xml:id="_QYC3d4c">
+					<orgName type="program" subtype="full">Horizon Europe and Innovation program</orgName>
+				</org>
+				<org type="funding" xml:id="_gfg27Xg">
+					<idno type="grant-number">NIHR213331</idno>
+				</org>
+				<org type="funding" xml:id="_FcWPBdF">
+					<idno type="grant-number">031L0312A</idno>
+				</org>
+				<org type="funding" xml:id="_ckxrYzz">
+					<idno type="grant-number">101057091</idno>
+					<orgName type="program" subtype="full">Horizon Europe and Innovation program</orgName>
+				</org>
+				<org type="funding" xml:id="_CsAEeTv">
+					<idno type="grant-number">01KD2215B</idno>
+				</org>
+				<org type="funding" xml:id="_EyqZYG5">
+					<idno type="grant-number">70115730</idno>
+				</org>
+				<org type="funding" xml:id="_bg9MKWC">
+					<idno type="grant-number">H-08</idno>
+				</org>
+				<org type="funding" xml:id="_sZmpUjn">
+					<idno type="grant-number">01KD2215A</idno>
+				</org>
+				<org type="funding" xml:id="_jGskdn4">
+					<idno type="grant-number">70115166</idno>
+				</org>
+				<org type="funding" xml:id="_jvaznCK">
+					<idno type="grant-number">504101714</idno>
+				</org>
+				<org type="funding" xml:id="_YhGp42z">
+					<idno type="grant-number">GPT-4</idno>
+				</org>
+			</listOrg>
+
+			<div type="availability">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data availability</head><p>All radiology images used in this study are available from the respective URLs as indicated in the Supplementary Information. The histopathology related results in our study are based upon data generated by TCGA Research Network (https://www.cancer.gov/tcga). Source data are provided with this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Code availability</head><p>An implementation of our source codes for researchers to extend on our work is available from GitHub (https://github.com/Dyke-F/ LLM_RAG_Agent). Instructions for using the repository are detailed in the respective ReadMe file.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Author contributions</head><p>D.F. designed and performed the experiments, evaluated and interpreted the results and wrote the initial draft of the manuscript. O.S.M.E.N. and G.W. provided scientific support for running the experiments and contributed to writing the manuscript. I.C.W. contributed to writing the manuscript. J.C., M.E.L., I.C.W. and D.F. evaluated the models. S.F., J.L., M.T., M.S.T. and N.S. provided feedback and contributed to writing the manuscript. D.J. supervised the study. D.T. and J.N.K. designed and supervised the experiments and wrote the manuscript. All authors contributed scientific advice and approved the final version of the manuscript.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Competing interests</head><p>O.S.M.E.N. holds shares in StratifAI. J.N.K. declares consulting services for Owkin, DoMore Diagnostics, Panakeia and Scailyte, holds shares in Kather Consulting, StratifAI and Synagen and has received honoraria for lectures and advisory board participation from AstraZeneca, Bayer, Eisai, MSD, BMS, Roche, Pfizer and Fresenius. D.T. has received honoraria for lectures by Bayer and holds shares in StratifAI and holds shares in Synagen. D.F. holds shares in Synagen. M.S.T. is a scientific advisor to Mindpeak and Sonrai Analytics and has received honoraria from BMS, MSD, Roche, Sanofi and Incyte. S.F. has received honoraria from MSD and BMS. The remaining authors declare no competing interests.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Additional information</head><p>Extended data is available for this paper at https://doi.org/10.1038/s43018-025-00991-6.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Supplementary information</head><p>The online version contains supplementary material available at https://doi.org/10.1038/s43018-025-00991-6.</p><p>Correspondence and requests for materials should be addressed to Jakob Nikolas Kather.</p><p>Peer review information Nature Cancer thanks Anant Madabhushi, Arsela Prelaj, Pranav Rajpurkar and Wayne Zhao for their contribution to the peer review of this work.</p><p>Reprints and permissions information is available at www.nature.com/reprints. Publisher's note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p><p>Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons. org/licenses/by/4.0/.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">A survey of large language models</title>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2303.18223</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2303.18223" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">GPT-4 technical report</title>
+		<author>
+			<persName><surname>Openai</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2303.08774</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2303.08774" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Capabilities of GPT-4 on medical challenge problems</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Nori</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>King</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">M</forename><surname>Mckinney</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Carignan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Horvitz</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2303.13375</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2303.13375" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">GPT-4 for information retrieval and comparison of medical oncology guidelines</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ferber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NEJM AI</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">2300235</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>AIcs</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Multimodal biomedical AI</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">J</forename><surname>Falcone</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rajpurkar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Topol</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s43018-025-00991-6</idno>
+		<ptr target="https://doi.org/10.1038/s43018-025-00991-6" />
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Med</title>
+		<imprint>
+			<biblScope unit="volume">28</biblScope>
+			<biblScope unit="page" from="1773" to="1784" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Artificial intelligence for multimodal data integration in oncology</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lipkova</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cancer Cell</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="1095" to="1110" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Multimodal deep learning for integrating chest radiographs and clinical parameters: a case for transformers</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Khader</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Radiology</title>
+		<imprint>
+			<biblScope unit="volume">309</biblScope>
+			<biblScope unit="page">230806</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Pan-cancer integrative histology-genomic analysis via multimodal deep learning</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cancer Cell</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="page" from="865" to="878" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">A multimodal generative AI copilot for human pathology</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">Y</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">634</biblScope>
+			<biblScope unit="page" from="466" to="473" />
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Foundation models for generalist medical artificial intelligence</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Moor</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">616</biblScope>
+			<biblScope unit="page" from="259" to="265" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Towards generalist biomedical AI</title>
+		<author>
+			<persName><forename type="first">Tao</forename><surname>Tu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NEJM AI</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>AIoa</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Capabilities of Gemini models in medicine</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Saab</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2404.18416</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2404.18416" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">New regulatory thinking is needed for AI-based personalised drug and cell therapies in precision oncology</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Derraz</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NPJ Precis. Oncol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">23</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title level="m" type="main">MEDITRON-70B: scaling medical pretraining for large language models</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Chen</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2311.16079</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2311.16079" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Retrieval-augmented generation for knowledge-intensive NLP tasks</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Lewis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">NIPS &apos;20: Proc. 34th International Conference on Neural Information Processing Systems</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">793</biblScope>
+			<biblScope unit="page" from="9459" to="9474" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Almanac-retrieval-augmented language models for clinical medicine</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Zakka</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">NEJM AI</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page">2300068</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note>AIoa</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">ReAct: synergizing reasoning and acting in language models</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yao</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2210.03629</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2210.03629" />
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Toolformer: language models can teach themselves to use tools</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Schick</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2302.04761</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2302.04761" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Large language models streamline automated machine learning for clinical studies</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Tayebi Arasteh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">1603</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Multimodal analysis and the oncology patient: creating a hospital system for integrated diagnostics and discovery</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Messiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Lee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Salto-Tellez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Comput. Struct. Biotechnol. J</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="4536" to="4539" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Deep learning can predict microsatellite instability directly from histology in gastrointestinal cancer</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Kather</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Med</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="1054" to="1056" />
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Segment anything in medical images</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ma</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="page">654</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Transformer-based biomarker prediction from colorectal cancer histology: a large-scale multicentric study</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">J</forename><surname>Wagner</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Cancer Cell</title>
+		<imprint>
+			<biblScope unit="volume">41</biblScope>
+			<biblScope unit="page" from="1650" to="1661" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Joint multi-task learning improves weaklysupervised biomarker prediction in computational pathology</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">S M</forename><surname>El Nahhas</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2403.03891</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2403.03891" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">OncoKB: a precision oncology knowledge base. JCO Precis</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Chakravarty</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Oncol</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">11</biblScope>
+			<date type="published" when="2017">2017. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">PathVQA: 30000+ questions for medical visual question answering</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Mou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Xing</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Xie</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2003.10286</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2003.10286" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title level="m" type="main">LongHealth: a question answering benchmark with long clinical documents</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Adams</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2401.14490</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2401.14490" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Introducing Meta Llama 3: the most capable openly available LLM to date</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Meta</surname></persName>
+		</author>
+		<ptr target="https://ai.meta.com/blog/meta-llama-3/" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title level="m" type="main">Mixtral of experts</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Q</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2401.04088</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2401.04088" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Large language models should be used as scientific reasoning engines, not knowledge databases</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Truhn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Reis-Filho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Kather</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Med</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="2983" to="2984" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Validation of MSIntuit as an AI-based pre-screening tool for MSI detection from colorectal cancer histology slides</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Saillard</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Commun</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="page">6695</biblScope>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">GPT-4V(ision) system card</title>
+		<ptr target="https://cdn.openai.com/papers/GPTV_System_Card.pdf" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+		<respStmt>
+			<orgName>OpenAI</orgName>
+		</respStmt>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">Merlin: a vision language foundation model for 3D computed tomography</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Blankemeier</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2406.06512</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2406.06512" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Improving the applicability of AI for psychiatric applications through human-in-the-loop methodologies</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Chandler</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Foltz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Elvevåg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Schizophr. Bull</title>
+		<imprint>
+			<biblScope unit="volume">48</biblScope>
+			<biblScope unit="page" from="949" to="957" />
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">The Llama 3 herd of models</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">I</forename><surname>Meta</surname></persName>
+		</author>
+		<ptr target="https://ai.meta.com/research/publications/the-llama-3-herd-of-models/" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Hermes 3 technical report</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Teknium</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Quesnelle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Guang</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2408.11857</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2408.11857" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">Benchmarking retrieval-augmented generation for medicine</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Jin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2402.13178</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2402.13178" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">An analysis of fusion functions for hybrid retrieval</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Bruch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Ingber</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans. Inf. Syst</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="page" from="1" to="35" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Gemini 1.5: unlocking multimodal understanding across millions of tokens of context</title>
+		<author>
+			<persName><forename type="first">Gemini</forename><surname>Team</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Google</forename></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2403.05530</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2403.05530" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title level="m" type="main">A generalist learner for multifaceted medical image interpretation</title>
+		<author>
+			<persName><forename type="first">H.-Y</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Adithan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">N</forename><surname>Acosta</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">J</forename><surname>Topol</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Rajpurkar</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2405.07988</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2405.07988" />
+		<imprint>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<title level="m" type="main">Language models are few-shot learners</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">B</forename><surname>Brown</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2005.14165</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2005.14165" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Expert-guided large language models for clinical decision support in precision oncology</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lammert</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JCO Precis. Oncol</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">2400478</biblScope>
+			<date type="published" when="2024">2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<author>
+			<persName><surname>Anthropic</surname></persName>
+		</author>
+		<ptr target="https://www-cdn.anthropic.com/de" />
+		<title level="m">The Claude 3 model family: Opus, Sonnet, Haiku</title>
+		<imprint>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">8</biblScope>
+		</imprint>
+	</monogr>
+	<note>ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_ Claude_3.pdf</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Large language model AI chatbos require approval as medical devices</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Gilbert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Harvey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Melvin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vollebregt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wicks</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Med</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="2396" to="2398" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">ASCO clinical practice guidelines and beyond</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">H</forename><surname>Lyman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Oncol. Pract</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="330" to="331" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m">Text Encoding Initiative</title>
+		<editor>
+			<persName><forename type="first">N</forename><surname>Ide</surname></persName>
+		</editor>
+		<editor>
+			<persName><forename type="first">J</forename><surname>Véronis</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Springer</publisher>
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<analytic>
+		<title level="a" type="main">Transformer-based unsupervised contrastive learning for histopathological image classification</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Med. Image Anal</title>
+		<imprint>
+			<biblScope unit="volume">81</biblScope>
+			<biblScope unit="page">102559</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">From whole-slide image to biomarker prediction: a protocol for end-to-end deep learning in computational pathology</title>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">S M</forename><surname>El Nahhas</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Protoc</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="293" to="316" />
+			<date type="published" when="2025">2025</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title level="m" type="main">DSPy: compiling declarative language model calls into self-improving pipelines</title>
+		<author>
+			<persName><forename type="first">O</forename><surname>Khattab</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2310.03714</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2310.03714" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title level="m" type="main">Answering complex open-domain questions with multi-hop dense retrieval</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Xiong</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv</idno>
+		<ptr target="https://doi.org/10.48550/arXiv" />
+		<imprint>
+			<date type="published" when="2009">2009. 2020</date>
+			<biblScope unit="page">12756</biblScope>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title level="m" type="main">Chain-of-thought prompting elicits reasoning in large language models</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wei</surname></persName>
+		</author>
+		<idno type="DOI">10.48550/arXiv.2201.11903</idno>
+		<ptr target="https://doi.org/10.48550/arXiv.2201.11903" />
+		<imprint>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="report_type">Preprint at</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m" type="main">The Cancer Imaging Archive. Preoperative CT and survival data for patients undergoing resection of colorectal liver metastases</title>
+		<idno type="DOI">10.1038/s43018-025-00991-6</idno>
+		<ptr target="https://doi.org/10.1038/s43018-025-00991-6" />
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">The Cancer Imaging Archive (TCIA): maintaining and operating a public information repository</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Clark</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Digit. Imaging</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="1045" to="1057" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Large language models encode clinical knowledge</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Singhal</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nature</title>
+		<imprint>
+			<biblScope unit="volume">620</biblScope>
+			<biblScope unit="page" from="172" to="180" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
