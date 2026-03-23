@@ -265,3 +265,6 @@ if st.session_state.workflow_step == 'done':
 
                 with st.expander("View Retrieved Guideline Context"):
                     st.info(st.session_state.agent_state.get('retrieved_guidelines', 'No context retrieved.'))
+
+                    # bala
+                    
