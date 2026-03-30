@@ -167,11 +167,7 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-# Python 虚拟环境
 medvenv/
-venv/
-.venv/
-__pycache__/
 
 # 数据库和大数据文件
 chroma_db/
@@ -179,6 +175,3 @@ Data/
 *.csv
 *.pdf
 *.db
-
-# Mac 系统文件
-.DS_Store

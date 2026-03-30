@@ -96,9 +96,14 @@ class ChromadbRM(dspy.Retrieve):
         persist_directory: str,
         embedding_function: Optional[EmbeddingFunction[Embeddable]] = None,
         k: int = 7,
+        host: str = "localhost",
+        port: int = 8000,
     ):
-        self.ef = embedding_function or self._chromadb_collection.embedding_function
+        self.host = host
+        self.port = port
+        # 必须先初始化 chromadb 客户端和 collection，才能调用其内部属性
         self._init_chromadb(collection_name, persist_directory)
+        self.ef = embedding_function or self._chromadb_collection.embedding_function
 
         super().__init__(k=k)
 
@@ -116,7 +121,7 @@ class ChromadbRM(dspy.Retrieve):
         Returns:
         """
 
-        self._chromadb_client = chromadb.HttpClient(host="localhost", port=8000)
+        self._chromadb_client = chromadb.HttpClient(host=self.host, port=self.port)
 
         try:
             self._chromadb_client.heartbeat()
@@ -183,6 +188,10 @@ class ChromadbRM(dspy.Retrieve):
             query_embeddings=embeddings, n_results=k
         )
 
-        passages = [dotdict({"long_text": x}) for x in results["documents"][0]]
+        # 安全防范：ChromaDB 可能返回空结果，避免 IndexError
+        if not results.get("documents") or len(results["documents"]) == 0 or not results["documents"][0]:
+            return []
+
+        passages = [dotdict({"long_text": x}) for x in results["documents"][0] if x is not None]
 
         return passages

@@ -1,270 +1,170 @@
 import streamlit as st
 import json
-import uuid
-import traceback
-from langgraph.graph import StateGraph, START, END
-
-# Directly import base node functions from the backend, taking full control of the flow
-from multi_agent_pipeline import (
-    ClinicalNoteState,
-    extraction_node,
-    reasoning_node,
-    critic_node,
-    decision_node,
-    routing_logic,
-    optimized_extractor,
-    USE_RAG
-)
+from multi_agent_pipeline import run_full_agent_pipeline
 
 # ==========================================
-# 1. 页面配置与原生 CSS 优化 (修复对比度问题)
+# 1. 页面基本配置 & 样式注入
 # ==========================================
-st.set_page_config(page_title="Clinical AI Copilot", layout="wide")
+st.set_page_config(page_title="OncoAgent Pro | Multimodal Edition", layout="wide", initial_sidebar_state="expanded")
 
 st.markdown("""
 <style>
-    .stApp { background-color: #f8fafc; font-family: 'Segoe UI', Roboto, sans-serif; }
-    header {visibility: hidden;}
-    .stHeading h1 { color: #1e3a8a; font-weight: 800; }
-
-    /* 修复 1：JSON 编辑器极客风格，并强制修复 disabled 状态下的对比度 */
-    .stTextArea textarea {
-        font-family: 'Courier New', Courier, monospace;
-        background-color: #0f172a !important; 
-        color: #10b981 !important;
-        border-radius: 6px; font-size: 14px; line-height: 1.5;
+    /* 全局背景 */
+    .stApp { background-color: #f4f7f6; }
+    
+    /* 侧边栏样式 */
+    [data-testid="stSidebar"] { background-color: #1e293b; color: white; }
+    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] p, [data-testid="stSidebar"] div { color: #f8fafc; }
+    
+    /* 卡片模拟 */
+    div.stBlockContainer { padding-top: 2rem; }
+    .report-card { 
+        background-color: white; 
+        padding: 25px; 
+        border-radius: 12px; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+        margin-bottom: 25px;
     }
-    .stTextArea textarea:disabled {
-        background-color: #1e293b !important;
-        color: #94a3b8 !important;
-        -webkit-text-fill-color: #94a3b8 !important; /* 强制覆盖苹果/谷歌浏览器的禁用态变灰 */
-        cursor: not-allowed;
+    
+    /* 各种卡片的顶部彩色边框 */
+    .card-input { border-top: 5px solid #64748b; }
+    .card-tools { border-top: 5px solid #8b5cf6; } 
+    .card-json { border-top: 5px solid #3b82f6; }
+    .card-assessment { border-top: 5px solid #10b981; }
+    .card-plan { border-top: 5px solid #ef4444; }
+    
+    /* 标题样式 */
+    .section-title { 
+        margin: 0 0 15px 0; 
+        color: #1e293b; 
+        font-weight: 700;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    /* 治疗方案专属高亮框 */
+    .plan-box { 
+        background-color: #fef2f2; 
+        border-left: 5px solid #ef4444; 
+        padding: 15px; 
+        border-radius: 8px;
+        color: #7f1d1d;
+        font-weight: 500;
     }
 
-    /* 侧边栏定制 */
-    [data-testid="stSidebar"] { background-color: #1e3a8a; color: white; }
-    [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 { color: white; }
-    [data-testid="stSidebar"] .stMarkdown { color: #e2e8f0; }
-
-    /* 修复 2：强制侧边栏按钮为白底深蓝字，解决白底白字看不清的问题 */
-    [data-testid="stSidebar"] .stButton > button {
-        background-color: #ffffff !important;
-        color: #1e3a8a !important;
-        font-weight: bold;
-        border: 1px solid #cbd5e1;
-    }
-    [data-testid="stSidebar"] .stButton > button:hover {
-        background-color: #f1f5f9 !important;
-        border-color: #94a3b8 !important;
+    /* 工具返回结果框 */
+    .tool-box {
+        background-color: #f3e8ff;
+        border-left: 5px solid #8b5cf6;
+        padding: 15px;
+        border-radius: 8px;
+        color: #4c1d95;
+        font-family: monospace;
+        white-space: pre-wrap;
     }
 </style>
 """, unsafe_allow_html=True)
 
-
 # ==========================================
-# 2. Core Architecture Refactor: Bulletproof Dual-Graph System
-# ==========================================
-@st.cache_resource
-def build_graphs():
-    g1 = StateGraph(ClinicalNoteState)
-    g1.add_node("Extractor", extraction_node)
-    g1.add_node("Critic", critic_node)
-    g1.add_edge(START, "Extractor")
-    g1.add_edge("Extractor", "Critic")
-    g1.add_conditional_edges("Critic", routing_logic, {"revise": "Extractor", "approved": END})
-
-    g2 = StateGraph(ClinicalNoteState)
-    g2.add_node("Reasoner", reasoning_node)
-    g2.add_node("DecisionMaker", decision_node)
-    g2.add_edge(START, "Reasoner")
-    g2.add_edge("Reasoner", "DecisionMaker")
-    g2.add_edge("DecisionMaker", END)
-
-    return g1.compile(), g2.compile()
-
-
-extraction_graph, decision_graph = build_graphs()
-
-# ==========================================
-# 3. State Initialization
+# 2. 初始化 Session State
 # ==========================================
 if 'workflow_step' not in st.session_state:
     st.session_state.workflow_step = 'input'
-
-if 'current_note' not in st.session_state:
-    st.session_state.current_note = "Patient is a 65yo M presenting with acute ST-segment elevation myocardial infarction (STEMI). PCI was performed immediately. Currently prescribed Aspirin and Clopidogrel. No other medications noted."
-
-if 'agent_state' not in st.session_state:
-    st.session_state.agent_state = {}
+if 'results' not in st.session_state:
+    st.session_state.results = None
 
 # ==========================================
-# 4. Sidebar: System Telemetry
+# 3. 侧边栏设计
 # ==========================================
 with st.sidebar:
-    st.markdown("## Clinical Copilot")
-    st.markdown("### System Telemetry")
+    st.title("OncoAgent Pro")
+    st.caption("Nature Cancer Benchmark Edition")
     st.markdown("---")
-
-    if optimized_extractor:
-        st.markdown("[OK] **Extractor:** Optimized")
-    else:
-        st.markdown("[WARN] **Extractor:** Baseline")
-
-    if USE_RAG:
-        st.markdown("[OK] **Vector DB:** Connected")
-    else:
-        st.markdown("[ERR] **Vector DB:** Disconnected")
-
+    st.write("**Engine:** DeepSeek-V3")
+    st.write("**Architecture:** 4-Agent Framework")
+    st.write("**Loaded Tools:**")
+    st.write("- MedSAM (Radiology)")
+    st.write("- STAMP (Pathology AI)")
+    st.write("- OncoKB (Genomics)")
     st.markdown("---")
-    st.markdown("### Process Progress")
-    if st.session_state.workflow_step == 'input':
-        st.write("[Current] -> [ ] -> [ ]")
-    elif st.session_state.workflow_step == 'reviewing':
-        st.write("[Done] -> [Current] -> [ ]")
-    else:
-        st.write("[Done] -> [Done] -> [Current]")
-
-    st.markdown("---")
-    if st.button("Restart System Session", use_container_width=True):
+    if st.button("Analyze New Patient", use_container_width=True):
         st.session_state.workflow_step = 'input'
-        st.session_state.agent_state = {}
+        st.session_state.results = None
         st.rerun()
 
 # ==========================================
-# 5. Main UI: Dashboard
+# 4. 主页面逻辑
 # ==========================================
-st.title("Clinical AI Copilot (Human-in-the-Loop)")
-st.markdown("A sophisticated CDSS decoupled pipeline featuring rigorous auditing and explicit physician sign-off.")
-st.markdown("---")
+st.title("Autonomous Multimodal Oncology Agent")
+st.markdown("Integrating LLM reasoning with Precision Oncology Tools (MedSAM, Pathology AI, OncoKB).")
 
-# ---------------------------------------------------------
-# [Step 1/3] Clinical Note Input
-# ---------------------------------------------------------
-with st.container(border=True):
-    st.markdown("### [1/3] Patient Clinical Note Input")
-    is_step1 = (st.session_state.workflow_step == 'input')
-
-    clinical_note = st.text_area("Raw clinical text:", value=st.session_state.current_note, height=150,
-                                 disabled=not is_step1)
-
-    if is_step1:
-        if st.button("Step 1: AI Extraction & Audit", type="primary"):
-            if clinical_note.strip():
-                st.session_state.current_note = clinical_note
-
-                initial_state = {
-                    "original_text": clinical_note,
-                    "revision_count": 0,
-                    "status": "processing",
-                    "critic_feedback": "None"
-                }
-
-                with st.spinner('AI Phase 1: Extracting and auditing entities...'):
-                    try:
-                        final_state_1 = extraction_graph.invoke(initial_state)
-                        st.session_state.agent_state = final_state_1
-                        st.session_state.workflow_step = 'reviewing'
-                        st.rerun()
-                    except Exception as e:
-                        st.error("❌ Extraction Graph Failed!")
-                        st.code(traceback.format_exc())
-            else:
-                st.error("Please enter a note.")
-    else:
-        if st.button("<- Re-enter Input Note", key="back_to_1"):
-            st.session_state.workflow_step = 'input'
-            st.rerun()
-
-# ---------------------------------------------------------
-# [Step 2/3] Physician Interception & Review
-# ---------------------------------------------------------
-if st.session_state.workflow_step in ['reviewing', 'done']:
-    with st.container(border=True):
-        st.markdown("### [2/3] Action Required: Physician Sign-off")
-        is_step2 = (st.session_state.workflow_step == 'reviewing')
-
-        if is_step2:
-            st.markdown("""
-            <div style="background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
-                <strong style="color: #d97706;">Attention:</strong> The AI has completed entity extraction and internal audit. Please review and edit the structured JSON data below to ensure absolute accuracy before downstream generation.
-            </div>
-            """, unsafe_allow_html=True)
-
-        extracted_json_str = st.session_state.agent_state.get("extracted_entities", "{}")
-        edited_json_str = st.text_area("Structured Clinical Data (Editable JSON):", value=extracted_json_str,
-                                       height=350, disabled=not is_step2)
-
-        if is_step2:
-            if st.button("Step 2: Sign-off & Generate Plan", type="primary"):
-                with st.spinner('AI Phase 2: Generating SOAP note and consulting guidelines...'):
-                    try:
-                        st.session_state.agent_state["extracted_entities"] = edited_json_str
-                        final_state_2 = decision_graph.invoke(st.session_state.agent_state)
-                        st.session_state.agent_state.update(final_state_2)
-                        st.session_state.workflow_step = 'done'
-                        st.rerun()
-                    except Exception as e:
-                        st.error("❌ Decision Graph Failed!")
-                        st.code(traceback.format_exc())
-        else:
-            if st.button("<- Unlock & Re-edit JSON Data", key="back_to_2"):
-                st.session_state.workflow_step = 'reviewing'
-                st.rerun()
-
-# ---------------------------------------------------------
-# [Step 3/3] Final Display (with Rich Visual Clinical Dashboard)
-# ---------------------------------------------------------
-if st.session_state.workflow_step == 'done':
-    with st.container(border=True):
-        st.markdown("### [3/3] Final Clinical Outputs")
-
-        col_out1, col_out2 = st.columns(2)
-
-        with col_out1:
-            with st.container(border=True):
-                st.markdown("#### Phase A: SOAP Summary")
-                st.markdown("*Objective SOAP note based strictly on human-approved data.*")
-
-                summary_output = st.session_state.agent_state.get('current_summary', '')
-                if summary_output:
-                    st.write(summary_output)
-                else:
-                    st.error("Summary is empty. Check terminal for specific node errors.")
-
-        with col_out2:
-            with st.container(border=True):
-                st.markdown("#### Phase B: Decision Support")
-                st.markdown("*Guideline-grounded insights powered by RAG.*")
-
-                plan_output = st.session_state.agent_state.get('final_treatment_plan', '')
-
-                # ==========================================
-                # New: Smart "Visual Dashboard" for Clinical Insights
-                # Traffic light indicators to instantly grab the physician's attention
-                # ==========================================
-                if plan_output:
-                    if "Missing Recommendations" in plan_output or "missing" in plan_output.lower():
-                        st.markdown("""
-                        <div style="background-color: #fee2e2; border-left: 5px solid #ef4444; padding: 12px; border-radius: 6px; margin-bottom: 20px;">
-                            <h4 style="color: #b91c1c; margin-top: 0; margin-bottom: 5px;">🚨 Guideline Variance Detected</h4>
-                            <p style="color: #7f1d1d; margin-bottom: 0;"><strong>Action Needed:</strong> The current treatment plan is missing critical medications per AHA/ACC protocols. Please review the detailed deviations below.</p>
-                        </div>
-                        """, unsafe_allow_html=True)
-                    else:
-                        st.markdown("""
-                        <div style="background-color: #dcfce7; border-left: 5px solid #22c55e; padding: 12px; border-radius: 6px; margin-bottom: 20px;">
-                            <h4 style="color: #15803d; margin-top: 0; margin-bottom: 5px;">✅ Fully Compliant</h4>
-                            <p style="color: #166534; margin-bottom: 0;">The current treatment aligns perfectly with retrieved medical guidelines.</p>
-                        </div>
-                        """, unsafe_allow_html=True)
-
-                    # Specific decision report
-                    st.write(plan_output)
-                else:
-                    st.error("Treatment plan is empty. Check terminal for specific node errors.")
-
-                with st.expander("View Retrieved Guideline Context"):
-                    st.info(st.session_state.agent_state.get('retrieved_guidelines', 'No context retrieved.'))
-
-                    # bala
+# --- STEP 1: INPUT ---
+if st.session_state.workflow_step == 'input':
+    with st.container():
+        st.markdown('<div class="report-card card-input">', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">1. Clinical Oncology Record</div>', unsafe_allow_html=True)
+        
+        default_note = "Patient is a 55-year-old male. Recent MRI scan of the liver shows suspected metastasis. A needle biopsy of the liver lesion was performed yesterday. Currently seeking treatment options."
+        note = st.text_area("Paste pathology reports or clinical notes:", value=default_note, height=200)
+        
+        if st.button("Start Multimodal Analysis", type="primary", use_container_width=True):
+            with st.status("Initiating Autonomous Agent Pipeline...", expanded=True) as status:
+                st.write("Scanning text for imaging and biopsy triggers...")
+                st.write("Invoking MedSAM for tumor volume calculation...")
+                st.write("Running Vision Transformer on H&E slides...")
+                st.write("Querying OncoKB for targeted therapies...")
+                st.write("Agents 1-4 are synthesizing final report...")
+                
+                try:
+                    res = run_full_agent_pipeline(note)
+                    st.session_state.results = res
+                    st.session_state.workflow_step = 'done'
+                    status.update(label="Analysis Complete! All agents successfully synchronized.", state="complete", expanded=False)
+                    st.rerun()
+                except Exception as e:
+                    status.update(label="Analysis Failed", state="error", expanded=False)
+                    st.error(f"Pipeline Error: {e}")
                     
+        st.markdown('</div>', unsafe_allow_html=True)
+
+# --- STEP 2: DASHBOARD OUTPUT ---
+if st.session_state.workflow_step == 'done' and st.session_state.results:
+    res = st.session_state.results
+    
+    if res.get("correction_triggered"):
+        st.warning("**Self-Correction Triggered:** Critic Agent detected an omission and forced the Extractor to re-evaluate the tool results.")
+    else:
+        st.success("**Data Verified:** Critic Agent confirmed complete extraction from text and multimodal tools.")
+
+    st.markdown("---")
+    
+    col_left, col_right = st.columns([1, 1.2])
+
+    with col_left:
+        st.markdown('<div class="report-card card-tools">', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">2. Multimodal Tool Findings</div>', unsafe_allow_html=True)
+        tool_data = res.get("tool_data_used", "No tool data generated.")
+        st.markdown(f'<div class="tool-box">{tool_data}</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        st.markdown('<div class="report-card card-json">', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">3. Structured Data (Verified)</div>', unsafe_allow_html=True)
+        st.json(res['final_json'])
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    with col_right:
+        st.markdown('<div class="report-card card-assessment">', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">4. Clinical Assessment (Reasoner)</div>', unsafe_allow_html=True)
+        summary_html = res['summary'].replace('\n', '<br>')
+        st.markdown(f"<div style='line-height: 1.6; color: #334155;'>{summary_html}</div>", unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        st.markdown('<div class="report-card card-plan">', unsafe_allow_html=True)
+        st.markdown('<div class="section-title">5. Treatment Plan (Planner)</div>', unsafe_allow_html=True)
+        plan_html = res["treatment_plan"].replace('\n', '<br>')
+        st.markdown(f'<div class="plan-box">{plan_html}</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown("<br><p style='text-align: center; color: #94a3b8; font-size: 0.9rem;'>Generated by Autonomous Multi-Agent Framework • Emulating Nature Cancer 2025 Methodology</p>", unsafe_allow_html=True)

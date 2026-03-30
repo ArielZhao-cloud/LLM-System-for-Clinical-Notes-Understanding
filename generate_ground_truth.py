@@ -3,14 +3,16 @@ import json
 import re
 import pandas as pd
 import dspy
+from dotenv import load_dotenv
 
 # ==========================================
 # 1. Configuration & Initialization
 # ==========================================
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+load_dotenv()
 
 print("Initializing Expert Annotation System with Zhipu GLM-4...")
-api_key = "7bc9d8e4b5444b97b5a25e071c478e2c.P7iDRHY4rhaDZYQk"
+api_key = os.environ.get("ZHIPU_API_KEY", "")
 my_domestic_model = dspy.OpenAI(
     model='glm-4-flash',
     api_key=api_key,

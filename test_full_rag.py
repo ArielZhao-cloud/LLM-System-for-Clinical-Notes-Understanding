@@ -2,12 +2,15 @@ import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 import dspy
 import chromadb
+from dotenv import load_dotenv
 
 # 屏蔽 Chroma 烦人的遥测报错信息
 os.environ["CHROMA_TELEMETRY_DISABLED"] = "1"
 
+load_dotenv()
 print("1. Initializing Zhipu LLM...")
 api_key = "7bc9d8e4b5444b97b5a25e071c478e2c.P7iDRHY4rhaDZYQk"
+api_key = os.getenv("ZHIPU_API_KEY")
 my_domestic_model = dspy.OpenAI(
     model='glm-4-flash',
     api_key=api_key,

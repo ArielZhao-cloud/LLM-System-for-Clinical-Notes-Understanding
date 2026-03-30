@@ -1,4 +1,6 @@
 import dspy
+from pydantic import BaseModel, Field
+from typing import List
 
 
 class CheckCitationFaithfulness(dspy.Signature):
@@ -10,6 +12,10 @@ class CheckCitationFaithfulness(dspy.Signature):
     faithfulness = dspy.OutputField(
         desc="Boolean value indicating if text is faithful to context"
     )
+
+class SearchQueries(BaseModel):
+    """A list of targeted subqueries."""
+    queries: List[str] = Field(description="Maximum 14 targeted subqueries derived from main question, context, and tool results.")
 
 
 class Search(dspy.Signature):
@@ -27,9 +33,9 @@ class Search(dspy.Signature):
     tool_results = dspy.InputField(
         desc="Accurate results from supplementary patient assessments (tools)."
     )
-    searches = dspy.OutputField(
-        desc="""A string of maximum 14 targeted subqueries, formatted as a list, derived from the main question, patient case context (context), and additional test results (tool_results). Subqueries should be answerable using general medical literature, focusing solely on the medical query without patient-specific details unanswerable by standard medical documents.
-        Ensure the list is properly formatted, avoiding special characters like newlines. Unacceptable format. [Here is a list:\n 1. ..., second ...]. Good example format: ['Optimal treatment for X cancer?', 'Criteria for using Y drug?']. No special characters, like newlines or excessive ''."""
+    # 使用 Pydantic 模型强制大模型输出标准的 JSON 数组，彻底消灭因解析字符串造成的崩溃
+    searches: SearchQueries = dspy.OutputField(
+        desc="Targeted subqueries answerable using general medical literature."
     )
 
 

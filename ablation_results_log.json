@@ -1,0 +1,3893 @@
+[
+    {
+        "record_id": "22595853",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "HCV cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "HCV cirrhosis"
+                },
+                {
+                    "condition": "ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "ascites"
+                },
+                {
+                    "condition": "hiv",
+                    "certainty": "Confirmed",
+                    "source_quote": "hiv"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed",
+                    "source_quote": "COPD"
+                },
+                {
+                    "condition": "Bipolar affective disorder",
+                    "certainty": "Confirmed",
+                    "source_quote": "bioplar"
+                },
+                {
+                    "condition": "PTSD",
+                    "certainty": "Confirmed",
+                    "source_quote": "PTSD"
+                },
+                {
+                    "condition": "food poisoning",
+                    "certainty": "Confirmed",
+                    "source_quote": "food poisoning"
+                },
+                {
+                    "condition": "calcification in her breast",
+                    "certainty": "Confirmed",
+                    "source_quote": "calcification in her breast"
+                },
+                {
+                    "condition": "HIV disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "HIV disease"
+                },
+                {
+                    "condition": "skin cancer",
+                    "certainty": "Confirmed",
+                    "source_quote": "skin cancer"
+                },
+                {
+                    "condition": "lesion in her forehead with purple discoloration",
+                    "certainty": "Confirmed",
+                    "source_quote": "another lesion in her forehead with purple discoloration"
+                },
+                {
+                    "condition": "Kaposi's sarcoma",
+                    "certainty": "Suspected",
+                    "source_quote": "exclude the possibility of ___'s sarcoma"
+                },
+                {
+                    "condition": "15 mm hypoechoic lesion on her ultrasound",
+                    "certainty": "Confirmed",
+                    "source_quote": "A 15 mm hypoechoic lesion on her ultrasound"
+                },
+                {
+                    "condition": "dysplasia of anus",
+                    "certainty": "Confirmed",
+                    "source_quote": "dysplasia of anus"
+                },
+                {
+                    "condition": "Nodular appearance of the liver compatible with cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "Nodular appearance of the liver compatible with cirrhosis."
+                },
+                {
+                    "condition": "portal hypertension",
+                    "certainty": "Confirmed",
+                    "source_quote": "Signs of portal hypertension"
+                },
+                {
+                    "condition": "splenomegaly",
+                    "certainty": "Confirmed",
+                    "source_quote": "splenomegaly"
+                },
+                {
+                    "condition": "Cholelithiasis",
+                    "certainty": "Confirmed",
+                    "source_quote": "Cholelithiasis"
+                },
+                {
+                    "condition": "SBP",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "SBP negative"
+                },
+                {
+                    "condition": "Ascites from Portal HTN",
+                    "certainty": "Confirmed",
+                    "source_quote": "Ascites from Portal HTN"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "lasix",
+                    "status": "Past",
+                    "source_quote": "self-discontinuing lasix"
+                },
+                {
+                    "name": "spirnolactone",
+                    "status": "Past",
+                    "source_quote": "self-discontinuing spirnolactone"
+                },
+                {
+                    "name": "ART",
+                    "status": "Current",
+                    "source_quote": "hiv on ART"
+                },
+                {
+                    "name": "Furosemide 20 mg PO DAILY",
+                    "status": "Past",
+                    "source_quote": "Furosemide 20 mg PO DAILY"
+                },
+                {
+                    "name": "Spironolactone 50 mg PO DAILY",
+                    "status": "Past",
+                    "source_quote": "Spironolactone 50 mg PO DAILY"
+                },
+                {
+                    "name": "Albuterol Inhaler",
+                    "status": "Current",
+                    "source_quote": "Albuterol Inhaler 2 PUFF IH Q4H:PRN wheezing, SOB"
+                },
+                {
+                    "name": "Raltegravir 400 mg PO BID",
+                    "status": "Current",
+                    "source_quote": "Raltegravir 400 mg PO BID"
+                },
+                {
+                    "name": "Emtricitabine-Tenofovir (Truvada)",
+                    "status": "Current",
+                    "source_quote": "Emtricitabine-Tenofovir (Truvada) 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Nicotine Patch 14 mg TD DAILY",
+                    "status": "Current",
+                    "source_quote": "Nicotine Patch 14 mg TD DAILY"
+                },
+                {
+                    "name": "Ipratropium Bromide Neb",
+                    "status": "Current",
+                    "source_quote": "Ipratropium Bromide Neb 1 NEB IH Q6H SOB"
+                },
+                {
+                    "name": "Furosemide 40 mg PO DAILY",
+                    "status": "Current",
+                    "source_quote": "Furosemide 40 mg PO DAILY"
+                },
+                {
+                    "name": "Spironolactone 50 mg PO DAILY",
+                    "status": "Current",
+                    "source_quote": "Spironolactone 50 mg PO DAILY"
+                },
+                {
+                    "name": "Acetaminophen 500 mg PO Q6H:PRN pain",
+                    "status": "Current",
+                    "source_quote": "Acetaminophen 500 mg PO Q6H:PRN pain"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Paracentesis",
+                    "status": "Performed",
+                    "source_quote": "Paracentesis"
+                },
+                {
+                    "name": "Diagnostic para attempted in the ED",
+                    "status": "Performed",
+                    "source_quote": "Diagnostic para attempted in the ED, unsuccessful."
+                },
+                {
+                    "name": "biopsied",
+                    "status": "Performed",
+                    "source_quote": "biopsied and showed skin cancer"
+                },
+                {
+                    "name": "biopsied",
+                    "status": "Performed",
+                    "source_quote": "biopsied to exclude the possibility of ___'s sarcoma"
+                },
+                {
+                    "name": "complete removal of the skin lesion",
+                    "status": "Planned",
+                    "source_quote": "scheduled for a complete removal of the skin lesion"
+                },
+                {
+                    "name": "outpatient screening EGD",
+                    "status": "Planned",
+                    "source_quote": "outpatient screening EGD"
+                },
+                {
+                    "name": "colonoscopy",
+                    "status": "Planned",
+                    "source_quote": "colonoscopy"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "Patient": {
+                "Name": "___",
+                "UnitNo": "___",
+                "AdmissionDate": "___",
+                "DischargeDate": "___",
+                "DateOfBirth": "___",
+                "Sex": "Female",
+                "Service": "MEDICINE"
+            },
+            "Allergies": {
+                "Allergies": "No Known Allergies / Adverse Drug Reactions"
+            },
+            "AttendingPhysician": "___",
+            "ChiefComplaint": "Worsening ABD distension and pain",
+            "MajorSurgicalProcedure": "Paracentesis",
+            "HistoryOfPresentIllness": {
+                "HCV": "Cirrhosis",
+                "HIV": "on ART",
+                "IVDU": "History of IVDU",
+                "COPD": "COPD",
+                "Bipolar": "Bipolar affective disorder",
+                "PTSD": "PTSD",
+                "FoodPoisoning": "Food poisoning",
+                "GumBleeding": "Gum bleeding",
+                "Confusion": "Confusion and forgetfulness"
+            },
+            "VitalSigns": {
+                "Temperature": "98.4°F",
+                "HeartRate": "70 bpm",
+                "BloodPressure": "106/63 mmHg",
+                "RespiratoryRate": "16 breaths/min",
+                "OxygenSaturation": "97% RA"
+            },
+            "LaboratoryResults": {
+                "ALT": "Elevated",
+                "AST": "Elevated",
+                "AP": "Elevated",
+                "TBili": "1.6",
+                "WBC": "5K",
+                "Platelet": "77",
+                "INR": "1.6"
+            },
+            "PastMedicalHistory": {
+                "HCV": "Cirrhosis",
+                "PapSmears": "No history of abnormal Pap smears",
+                "BreastCalcification": "Breast calcification and removal",
+                "HIV": "HIV disease",
+                "COPD": "COPD",
+                "Smoking": "Past history of smoking",
+                "SkinCancer": "Skin cancer",
+                "ForeheadLesion": "Lesion in forehead with purple discoloration",
+                "UltrasoundLesion": "Hypoechoic lesion on ultrasound",
+                "Dysplasia": "Dysplasia of anus",
+                "Bipolar": "Bipolar affective disorder",
+                "DrugUse": "History of cocaine and heroin use"
+            },
+            "SocialHistory": "Not provided",
+            "FamilyHistory": {
+                "Siblings": "Total of five siblings, not in contact with most",
+                "Brother": "One brother in contact",
+                "GI": "No known GI or liver disease in family",
+                "Alcohol": "No regular alcohol consumption",
+                "DrugUse": "Last drug use years ago",
+                "Smoking": "Quit smoking a couple of years ago"
+            },
+            "PhysicalExam": {
+                "General": "In no acute distress",
+                "HEENT": "Clear",
+                "Neck": "Supple",
+                "CV": "RRR, S1S2, no murmurs, rubs, or gallops",
+                "Lungs": "Clear, prolonged expiratory phase",
+                "Abdomen": "Distended, mild diffuse tenderness, +flank dullness",
+                "GU": "No foley",
+                "Ext": "Well appearing, no clubbing",
+                "Neuro": "AAO3, CN II-XII intact"
+            },
+            "DischargeMedications": [
+                "Furosemide",
+                "Spironolactone",
+                "Albuterol Inhaler",
+                "Raltegravir",
+                "Emtricitabine-Tenofovir (Truvada)",
+                "Nicotine Patch",
+                "Ipratropium Bromide Neb",
+                "Acetaminophen"
+            ],
+            "DischargeDiagnosis": "Ascites from Portal HTN",
+            "DischargeCondition": {
+                "MentalStatus": "Clear and coherent",
+                "LevelOfConsciousness": "Alert and interactive",
+                "ActivityStatus": "Ambulatory - Independent"
+            },
+            "DischargeInstructions": {
+                "Medications": "Take medications as prescribed",
+                "Followup": "Follow up with Dr. ___ in liver clinic",
+                "Procedures": "Schedule colonoscopy and EGD"
+            },
+            "FollowupInstructions": "Not provided"
+        },
+        "Group_B_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_revisions": 3,
+        "Group_C_final_feedback": "[MISSING] Name\n[MISSING] Unit No\n[MISSING] Admission Date\n[MISSING] Discharge Date\n[MISSING] Date of Birth\n[MISSING] Allergies (specific details)\n[MISSING] History of Present Illness (full details)\n[MISSING] Physical Exam (full details)\n[MISSING] Pertinent Results (full details)\n[MISSING] Brief Hospital Course (full details)\n[MISSING] Medications on Admission (full list)\n[MISSING] Discharge Instructions (full details)\n[MISSING] Followup Instructions (full details)"
+    },
+    {
+        "record_id": "22841357",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "abdominal fullness and discomfort",
+                    "certainty": "Confirmed",
+                    "source_quote": "abdominal fullness and discomfort"
+                },
+                {
+                    "condition": "HIV",
+                    "certainty": "Confirmed",
+                    "source_quote": "with HIV"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed",
+                    "source_quote": "COPD"
+                },
+                {
+                    "condition": "HCV cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "HCV cirrhosis"
+                },
+                {
+                    "condition": "ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "ascites"
+                },
+                {
+                    "condition": "HE",
+                    "certainty": "Confirmed",
+                    "source_quote": "HE"
+                },
+                {
+                    "condition": "abdominal distention and pain",
+                    "certainty": "Confirmed",
+                    "source_quote": "abdominal distention and pain"
+                },
+                {
+                    "condition": "hyponatremia",
+                    "certainty": "Confirmed",
+                    "source_quote": "worsening hyponatremia 128"
+                },
+                {
+                    "condition": "hyperkalemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "hyperkalemia 5.1"
+                },
+                {
+                    "condition": "visual hallucinations and forgetfulness",
+                    "certainty": "Confirmed",
+                    "source_quote": "visual hallucinations and forgetfulness"
+                },
+                {
+                    "condition": "Abdominal distention and pain",
+                    "certainty": "Confirmed",
+                    "source_quote": "+Abdominal distention and pain"
+                },
+                {
+                    "condition": "HCV Cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "HCV Cirrhosis"
+                },
+                {
+                    "condition": "calcification in her breast",
+                    "certainty": "Confirmed",
+                    "source_quote": "calcification in her breast"
+                },
+                {
+                    "condition": "HIV disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "HIV disease"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed",
+                    "source_quote": "COPD"
+                },
+                {
+                    "condition": "Past history of smoking",
+                    "certainty": "Confirmed",
+                    "source_quote": "Past history of smoking"
+                },
+                {
+                    "condition": "skin cancer",
+                    "certainty": "Confirmed",
+                    "source_quote": "skin cancer per patient report"
+                },
+                {
+                    "condition": "lesion in her forehead with purple discoloration",
+                    "certainty": "Confirmed",
+                    "source_quote": "another lesion in her forehead with purple discoloration"
+                },
+                {
+                    "condition": "___'s sarcoma",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "exclude the possibility of ___'s sarcoma"
+                },
+                {
+                    "condition": "A 15 mm hypoechoic lesion",
+                    "certainty": "Confirmed",
+                    "source_quote": "A 15 mm hypoechoic lesion on her ultrasound"
+                },
+                {
+                    "condition": "dysplasia of anus",
+                    "certainty": "Confirmed",
+                    "source_quote": "History of dysplasia of anus"
+                },
+                {
+                    "condition": "Bipolar affective disorder, currently manic, mild",
+                    "certainty": "Confirmed",
+                    "source_quote": "Bipolar affective disorder, currently manic, mild"
+                },
+                {
+                    "condition": "PTSD",
+                    "certainty": "Confirmed",
+                    "source_quote": "PTSD"
+                },
+                {
+                    "condition": "History of cocaine and heroin use",
+                    "certainty": "Confirmed",
+                    "source_quote": "History of cocaine and heroin use"
+                },
+                {
+                    "condition": "Extremely coarse and nodular liver echotexture consistent with a history of cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "Extremely coarse and nodular liver echotexture consistent with a history of cirrhosis"
+                },
+                {
+                    "condition": "Moderate ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "Moderate ascites"
+                },
+                {
+                    "condition": "diuretic refractory ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "diuretic refractory ascites"
+                },
+                {
+                    "condition": "Infectious workup negative",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "Infectious workup negative"
+                },
+                {
+                    "condition": "hepatic encephalopathy",
+                    "certainty": "Confirmed",
+                    "source_quote": "HEPATIC ENCEPHALOPATHY"
+                },
+                {
+                    "condition": "mild encephalopathy (hallucinations and forgetfulness)",
+                    "certainty": "Confirmed",
+                    "source_quote": "mild encephalopathy (hallucinations and forgetfulness)"
+                },
+                {
+                    "condition": "hyponatremia",
+                    "certainty": "Confirmed",
+                    "source_quote": "HYPONATREMIA. Na 125 on admission"
+                },
+                {
+                    "condition": "Cirrhosis, Hepatitis C",
+                    "certainty": "Confirmed",
+                    "source_quote": "CIRRHOSIS, HEPATITIS C"
+                },
+                {
+                    "condition": "decompensated due to ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "Now decompensated due to ascites"
+                },
+                {
+                    "condition": "Coagulopathy",
+                    "certainty": "Confirmed",
+                    "source_quote": "COAGULOPATHY. INR 1.4 four days ago"
+                },
+                {
+                    "condition": "Very mild thrombocytopenia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Very mild thrombocytopenia with plts 143"
+                },
+                {
+                    "condition": "HIV",
+                    "certainty": "Confirmed",
+                    "source_quote": "HIV. Most recent CD4 173"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed",
+                    "source_quote": "COPD. Stable"
+                },
+                {
+                    "condition": "elevated potassium",
+                    "certainty": "Confirmed",
+                    "source_quote": "elevated potassium"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Percocet",
+                    "status": "Past",
+                    "source_quote": "Percocet"
+                },
+                {
+                    "name": "HAART",
+                    "status": "Current",
+                    "source_quote": "HIV on HAART"
+                },
+                {
+                    "name": "diuretics",
+                    "status": "Current",
+                    "source_quote": "Her diuretics were recently decreased"
+                },
+                {
+                    "name": "lactulose",
+                    "status": "Current",
+                    "source_quote": "never filled out the lactulose prescription"
+                },
+                {
+                    "name": "ondansetron 4mg IV",
+                    "status": "Past",
+                    "source_quote": "given ondansetron 4mg IV"
+                },
+                {
+                    "name": "morphine 2.5mg IV x1",
+                    "status": "Past",
+                    "source_quote": "morphine 2.5mg IV x1"
+                },
+                {
+                    "name": "spironolactone",
+                    "status": "Past",
+                    "source_quote": "Held spironolactone for now"
+                },
+                {
+                    "name": "lasix",
+                    "status": "Current",
+                    "source_quote": "increased lasix 20 -> 40"
+                },
+                {
+                    "name": "Bactrim",
+                    "status": "Current",
+                    "source_quote": "already on Bactrim for PCP prophylaxis"
+                },
+                {
+                    "name": "lactulose 30mL TID",
+                    "status": "Current",
+                    "source_quote": "Continue lactulose 30mL TID"
+                },
+                {
+                    "name": "rifaximin 550mg BID",
+                    "status": "Current",
+                    "source_quote": "continue rifaximin 550mg BID"
+                },
+                {
+                    "name": "___ and ___",
+                    "status": "Planned",
+                    "source_quote": "starting ___ and ___ with patient in clinic"
+                },
+                {
+                    "name": "Truvada",
+                    "status": "Current",
+                    "source_quote": "Continue Truvada"
+                },
+                {
+                    "name": "Isentress",
+                    "status": "Current",
+                    "source_quote": "Continue Truvada and Isentress"
+                },
+                {
+                    "name": "Bactrim DS daily",
+                    "status": "Current",
+                    "source_quote": "Bactrim DS daily for PCP"
+                },
+                {
+                    "name": "Albuterol Inhaler",
+                    "status": "Current",
+                    "source_quote": "Albuterol Inhaler 2 PUFF IH Q6H:PRN wheezing, SOB"
+                },
+                {
+                    "name": "___ (Truvada)",
+                    "status": "Current",
+                    "source_quote": "___ (Truvada) 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Furosemide 20 mg",
+                    "status": "Current",
+                    "source_quote": "Furosemide 20 mg PO DAILY"
+                },
+                {
+                    "name": "Raltegravir 400 mg",
+                    "status": "Current",
+                    "source_quote": "Raltegravir 400 mg PO BID"
+                },
+                {
+                    "name": "Spironolactone 50 mg",
+                    "status": "Current",
+                    "source_quote": "Spironolactone 50 mg PO DAILY"
+                },
+                {
+                    "name": "Acetaminophen 500 mg",
+                    "status": "Current",
+                    "source_quote": "Acetaminophen 500 mg PO Q6H:PRN pain,fever"
+                },
+                {
+                    "name": "Tiotropium Bromide",
+                    "status": "Current",
+                    "source_quote": "Tiotropium Bromide 1 CAP IH DAILY"
+                },
+                {
+                    "name": "Rifaximin 550 mg",
+                    "status": "Current",
+                    "source_quote": "Rifaximin 550 mg PO BID"
+                },
+                {
+                    "name": "Calcium Carbonate 1250 mg",
+                    "status": "Current",
+                    "source_quote": "Calcium Carbonate 1250 mg PO BID"
+                },
+                {
+                    "name": "Lactulose 15 mL",
+                    "status": "Current",
+                    "source_quote": "Lactulose 15 mL PO TID"
+                },
+                {
+                    "name": "Sulfameth/Trimethoprim DS",
+                    "status": "Current",
+                    "source_quote": "Sulfameth/Trimethoprim DS 1 TAB PO DAILY"
+                },
+                {
+                    "name": "spironolactone",
+                    "status": "Past",
+                    "source_quote": "Discontinued spironolactone"
+                },
+                {
+                    "name": "furosemide",
+                    "status": "Current",
+                    "source_quote": "Increased furosemide to 40mg daily"
+                },
+                {
+                    "name": "Acetaminophen 500 mg",
+                    "status": "Current",
+                    "source_quote": "Acetaminophen 500 mg PO Q6H:PRN pain,fever"
+                },
+                {
+                    "name": "Albuterol Inhaler",
+                    "status": "Current",
+                    "source_quote": "Albuterol Inhaler 2 PUFF IH Q6H:PRN wheezing, SOB"
+                },
+                {
+                    "name": "Calcium Carbonate 1250 mg",
+                    "status": "Current",
+                    "source_quote": "Calcium Carbonate 1250 mg PO BID"
+                },
+                {
+                    "name": "___ (Truvada)",
+                    "status": "Current",
+                    "source_quote": "___ (Truvada) 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Furosemide 40 mg",
+                    "status": "Current",
+                    "source_quote": "Furosemide 40 mg PO DAILY"
+                },
+                {
+                    "name": "Lactulose 15 mL",
+                    "status": "Current",
+                    "source_quote": "Lactulose 15 mL PO TID"
+                },
+                {
+                    "name": "Raltegravir 400 mg",
+                    "status": "Current",
+                    "source_quote": "Raltegravir 400 mg PO BID"
+                },
+                {
+                    "name": "Rifaximin 550 mg",
+                    "status": "Current",
+                    "source_quote": "Rifaximin 550 mg PO BID"
+                },
+                {
+                    "name": "Sulfameth/Trimethoprim DS",
+                    "status": "Current",
+                    "source_quote": "Sulfameth/Trimethoprim DS 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Tiotropium Bromide",
+                    "status": "Current",
+                    "source_quote": "Tiotropium Bromide 1 CAP IH DAILY"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "diagnostic paracentesis",
+                    "status": "Performed",
+                    "source_quote": "___ diagnostic paracentesis"
+                },
+                {
+                    "name": "therapeutic paracentesis",
+                    "status": "Performed",
+                    "source_quote": "___ therapeutic paracentesis"
+                },
+                {
+                    "name": "fluid removed",
+                    "status": "Performed",
+                    "source_quote": "3L fluid removed"
+                },
+                {
+                    "name": "Diagnostic para",
+                    "status": "Performed",
+                    "source_quote": "Diagnostic para with 225 WBC"
+                },
+                {
+                    "name": "biopsied",
+                    "status": "Performed",
+                    "source_quote": "biopsied and showed skin cancer"
+                },
+                {
+                    "name": "complete removal of the skin lesion",
+                    "status": "Planned",
+                    "source_quote": "scheduled for a complete removal of the skin lesion"
+                },
+                {
+                    "name": "biopsied",
+                    "status": "Performed",
+                    "source_quote": "It was biopsied to exclude the possibility of ___'s sarcoma"
+                },
+                {
+                    "name": "monitored by an MRI",
+                    "status": "Planned",
+                    "source_quote": "monitored by an MRI"
+                },
+                {
+                    "name": "therapeutic paracentesis",
+                    "status": "Performed",
+                    "source_quote": "She had therapeutic paracentesis with 4.3L removed"
+                },
+                {
+                    "name": "albumin IV post procedure",
+                    "status": "Performed",
+                    "source_quote": "received 37.5G albumin IV post procedure"
+                },
+                {
+                    "name": "repeat paracentesis",
+                    "status": "Planned",
+                    "source_quote": "Patient is scheduled for repeat paracentesis as outpatient"
+                },
+                {
+                    "name": "EGD",
+                    "status": "Planned",
+                    "source_quote": "No history of EGD, needs this as outpatient for varices screening"
+                },
+                {
+                    "name": "paracentesis",
+                    "status": "Performed",
+                    "source_quote": "You had a diagnostic and therapeutic paracentesis with 4.3 L removed"
+                },
+                {
+                    "name": "another paracentesis",
+                    "status": "Planned",
+                    "source_quote": "You are scheduled for another paracentesis on ___"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_B_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_revisions": 3,
+        "Group_C_final_feedback": "[MISSING] Allergies: Percocet, [MISSING] Medications: Spironolactone, [MISSING] Medications: Lasix, [MISSING] Medications: Bactrim DS, [MISSING] Medications: Truvada, [MISSING] Medications: Isentress, [MISSING] Medications: Raltegravir, [MISSING] Medications: Furosemide, [MISSING] Medications: Acetaminophen, [MISSING] Medications: Tiotropium Bromide, [MISSING] Medications: Rifaximin, [MISSING] Medications: Calcium Carbonate, [MISSING] Medications: Lactulose, [MISSING] Medications: Sulfameth/Trimethoprim DS, [MISSING] Procedures: Diagnostic paracentesis, [MISSING] Procedures: Therapeutic paracentesis, [MISSING] Discharge Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of other appointments, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the paracentesis, [MISSING] Followup Instructions: Time of the par"
+    },
+    {
+        "record_id": "29079034",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "altered mental status",
+                    "certainty": "Confirmed",
+                    "source_quote": "altered mental status"
+                },
+                {
+                    "condition": "HIV",
+                    "certainty": "Confirmed",
+                    "source_quote": "HIV"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed",
+                    "source_quote": "COPD"
+                },
+                {
+                    "condition": "HCV cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "HCV cirrhosis"
+                },
+                {
+                    "condition": "ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "ascites"
+                },
+                {
+                    "condition": "hepatic encephalopathy",
+                    "certainty": "Confirmed",
+                    "source_quote": "hepatic encephalopathy"
+                },
+                {
+                    "condition": "hypotension",
+                    "certainty": "Confirmed",
+                    "source_quote": "hypotension"
+                },
+                {
+                    "condition": "worsening mental status",
+                    "certainty": "Confirmed",
+                    "source_quote": "worsening mental status"
+                },
+                {
+                    "condition": "Bipolar Affective Disorder",
+                    "certainty": "Confirmed",
+                    "source_quote": "Bipolar Affective Disorder"
+                },
+                {
+                    "condition": "PTSD",
+                    "certainty": "Confirmed",
+                    "source_quote": "PTSD"
+                },
+                {
+                    "condition": "cocaine and heroin abuse",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hx of cocaine and heroin abuse"
+                },
+                {
+                    "condition": "skin cancer",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hx of skin cancer per patient report"
+                },
+                {
+                    "condition": "Hyperkalemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hyperkalemia"
+                },
+                {
+                    "condition": "Acute Kidney Injury",
+                    "certainty": "Confirmed",
+                    "source_quote": "Acute Kidney Injury"
+                },
+                {
+                    "condition": "hypoxia",
+                    "certainty": "Confirmed",
+                    "source_quote": "hypoxia"
+                },
+                {
+                    "condition": "RV dilation",
+                    "certainty": "Confirmed",
+                    "source_quote": "RV dilation"
+                },
+                {
+                    "condition": "poor dentition",
+                    "certainty": "Confirmed",
+                    "source_quote": "poor dentition"
+                },
+                {
+                    "condition": "chronic cough",
+                    "certainty": "Confirmed",
+                    "source_quote": "chronic cough"
+                },
+                {
+                    "condition": "decompensated cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "accelerated decompensation of her cirrhosis"
+                },
+                {
+                    "condition": "low effective arterial volume",
+                    "certainty": "Confirmed",
+                    "source_quote": "low effective arterial volume"
+                },
+                {
+                    "condition": "confusion",
+                    "certainty": "Confirmed",
+                    "source_quote": "confusion"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Percocet",
+                    "status": "Past",
+                    "source_quote": "Percocet"
+                },
+                {
+                    "name": "Vicodin",
+                    "status": "Past",
+                    "source_quote": "Vicodin"
+                },
+                {
+                    "name": "HAART",
+                    "status": "Current",
+                    "source_quote": "HAART"
+                },
+                {
+                    "name": "ceftriaxone",
+                    "status": "Past",
+                    "source_quote": "ceftriaxone 2gm x1"
+                },
+                {
+                    "name": "regular insulin",
+                    "status": "Past",
+                    "source_quote": "regular insulin 10U"
+                },
+                {
+                    "name": "calcium gluconate",
+                    "status": "Past",
+                    "source_quote": "calcium gluconate 1g"
+                },
+                {
+                    "name": "lactulose",
+                    "status": "Current",
+                    "source_quote": "lactulose 30 mL x2"
+                },
+                {
+                    "name": "albumin",
+                    "status": "Current",
+                    "source_quote": "25g 5% albumin"
+                },
+                {
+                    "name": "raltegravir",
+                    "status": "Current",
+                    "source_quote": "raltegravir"
+                },
+                {
+                    "name": "emtricitabine",
+                    "status": "Current",
+                    "source_quote": "emtricitabine"
+                },
+                {
+                    "name": "tenofovir",
+                    "status": "Current",
+                    "source_quote": "tenofovir"
+                },
+                {
+                    "name": "Sulfameth/Trimethoprim DS",
+                    "status": "Past",
+                    "source_quote": "Sulfameth/Trimethoprim DS 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Spironolactone",
+                    "status": "Past",
+                    "source_quote": "Spironolactone"
+                },
+                {
+                    "name": "Tiotropium Bromide",
+                    "status": "Current",
+                    "source_quote": "Tiotropium Bromide 1 CAP IH DAILY"
+                },
+                {
+                    "name": "Emtricitabine-Tenofovir (Truvada)",
+                    "status": "Current",
+                    "source_quote": "Emtricitabine-Tenofovir (Truvada) 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Furosemide",
+                    "status": "Past",
+                    "source_quote": "Furosemide 40 mg PO DAILY"
+                },
+                {
+                    "name": "TraMADOL (Ultram)",
+                    "status": "Current",
+                    "source_quote": "TraMADOL (Ultram) 50 mg PO Q8H:PRN Pain"
+                },
+                {
+                    "name": "Fluticasone Propionate",
+                    "status": "Current",
+                    "source_quote": "Fluticasone Propionate 110mcg 1 PUFF IH BID"
+                },
+                {
+                    "name": "Calcium Carbonate",
+                    "status": "Current",
+                    "source_quote": "Calcium Carbonate 500 mg PO BID"
+                },
+                {
+                    "name": "Rifaximin",
+                    "status": "Current",
+                    "source_quote": "Rifaximin 550 mg PO BID"
+                },
+                {
+                    "name": "albuterol sulfate",
+                    "status": "Current",
+                    "source_quote": "albuterol sulfate 90 mcg/actuation inhalation Q6H:PRN Wheezing"
+                },
+                {
+                    "name": "kayexalate",
+                    "status": "Past",
+                    "source_quote": "kayexalate"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Major Surgical or Invasive Procedure",
+                    "status": "Ruled_Out",
+                    "source_quote": "none"
+                },
+                {
+                    "name": "paracentesis",
+                    "status": "Performed",
+                    "source_quote": "paracentesis"
+                },
+                {
+                    "name": "paracentesis",
+                    "status": "Planned",
+                    "source_quote": "twice weekly paracentesis"
+                },
+                {
+                    "name": "head CT",
+                    "status": "Performed",
+                    "source_quote": "head CT"
+                },
+                {
+                    "name": "EKG",
+                    "status": "Performed",
+                    "source_quote": "Initial EKG"
+                },
+                {
+                    "name": "CXR",
+                    "status": "Performed",
+                    "source_quote": "CXR"
+                },
+                {
+                    "name": "PFT",
+                    "status": "Performed",
+                    "source_quote": "PFT"
+                },
+                {
+                    "name": "therapeutic paracenteses",
+                    "status": "Planned",
+                    "source_quote": "continue to have therapeutic paracenteses"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_B_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "F"
+            },
+            "chief_complaint": "Altered mental status",
+            "medical_history": [
+                {
+                    "condition": "HCV Cirrhosis: genotype 3a",
+                    "status": "Present"
+                },
+                {
+                    "condition": "HIV: on HAART",
+                    "status": "Present"
+                },
+                {
+                    "condition": "COPD",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Bipolar Affective Disorder",
+                    "status": "Present"
+                },
+                {
+                    "condition": "PTSD",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Hx of cocaine and heroin abuse",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Hx of skin cancer per patient report",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Ascites",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Hepatic encephalopathy",
+                    "status": "Present"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "Percocet / Vicodin"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Altered mental status",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hypotension",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hyperkalemia",
+                    "status": "Present"
+                },
+                {
+                    "name": "Confusion",
+                    "status": "Present"
+                },
+                {
+                    "name": "Lightheadedness",
+                    "status": "Present"
+                },
+                {
+                    "name": "Decreased Urinary Output",
+                    "status": "Present"
+                },
+                {
+                    "name": "Cachexia",
+                    "status": "Present"
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "Hypotension",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "Hyperkalemia",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "Acute Kidney Injury",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "HCV Cirrhosis",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "Hepatic Encephalopathy",
+                    "certainty": "Confirmed"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Lactulose",
+                    "status": "Current"
+                },
+                {
+                    "name": "Ceftriaxone",
+                    "status": "Current"
+                },
+                {
+                    "name": "Regular insulin",
+                    "status": "Current"
+                },
+                {
+                    "name": "Calcium gluconate",
+                    "status": "Current"
+                },
+                {
+                    "name": "Rifaximin",
+                    "status": "Current"
+                },
+                {
+                    "name": "Bactrim",
+                    "status": "Held"
+                },
+                {
+                    "name": "Furosemide",
+                    "status": "Held"
+                },
+                {
+                    "name": "Spironolactone",
+                    "status": "Stopped"
+                },
+                {
+                    "name": "Albuterol sulfate",
+                    "status": "Current"
+                },
+                {
+                    "name": "Tiotropium Bromide",
+                    "status": "Current"
+                },
+                {
+                    "name": "Emtricitabine-Tenofovir (Truvada)",
+                    "status": "Current"
+                },
+                {
+                    "name": "Fluticasone Propionate",
+                    "status": "Current"
+                },
+                {
+                    "name": "Calcium Carbonate",
+                    "status": "Current"
+                },
+                {
+                    "name": "TraMADOL (Ultram)",
+                    "status": "Current"
+                },
+                {
+                    "name": "raltegravir",
+                    "status": "Current"
+                },
+                {
+                    "name": "emtricitabine",
+                    "status": "Current"
+                },
+                {
+                    "name": "tenofovir",
+                    "status": "Current"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Paracentesis",
+                    "status": "Performed"
+                },
+                {
+                    "name": "CT Head",
+                    "status": "Performed"
+                },
+                {
+                    "name": "CXR",
+                    "status": "Performed"
+                }
+            ]
+        },
+        "Group_C_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "F"
+            },
+            "chief_complaint": "Altered mental status",
+            "medical_history": [
+                {
+                    "condition": "HCV Cirrhosis: genotype 3a",
+                    "status": "Present"
+                },
+                {
+                    "condition": "HIV: on HAART",
+                    "status": "Present"
+                },
+                {
+                    "condition": "COPD",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Bipolar Affective Disorder",
+                    "status": "Present"
+                },
+                {
+                    "condition": "PTSD",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Hx of cocaine and heroin abuse",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Hx of skin cancer per patient report",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Ascites",
+                    "status": "Present"
+                },
+                {
+                    "condition": "Hepatic encephalopathy",
+                    "status": "Present"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "Percocet / Vicodin"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Altered mental status",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hypotension",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hyperkalemia",
+                    "status": "Present"
+                },
+                {
+                    "name": "Confusion",
+                    "status": "Present"
+                },
+                {
+                    "name": "Lightheadedness",
+                    "status": "Present"
+                },
+                {
+                    "name": "Decreased Urinary Output",
+                    "status": "Present"
+                },
+                {
+                    "name": "Cachexia",
+                    "status": "Present"
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "Hypotension",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "Hyperkalemia",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "Acute Kidney Injury",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "HCV Cirrhosis",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed"
+                },
+                {
+                    "condition": "Hepatic Encephalopathy",
+                    "certainty": "Confirmed"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Lactulose",
+                    "status": "Current"
+                },
+                {
+                    "name": "Ceftriaxone",
+                    "status": "Current"
+                },
+                {
+                    "name": "Regular insulin",
+                    "status": "Current"
+                },
+                {
+                    "name": "Calcium gluconate",
+                    "status": "Current"
+                },
+                {
+                    "name": "Rifaximin",
+                    "status": "Current"
+                },
+                {
+                    "name": "Bactrim",
+                    "status": "Held"
+                },
+                {
+                    "name": "Furosemide",
+                    "status": "Held"
+                },
+                {
+                    "name": "Spironolactone",
+                    "status": "Stopped"
+                },
+                {
+                    "name": "Albuterol sulfate",
+                    "status": "Current"
+                },
+                {
+                    "name": "Tiotropium Bromide",
+                    "status": "Current"
+                },
+                {
+                    "name": "Emtricitabine-Tenofovir (Truvada)",
+                    "status": "Current"
+                },
+                {
+                    "name": "Fluticasone Propionate",
+                    "status": "Current"
+                },
+                {
+                    "name": "Calcium Carbonate",
+                    "status": "Current"
+                },
+                {
+                    "name": "TraMADOL (Ultram)",
+                    "status": "Current"
+                },
+                {
+                    "name": "raltegravir",
+                    "status": "Current"
+                },
+                {
+                    "name": "emtricitabine",
+                    "status": "Current"
+                },
+                {
+                    "name": "tenofovir",
+                    "status": "Current"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Paracentesis",
+                    "status": "Performed"
+                },
+                {
+                    "name": "CT Head",
+                    "status": "Performed"
+                },
+                {
+                    "name": "CXR",
+                    "status": "Performed"
+                }
+            ]
+        },
+        "Group_C_revisions": 0,
+        "Group_C_final_feedback": "None"
+    },
+    {
+        "record_id": "25742920",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "Abdominal pain",
+                    "certainty": "Confirmed",
+                    "source_quote": "Abdominal pain"
+                },
+                {
+                    "condition": "HIV",
+                    "certainty": "Confirmed",
+                    "source_quote": "HIV"
+                },
+                {
+                    "condition": "COPD",
+                    "certainty": "Confirmed",
+                    "source_quote": "COPD"
+                },
+                {
+                    "condition": "HCV cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "HCV cirrhosis"
+                },
+                {
+                    "condition": "ascites",
+                    "certainty": "Confirmed",
+                    "source_quote": "ascites"
+                },
+                {
+                    "condition": "hepatic encephalopathy",
+                    "certainty": "Confirmed",
+                    "source_quote": "hepatic encephalopathy"
+                },
+                {
+                    "condition": "Bipolar Affective Disorder",
+                    "certainty": "Confirmed",
+                    "source_quote": "Bipolar Affective Disorder"
+                },
+                {
+                    "condition": "PTSD",
+                    "certainty": "Confirmed",
+                    "source_quote": "PTSD"
+                },
+                {
+                    "condition": "cocaine and heroin abuse",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hx of cocaine and heroin abuse"
+                },
+                {
+                    "condition": "skin cancer",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hx of skin cancer per patient report"
+                },
+                {
+                    "condition": "Decompensated HCV cirrhosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "Decompensated HCV cirrhosis"
+                },
+                {
+                    "condition": "Hyperkalemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hyperkalemia"
+                },
+                {
+                    "condition": "Hyponatremia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hyponatremia"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Percocet",
+                    "status": "Past",
+                    "source_quote": "Percocet"
+                },
+                {
+                    "name": "Vicodin",
+                    "status": "Past",
+                    "source_quote": "Vicodin"
+                },
+                {
+                    "name": "HAART",
+                    "status": "Current",
+                    "source_quote": "HAART"
+                },
+                {
+                    "name": "Morphine Sulfate 5 mg IV",
+                    "status": "Current",
+                    "source_quote": "Morphine Sulfate 5 mg IV ONCE MR1"
+                },
+                {
+                    "name": "GI cocktail",
+                    "status": "Current",
+                    "source_quote": "a GI cocktail"
+                },
+                {
+                    "name": "Calcium Carbonate 500 mg PO BID",
+                    "status": "Current",
+                    "source_quote": "Calcium Carbonate 500 mg PO BID"
+                },
+                {
+                    "name": "Emtricitabine-Tenofovir (Truvada)",
+                    "status": "Current",
+                    "source_quote": "Emtricitabine-Tenofovir (Truvada) 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Fluticasone Propionate 110mcg",
+                    "status": "Current",
+                    "source_quote": "Fluticasone Propionate 110mcg 1 PUFF IH BID"
+                },
+                {
+                    "name": "Lactulose",
+                    "status": "Current",
+                    "source_quote": "Lactulose 30 mL PO TID"
+                },
+                {
+                    "name": "Raltegravir 400 mg PO BID",
+                    "status": "Current",
+                    "source_quote": "Raltegravir 400 mg PO BID"
+                },
+                {
+                    "name": "Rifaximin 550 mg PO BID",
+                    "status": "Current",
+                    "source_quote": "Rifaximin 550 mg PO BID"
+                },
+                {
+                    "name": "TraMADOL (Ultram)",
+                    "status": "Current",
+                    "source_quote": "TraMADOL (Ultram) ___ mg PO Q6H:PRN pain"
+                },
+                {
+                    "name": "albuterol sulfate 90 mcg/actuation inhalation",
+                    "status": "Current",
+                    "source_quote": "albuterol sulfate 90 mcg/actuation inhalation Q6H:PRN Wheezing"
+                },
+                {
+                    "name": "Tiotropium Bromide",
+                    "status": "Current",
+                    "source_quote": "Tiotropium Bromide 1 CAP IH DAILY"
+                },
+                {
+                    "name": "tramadol",
+                    "status": "Current",
+                    "source_quote": "Her pain was initially managed with tramadol and morphine."
+                },
+                {
+                    "name": "morphine",
+                    "status": "Current",
+                    "source_quote": "Her pain was initially managed with tramadol and morphine."
+                },
+                {
+                    "name": "calcium gluconate 2gm",
+                    "status": "Current",
+                    "source_quote": "After treatment with calcium gluconate 2gm x2"
+                },
+                {
+                    "name": "insulin and D50",
+                    "status": "Current",
+                    "source_quote": "insulin and D50 x 2"
+                },
+                {
+                    "name": "kayexelate",
+                    "status": "Current",
+                    "source_quote": "and kayexelate"
+                },
+                {
+                    "name": "Furosemide 10 mg PO DAILY",
+                    "status": "Current",
+                    "source_quote": "Furosemide 10 mg PO DAILY"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Paracentesis",
+                    "status": "Performed",
+                    "source_quote": "Paracentesis"
+                },
+                {
+                    "name": "paracentesis",
+                    "status": "Performed",
+                    "source_quote": "She last had paracentesis on the ___."
+                },
+                {
+                    "name": "pleurex catheter placed",
+                    "status": "Planned",
+                    "source_quote": "We also discussed the possibility of her getting a pleurex catheter placed"
+                },
+                {
+                    "name": "paracentesis",
+                    "status": "Performed",
+                    "source_quote": "She underwent ___ paracentesis on ___ with removal of 3.5L"
+                },
+                {
+                    "name": "paracenteses",
+                    "status": "Planned",
+                    "source_quote": "She will continue to have twice weekly paracenteses"
+                },
+                {
+                    "name": "pleurex catheter placement",
+                    "status": "Planned",
+                    "source_quote": "Continue conversation regarding pleurex catheter placement"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_B_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_revisions": 3,
+        "Group_C_final_feedback": "- Missing Diagnoses: \n  - [MISSING] Decompensated HCV cirrhosis\n  - [MISSING] Hyperkalemia\n  - [MISSING] Hypokalemia\n  - [MISSING] Hypovolemia\n- Missing Medications: \n  - [MISSING] Morphine Sulfate 5 mg IV ONCE MR1\n  - [MISSING] GI cocktail\n  - [MISSING] rifaximin\n  - [MISSING] lactulose\n  - [MISSING] fluticasone, tiotropium, and albuterol\n  - [MISSING] Emtricitabine-Tenofovir (Truvada)\n  - [MISSING] Raltegravir\n  - [MISSING] Rifaximin\n  - [MISSING] Albuterol sulfate\n  - [MISSING] Tiotropium Bromide\n  - [MISSING] TraMADOL (Ultram)\n  - [MISSING] Furosemide 10 mg PO DAILY\n- Missing Procedures: \n  - [MISSING] Paracentesis\n  - [MISSING] Pleurex catheter placement"
+    },
+    {
+        "record_id": "23052089",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "Visual hallucinations",
+                    "certainty": "Confirmed",
+                    "source_quote": "Visual hallucinations"
+                },
+                {
+                    "condition": "___ disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "___ male with ___ disease"
+                },
+                {
+                    "condition": "dyslipidemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "dyslipidemia"
+                },
+                {
+                    "condition": "prostate cancer",
+                    "certainty": "Confirmed",
+                    "source_quote": "history of prostate cancer"
+                },
+                {
+                    "condition": "worsening gait",
+                    "certainty": "Confirmed",
+                    "source_quote": "worsening gait"
+                },
+                {
+                    "condition": "falls",
+                    "certainty": "Confirmed",
+                    "source_quote": "falls"
+                },
+                {
+                    "condition": "gait freezing",
+                    "certainty": "Confirmed",
+                    "source_quote": "gait freezing"
+                },
+                {
+                    "condition": "visual hallucinations",
+                    "certainty": "Confirmed",
+                    "source_quote": "began to have visual hallucinations"
+                },
+                {
+                    "condition": "confusion",
+                    "certainty": "Confirmed",
+                    "source_quote": "visual hallucinations and confusion"
+                },
+                {
+                    "condition": "gait stiffness",
+                    "certainty": "Confirmed",
+                    "source_quote": "progressive gait stiffness"
+                },
+                {
+                    "condition": "difficulty standing",
+                    "certainty": "Confirmed",
+                    "source_quote": "increased difficulty standing"
+                },
+                {
+                    "condition": "incontinence",
+                    "certainty": "Confirmed",
+                    "source_quote": "episodes of incontinence"
+                },
+                {
+                    "condition": "fall",
+                    "certainty": "Confirmed",
+                    "source_quote": "had a fall while transferring from the couch to a chair"
+                },
+                {
+                    "condition": "unable to ambulate on his own",
+                    "certainty": "Confirmed",
+                    "source_quote": "unable to ambulate on his own"
+                },
+                {
+                    "condition": "cogwheeling of upper extremities",
+                    "certainty": "Confirmed",
+                    "source_quote": "cogwheeling of upper extremities"
+                },
+                {
+                    "condition": "decrease ___ strength",
+                    "certainty": "Confirmed",
+                    "source_quote": "decrease ___ strength"
+                },
+                {
+                    "condition": "failure to thrive",
+                    "certainty": "Confirmed",
+                    "source_quote": "failure to thrive"
+                },
+                {
+                    "condition": "___ Body Dementia",
+                    "certainty": "Confirmed",
+                    "source_quote": "___ Body Dementia"
+                },
+                {
+                    "condition": "Mild atelectasis in the lung bases",
+                    "certainty": "Confirmed",
+                    "source_quote": "Mild atelectasis in the lung bases"
+                },
+                {
+                    "condition": "Age-indeterminate moderate to severe compression deformity of a low thoracic vertebral body",
+                    "certainty": "Confirmed",
+                    "source_quote": "Age-indeterminate moderate to severe compression deformity of a low thoracic vertebral body"
+                },
+                {
+                    "condition": "acute on chronic progression of his ___ disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "acute on chronic progression of his ___ disease"
+                },
+                {
+                    "condition": "___ Dementia",
+                    "certainty": "Confirmed",
+                    "source_quote": "___ Dementia"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "mirapex",
+                    "status": "Current",
+                    "source_quote": "his mirapex was increased by 0.125 mg every week to a goal dose of 0.75 mg t.i.d."
+                },
+                {
+                    "name": "pramipexole",
+                    "status": "Current",
+                    "source_quote": "The patient was given his home pramipexole"
+                },
+                {
+                    "name": "pravastatin",
+                    "status": "Current",
+                    "source_quote": "given his home pravastatin"
+                },
+                {
+                    "name": "mirapex",
+                    "status": "Current",
+                    "source_quote": "Continued mirapex"
+                },
+                {
+                    "name": "rasagiline",
+                    "status": "Current",
+                    "source_quote": "rasagiline"
+                },
+                {
+                    "name": "rivastigmine",
+                    "status": "Current",
+                    "source_quote": "rivastigmine"
+                },
+                {
+                    "name": "Seroquel",
+                    "status": "Current",
+                    "source_quote": "Neurology recommended started Seroquel for his hallucinations."
+                },
+                {
+                    "name": "Rasagiline",
+                    "status": "Current",
+                    "source_quote": "Rasagiline 1 mg PO DAILY"
+                },
+                {
+                    "name": "Pramipexole",
+                    "status": "Current",
+                    "source_quote": "Pramipexole 0.625 mg PO TID"
+                },
+                {
+                    "name": "rivastigmine",
+                    "status": "Current",
+                    "source_quote": "rivastigmine 9.5 mg/24 hr transdermal DAILY"
+                },
+                {
+                    "name": "Pravastatin",
+                    "status": "Current",
+                    "source_quote": "Pravastatin 40 mg PO QPM"
+                },
+                {
+                    "name": "Cyanocobalamin",
+                    "status": "Current",
+                    "source_quote": "Cyanocobalamin Dose is Unknown PO DAILY"
+                },
+                {
+                    "name": "Loratadine",
+                    "status": "Current",
+                    "source_quote": "Loratadine 10 mg PO DAILY"
+                },
+                {
+                    "name": "QUEtiapine Fumarate",
+                    "status": "Current",
+                    "source_quote": "QUEtiapine Fumarate 25 mg PO QHS"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "prostatectomy",
+                    "status": "Performed",
+                    "source_quote": "s/p prostatectomy"
+                },
+                {
+                    "name": "UA",
+                    "status": "Performed",
+                    "source_quote": "A UA performed on ___ was reassuring."
+                },
+                {
+                    "name": "CT HEAD W/O CONTRAST",
+                    "status": "Performed",
+                    "source_quote": "CT HEAD W/O CONTRAST"
+                },
+                {
+                    "name": "CHEST (PA & LAT)",
+                    "status": "Performed",
+                    "source_quote": "CHEST (PA & LAT)"
+                },
+                {
+                    "name": "rehab",
+                    "status": "Planned",
+                    "source_quote": "evaluated by physical therapy who recommended rehab"
+                },
+                {
+                    "name": "home physical therapy",
+                    "status": "Planned",
+                    "source_quote": "opted for discharge to home with home physical therapy"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_B_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "M"
+            },
+            "chief_complaint": "Visual hallucinations, worsening gait, falls",
+            "medical_history": [
+                {
+                    "condition": "___ disease",
+                    "status": "Present",
+                    "source_quote": "___ male with ___ disease..."
+                },
+                {
+                    "condition": "Dyslipidemia",
+                    "status": "Present",
+                    "source_quote": "___ male with ___ disease, dyslipidemia..."
+                },
+                {
+                    "condition": "Prostate cancer (s/p prostatectomy)",
+                    "status": "Present",
+                    "source_quote": "___ male with ___ disease, dyslipidemia, and a history of prostate cancer..."
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "No Known Allergies / Adverse Drug Reactions",
+                    "source_quote": "No Known Allergies / Adverse Drug Reactions"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Visual hallucinations",
+                    "status": "Present",
+                    "source_quote": "The patient was seen by his neurologist on ___ at which time he was noted to have visual hallucinations..."
+                },
+                {
+                    "name": "Worsening gait",
+                    "status": "Present",
+                    "source_quote": "For his gait freezing, his mirapex was increased by 0.125 mg every week..."
+                },
+                {
+                    "name": "Falls",
+                    "status": "Present",
+                    "source_quote": "He subsequently had a fall while transferring from the couch to a chair..."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "___ disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "The patient appears to have acute on chronic progression of his ___ disease."
+                },
+                {
+                    "condition": "Dementia",
+                    "certainty": "Confirmed",
+                    "source_quote": "He was evaluated by neurology who recommended admission to medicine for failure to thrive, to continue the patient's home medications, and complete a toxo-metabolic workup."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Rasagiline",
+                    "status": "Current",
+                    "source_quote": "Medications on Admission: The Preadmission Medication list may be inaccurate and requires futher investigation. 1. Rasagiline 1 mg PO DAILY"
+                },
+                {
+                    "name": "Pramipexole",
+                    "status": "Current",
+                    "source_quote": "Pramipexole 0.625 mg PO TID"
+                },
+                {
+                    "name": "Rivastigmine",
+                    "status": "Current",
+                    "source_quote": "rivastigmine 9.5 mg/24 hr transdermal DAILY"
+                },
+                {
+                    "name": "Pravastatin",
+                    "status": "Current",
+                    "source_quote": "Pravastatin 40 mg PO QPM"
+                },
+                {
+                    "name": "Cyanocobalamin",
+                    "status": "Current",
+                    "source_quote": "Cyanocobalamin Dose is Unknown PO DAILY"
+                },
+                {
+                    "name": "Loratadine",
+                    "status": "Current",
+                    "source_quote": "Loratadine 10 mg PO DAILY"
+                },
+                {
+                    "name": "Que tiapine fumarate",
+                    "status": "Current",
+                    "source_quote": "Discharge Medications: 1. QUEtiapine Fumarate 25 mg PO QHS RX *quetiapine 25 mg 1 tablet(s) by mouth AT NIGHT Disp #*30 Tablet Refills:*0"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "CT Head",
+                    "status": "Performed",
+                    "source_quote": "Imaging CT HEAD W/O CONTRAST FINDINGS..."
+                },
+                {
+                    "name": "Chest (PA & LAT)",
+                    "status": "Performed",
+                    "source_quote": "Imaging CHEST (PA & LAT) IMPRESSION..."
+                }
+            ],
+            "social_history": null,
+            "family_history": null,
+            "physical_exam": null,
+            "pertinent_results": {
+                "labs": null,
+                "imaging": null
+            }
+        },
+        "Group_C_revisions": 1,
+        "Group_C_final_feedback": "- [MISSING] Age\n- [MISSING] Social History\n- [MISSING] Family History\n- [MISSING] Physical Exam\n- [MISSING] Pertinent Results (labs and imaging)"
+    },
+    {
+        "record_id": "22927623",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "dysphagia",
+                    "certainty": "Confirmed",
+                    "source_quote": "dysphagia"
+                },
+                {
+                    "condition": "anxiety",
+                    "certainty": "Confirmed",
+                    "source_quote": "w/ anxiety"
+                },
+                {
+                    "condition": "foreign body sensation",
+                    "certainty": "Confirmed",
+                    "source_quote": "worsened foreign body sensation."
+                },
+                {
+                    "condition": "GERD",
+                    "certainty": "Confirmed",
+                    "source_quote": "- GERD"
+                },
+                {
+                    "condition": "Hypercholesterolemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Hypercholesterolemia"
+                },
+                {
+                    "condition": "Kidney stones",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Kidney stones"
+                },
+                {
+                    "condition": "Mitral valve prolapse",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Mitral valve prolapse"
+                },
+                {
+                    "condition": "Uterine fibroids",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Uterine fibroids"
+                },
+                {
+                    "condition": "Osteoporosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Osteoporosis"
+                },
+                {
+                    "condition": "Migraine headaches",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Migraine headaches"
+                },
+                {
+                    "condition": "Prominent esophagus",
+                    "certainty": "Confirmed",
+                    "source_quote": "CXR showed a prominent esophagus"
+                },
+                {
+                    "condition": "prevertebral soft tissue swelling",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "no evidence of prevertebral soft tissue swelling"
+                },
+                {
+                    "condition": "soft tissue mass in the neck",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "soft tissue mass in the neck"
+                },
+                {
+                    "condition": "Hiatal hernia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hiatal hernia"
+                },
+                {
+                    "condition": "Angioectasia in the stomach",
+                    "certainty": "Confirmed",
+                    "source_quote": "Angioectasia in the stomach"
+                },
+                {
+                    "condition": "Angioectasia in the duodenum",
+                    "certainty": "Confirmed",
+                    "source_quote": "Angioectasia in the duodenum"
+                },
+                {
+                    "condition": "eosinophilic esophagitis",
+                    "certainty": "Suspected",
+                    "source_quote": "follow-up biopsy results to rule out eosinophilic esophagitis"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Omeprazole",
+                    "status": "Current",
+                    "source_quote": "Omeprazole 20 mg PO BID"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Upper endoscopy",
+                    "status": "Performed",
+                    "source_quote": "Upper endoscopy"
+                },
+                {
+                    "name": "EGD",
+                    "status": "Performed",
+                    "source_quote": "Pt underwent EGD"
+                },
+                {
+                    "name": "Biopsies",
+                    "status": "Performed",
+                    "source_quote": "Biopsies were taken."
+                },
+                {
+                    "name": "barium swallow",
+                    "status": "Planned",
+                    "source_quote": "barium swallow is indicated either now or electively."
+                },
+                {
+                    "name": "f/u with ENT",
+                    "status": "Planned",
+                    "source_quote": "f/u with ENT as planned"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "PatientInformation": {
+                "Name": "___",
+                "UnitNo": "___",
+                "AdmissionDate": "___",
+                "DischargeDate": "___",
+                "DateOfBirth": "___",
+                "Sex": "F",
+                "Service": "MEDICINE"
+            },
+            "Allergies": [
+                "omeprazole"
+            ],
+            "Attending": "___.",
+            "ChiefComplaint": "dysphagia",
+            "MajorSurgicalOrInvasiveProcedure": "Upper endoscopy ___",
+            "HistoryOfPresentIllness": {
+                "Anxiety": "several years",
+                "Dysphagia": "worsened foreign body sensation",
+                "ForeignBodySensation": "difficulty breathing when food gets stuck in throat",
+                "PureedDiet": "last 10 days"
+            },
+            "PastMedicalHistory": [
+                "GERD",
+                "Hypercholesterolemia",
+                "Kidney stones",
+                "Mitral valve prolapse",
+                "Uterine fibroids",
+                "Osteoporosis",
+                "Migraine headaches"
+            ],
+            "SocialHistory": "___",
+            "FamilyHistory": {
+                "HTN": "father",
+                "Dementia": "father"
+            },
+            "PhysicalExam": {
+                "General": "Thin anxious woman, no acute distress",
+                "HEENT": "Moist MM, anicteric sclerae, NCAT, PERRL, EOMI",
+                "Neck": "Supple without LAD, no JVD",
+                "PULM": "CTABL no w/c/r",
+                "COR": "RRR (+)S1/S2 no m/r/g",
+                "ABD": "Soft, non-tender, non-distended, +BS, no HSM",
+                "EXTREM": "Warm, well-perfused, no edema",
+                "NEURO": "CN II-XII grossly intact, motor function grossly normal, sensation grossly intact"
+            },
+            "PertinentResults": {
+                "LabResults": {
+                    "WBC": "5.0",
+                    "RBC": "4.82",
+                    "Hgb": "14.9",
+                    "Hct": "44.4",
+                    "MCV": "92",
+                    "MCH": "30.9",
+                    "MCHC": "33.6",
+                    "RDW": "12.1",
+                    "RDWSD": "41.3",
+                    "Plt": "missing",
+                    "PTT": "28.6",
+                    "Glucose": "85",
+                    "UreaN": "8",
+                    "Creat": "0.9",
+                    "Na": "142",
+                    "K": "3.6",
+                    "Cl": "104",
+                    "HCO3": "22",
+                    "AnGap": "20",
+                    "ALT": "11",
+                    "AST": "16",
+                    "LD(LDH)": "154",
+                    "AlkPhos": "63",
+                    "TotBili": "1.0",
+                    "Albumin": "4.8"
+                },
+                "Imaging": {
+                    "CXR": "Prominent esophagus",
+                    "NeckXray": "No evidence of prevertebral soft tissue swelling or soft tissue mass",
+                    "EGD": "Hiatal hernia, angioectasia in the stomach, angioectasia in the duodenum (biopsy, biopsy)"
+                }
+            },
+            "Recommendations": {
+                "NoAnatomicCause": "No obvious anatomic cause for the patient's symptoms",
+                "FollowUpBiopsy": "Follow-up biopsy results to rule out eosinophilic esophagitis",
+                "FollowUpDoctor": "Follow-up with Dr. ___ if biopsies show eosinophilic esophagitis",
+                "BariumSwallow": "Pt should undergo barium swallow as an outpatient for further workup of her dysphagia",
+                "ENTFollowUp": "Follow-up with ENT as planned"
+            },
+            "Medications": {
+                "Preadmission": "The Preadmission Medication list is accurate and complete",
+                "Discharge": "Omeprazole 20 mg PO BID"
+            },
+            "DischargeInformation": {
+                "PrimaryDiagnosis": "dysphagia and foreign body sensation",
+                "SecondaryDiagnosis": "GERD",
+                "DischargeCondition": {
+                    "MentalStatus": "Clear and coherent",
+                    "LevelOfConsciousness": "Alert and interactive",
+                    "ActivityStatus": "Ambulatory - Independent"
+                },
+                "DischargeInstructions": "Barium swallow as an outpatient, follow-up with Dr. ___ for biopsy results",
+                "FollowupInstructions": "___"
+            }
+        },
+        "Group_B_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "F"
+            },
+            "chief_complaint": "dysphagia",
+            "medical_history": [
+                {
+                    "condition": "GERD",
+                    "status": "Present",
+                    "source_quote": "Ms. ___ is a ___ with history of GERD..."
+                },
+                {
+                    "condition": "Hypercholesterolemia",
+                    "status": "Present",
+                    "source_quote": "Hypercholesterolemia"
+                },
+                {
+                    "condition": "Kidney stones",
+                    "status": "Present",
+                    "source_quote": "Kidney stones"
+                },
+                {
+                    "condition": "Mitral valve prolapse",
+                    "status": "Present",
+                    "source_quote": "Mitral valve prolapse"
+                },
+                {
+                    "condition": "Uterine fibroids",
+                    "status": "Present",
+                    "source_quote": "Uterine fibroids"
+                },
+                {
+                    "condition": "Osteoporosis",
+                    "status": "Present",
+                    "source_quote": "Osteoporosis"
+                },
+                {
+                    "condition": "Migraine headaches",
+                    "status": "Present",
+                    "source_quote": "Migraine headaches"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "omeprazole",
+                    "source_quote": "Allergies: omeprazole"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Dysphagia",
+                    "status": "Present",
+                    "source_quote": "She describes feeling as though food gets stuck in her neck when she eats."
+                },
+                {
+                    "name": "Foreign body sensation",
+                    "status": "Present",
+                    "source_quote": "She describes feeling as though food gets stuck in her neck when she eats."
+                },
+                {
+                    "name": "Anxiety",
+                    "status": "Present",
+                    "source_quote": "Currently, she endorses anxiety about eating."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "Hiatal hernia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Impression: Hiatal hernia"
+                },
+                {
+                    "condition": "Angioectasia in the stomach",
+                    "certainty": "Confirmed",
+                    "source_quote": "Angioectasia in the stomach"
+                },
+                {
+                    "condition": "Angioectasia in the duodenum",
+                    "certainty": "Confirmed",
+                    "source_quote": "Angioectasia in the duodenum"
+                },
+                {
+                    "condition": "Normal appearing esophagus",
+                    "certainty": "Confirmed",
+                    "source_quote": "This showed a normal appearing esophagus."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Omeprazole",
+                    "status": "Current",
+                    "source_quote": "Medications on Admission: The Preadmission Medication list is accurate and complete. 1. Omeprazole 20 mg PO BID"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Upper endoscopy",
+                    "status": "Performed",
+                    "source_quote": "Pt underwent EGD which showed a normal appearing esophagus."
+                }
+            ]
+        },
+        "Group_C_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "F"
+            },
+            "chief_complaint": "dysphagia",
+            "medical_history": [
+                {
+                    "condition": "GERD",
+                    "status": "Present",
+                    "source_quote": "Ms. ___ is a ___ with history of GERD..."
+                },
+                {
+                    "condition": "Hypercholesterolemia",
+                    "status": "Present",
+                    "source_quote": "Hypercholesterolemia"
+                },
+                {
+                    "condition": "Kidney stones",
+                    "status": "Present",
+                    "source_quote": "Kidney stones"
+                },
+                {
+                    "condition": "Mitral valve prolapse",
+                    "status": "Present",
+                    "source_quote": "Mitral valve prolapse"
+                },
+                {
+                    "condition": "Uterine fibroids",
+                    "status": "Present",
+                    "source_quote": "Uterine fibroids"
+                },
+                {
+                    "condition": "Osteoporosis",
+                    "status": "Present",
+                    "source_quote": "Osteoporosis"
+                },
+                {
+                    "condition": "Migraine headaches",
+                    "status": "Present",
+                    "source_quote": "Migraine headaches"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "omeprazole",
+                    "source_quote": "Allergies: omeprazole"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Dysphagia",
+                    "status": "Present",
+                    "source_quote": "She describes feeling as though food gets stuck in her neck when she eats."
+                },
+                {
+                    "name": "Foreign body sensation",
+                    "status": "Present",
+                    "source_quote": "She describes feeling as though food gets stuck in her neck when she eats."
+                },
+                {
+                    "name": "Anxiety",
+                    "status": "Present",
+                    "source_quote": "Currently, she endorses anxiety about eating."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "Hiatal hernia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Impression: Hiatal hernia"
+                },
+                {
+                    "condition": "Angioectasia in the stomach",
+                    "certainty": "Confirmed",
+                    "source_quote": "Angioectasia in the stomach"
+                },
+                {
+                    "condition": "Angioectasia in the duodenum",
+                    "certainty": "Confirmed",
+                    "source_quote": "Angioectasia in the duodenum"
+                },
+                {
+                    "condition": "Normal appearing esophagus",
+                    "certainty": "Confirmed",
+                    "source_quote": "This showed a normal appearing esophagus."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Omeprazole",
+                    "status": "Current",
+                    "source_quote": "Medications on Admission: The Preadmission Medication list is accurate and complete. 1. Omeprazole 20 mg PO BID"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "Upper endoscopy",
+                    "status": "Performed",
+                    "source_quote": "Pt underwent EGD which showed a normal appearing esophagus."
+                }
+            ]
+        },
+        "Group_C_revisions": 0,
+        "Group_C_final_feedback": "None"
+    },
+    {
+        "record_id": "27988844",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "Femur fracture",
+                    "certainty": "Confirmed",
+                    "source_quote": "REASON FOR CONSULT: Femur fracture"
+                },
+                {
+                    "condition": "GERD",
+                    "certainty": "Confirmed",
+                    "source_quote": "- GERD"
+                },
+                {
+                    "condition": "Hypercholesterolemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Hypercholesterolemia"
+                },
+                {
+                    "condition": "Kidney stones",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Kidney stones"
+                },
+                {
+                    "condition": "Mitral valve prolapse",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Mitral valve prolapse"
+                },
+                {
+                    "condition": "Uterine fibroids",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Uterine fibroids"
+                },
+                {
+                    "condition": "Osteoporosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Osteoporosis"
+                },
+                {
+                    "condition": "Migraine headaches",
+                    "certainty": "Confirmed",
+                    "source_quote": "- Migraine headaches"
+                },
+                {
+                    "condition": "left valgus impacted femoral neck fracture",
+                    "certainty": "Confirmed",
+                    "source_quote": "The patient was found to have a left valgus impacted femoral neck fracture"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Lactaid (lactase)",
+                    "status": "Current",
+                    "source_quote": "1. Lactaid (lactase) 3,000 unit oral DAILY:PRN"
+                },
+                {
+                    "name": "Calcium Citrate + D (calcium citrate-vitamin D3)",
+                    "status": "Current",
+                    "source_quote": "2. Calcium Citrate + D (calcium citrate-vitamin D3) 315-200 mg-unit oral DAILY"
+                },
+                {
+                    "name": "Acetaminophen",
+                    "status": "Current",
+                    "source_quote": "1. Acetaminophen 1000 mg PO Q6H:PRN Pain - Mild/Fever"
+                },
+                {
+                    "name": "Bisacodyl",
+                    "status": "Current",
+                    "source_quote": "2. Bisacodyl 10 mg PO/PR DAILY:PRN Constipation"
+                },
+                {
+                    "name": "Docusate Sodium",
+                    "status": "Current",
+                    "source_quote": "3. Docusate Sodium 100 mg PO BID"
+                },
+                {
+                    "name": "Enoxaparin Sodium",
+                    "status": "Current",
+                    "source_quote": "4. Enoxaparin Sodium 40 mg SC QHS"
+                },
+                {
+                    "name": "OxyCODONE (Immediate Release)",
+                    "status": "Current",
+                    "source_quote": "5. OxyCODONE (Immediate Release) ___ mg PO Q4H:PRN Pain - Moderate"
+                },
+                {
+                    "name": "Senna",
+                    "status": "Current",
+                    "source_quote": "6. Senna 8.6 mg PO BID"
+                },
+                {
+                    "name": "Multivitamins",
+                    "status": "Current",
+                    "source_quote": "9. Multivitamins 1 TAB PO DAILY"
+                },
+                {
+                    "name": "Vitamin D",
+                    "status": "Current",
+                    "source_quote": "10. Vitamin D 400 UNIT PO DAILY"
+                },
+                {
+                    "name": "Lovenox",
+                    "status": "Current",
+                    "source_quote": "The patient will be discharged on Lovenox for DVT prophylaxis."
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "left CRPP",
+                    "status": "Performed",
+                    "source_quote": "Status post left CRPP"
+                },
+                {
+                    "name": "left closed reduction and percutaneous pinning of hip",
+                    "status": "Performed",
+                    "source_quote": "The patient was taken to the operating room on ___ for left closed reduction and percutaneous pinning of hip"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "PatientInformation": {
+                "Name": "___",
+                "UnitNo": "___",
+                "AdmissionDate": "___",
+                "DischargeDate": "___",
+                "DateOfBirth": "___",
+                "Sex": "F",
+                "Service": "ORTHOPAEDICS"
+            },
+            "Allergies": [
+                "omeprazole",
+                "Iodine and Iodide Containing Products",
+                "hallucinogens"
+            ],
+            "Attending": "___.",
+            "ChiefComplaint": "Left hip pain",
+            "MajorSurgicalOrInvasiveProcedure": "Status post left CRPP ___, ___",
+            "HistoryOfPresentIllness": {
+                "ReasonForConsult": "Femur fracture",
+                "HPI": "___ female presents with the above fracture s/p mechanical fall. This morning, pt was walking ___, when dog pulled on leash. Pt fell on L hip. Immediate pain. ___ ___ with movement. Denies Head strike, LOC or blood thinners. Denies numbness or weakness in the extremities."
+            },
+            "PastMedicalHistory": [
+                "GERD",
+                "Hypercholesterolemia",
+                "Kidney stones",
+                "Mitral valve prolapse",
+                "Uterine fibroids",
+                "Osteoporosis",
+                "Migraine headaches"
+            ],
+            "SocialHistory": "___",
+            "FamilyHistory": [
+                "+ HTN - father",
+                "+ Dementia - father"
+            ],
+            "PhysicalExam": {
+                "General": "Well-appearing female in no acute distress.",
+                "LeftLowerExtremity": {
+                    "SkinIntact": true,
+                    "NoDeformity": true,
+                    "NoEdema": true,
+                    "NoEcchymosis": true,
+                    "NoErythema": true,
+                    "NoInduration": true,
+                    "SoftNonTenderThighAndLeg": true,
+                    "FullPainlessROMKneeAndAnkle": true,
+                    "Fires": true,
+                    "SILTSSSPDPulse": true,
+                    "WWP": true
+                }
+            },
+            "BriefHospitalCourse": {
+                "ProcedurePerformed": "Left closed reduction and percutaneous pinning of hip",
+                "MedicationsAdministered": [
+                    "IV fluids",
+                    "IV pain medications",
+                    "___ antibiotics",
+                    "anticoagulation per routine"
+                ],
+                "RecoveryProcess": "The patient was taken from the OR to the PACU in stable condition and after satisfactory recovery from anesthesia was transferred to the floor. The patient was initially given IV fluids and IV pain medications, and progressed to a regular diet and oral medications by POD#1."
+            },
+            "MedicationsOnAdmission": [
+                "Lactaid (lactase) 3,000 unit oral DAILY:PRN",
+                "Calcium Citrate + D (calcium citrate-vitamin D3) 315-200 mg-unit oral DAILY"
+            ],
+            "DischargeMedications": [
+                "Acetaminophen 1000 mg PO Q6H:PRN Pain - Mild/Fever",
+                "Bisacodyl 10 mg PO/PR DAILY:PRN Constipation",
+                "Docusate Sodium 100 mg PO BID",
+                "Enoxaparin Sodium 40 mg SC QHS RX",
+                "OxyCODONE (Immediate Release) ___ mg PO Q4H:PRN Pain - Moderate RX",
+                "Senna 8.6 mg PO BID",
+                "Calcium Citrate + D (calcium citrate-vitamin D3) 315-200 mg-unit oral DAILY",
+                "Lactaid (lactase) 3,000 unit oral DAILY:PRN",
+                "Multivitamins 1 TAB PO DAILY",
+                "Vitamin D 400 UNIT PO DAILY"
+            ],
+            "DischargeDisposition": {
+                "HomeWithServiceFacility": "___",
+                "DischargeDiagnosis": "Left valgus impacted femoral neck fracture",
+                "DischargeCondition": "AVSS NAD, A&Ox3 LLE: Incision well approximated. Dressing clean and dry. Fires FHL, ___, TA, GCS. SILT ___ n distributions. 1+ DP pulse, wwp distally.",
+                "DischargeInstructions": "INSTRUCTIONS AFTER ORTHOPAEDIC SURGERY"
+            },
+            "FollowupInstructions": "___"
+        },
+        "Group_B_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_revisions": 1,
+        "Group_C_final_feedback": "[MISSING] Name\n[MISSING] Unit No\n[MISSING] Admission Date\n[MISSING] Discharge Date\n[MISSING] Date of Birth\n[MISSING] Sex\n[MISSING] Service\n[MISSING] Attending\n[MISSING] History of Present Illness\n[MISSING] Major Surgical or Invasive Procedure\n[MISSING] Physical Exam - General\n[MISSING] Physical Exam - Left Lower extremity\n[MISSING] Brief Hospital Course - Full details of the procedure\n[MISSING] Brief Hospital Course - Recovery from anesthesia\n[MISSING] Brief Hospital Course - Progression to regular diet and oral medications\n[MISSING] Brief Hospital Course - Antibiotics and anticoagulation\n[MISSING] Brief Hospital Course - Home medications\n[MISSING] Brief Hospital Course - Work with discharge planner\n[MISSING] Brief Hospital Course - Unremarkable hospital course\n[MISSING] Brief Hospital Course - Pain control\n[MISSING] Brief Hospital Course - Incisions\n[MISSING] Brief Hospital Course - Voiding/moving bowels\n[MISSING] Brief Hospital Course - Weightbearing\n[MISSING] Brief Hospital Course - Lovenox for DVT prophylaxis\n[MISSING] Brief Hospital Course - Follow-up with Dr.\n[MISSING] Brief Hospital Course - Discussion with patient\n[MISSING] Brief Hospital Course - Written instructions\n[MISSING] Brief Hospital Course - Readiness for discharge\n[MISSING] Medications on Admission - Full list\n[MISSING] Discharge Disposition\n[MISSING] Discharge Condition - Full description\n[MISSING] Discharge Instructions - Full instructions\n[MISSING] Followup Instructions - Full instructions"
+    },
+    {
+        "record_id": "20600184",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "factor VIII deficiency",
+                    "certainty": "Confirmed",
+                    "source_quote": "history of factor VIII deficiency"
+                },
+                {
+                    "condition": "right neck swelling",
+                    "certainty": "Confirmed",
+                    "source_quote": "presents with right neck swelling"
+                },
+                {
+                    "condition": "intracranial hemorrhage",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "CT imaging of head/neck showed no intracranial hemorrhage"
+                },
+                {
+                    "condition": "thickened right platysma muscle with surrounding hematoma",
+                    "certainty": "Confirmed",
+                    "source_quote": "a thickened right platysma muscle with surrounding hematoma"
+                },
+                {
+                    "condition": "focus of active contrast extravasation within the right platysma muscle",
+                    "certainty": "Confirmed",
+                    "source_quote": "a focus of active contrast extravasation within the right platysma muscle"
+                },
+                {
+                    "condition": "right shoulder hematoma",
+                    "certainty": "Confirmed",
+                    "source_quote": "developed a right shoulder hematoma"
+                },
+                {
+                    "condition": "enlarging flank hematoma",
+                    "certainty": "Confirmed",
+                    "source_quote": "found to have an enlarging flank hematoma"
+                },
+                {
+                    "condition": "retroperitoneal bleed",
+                    "certainty": "Suspected",
+                    "source_quote": "concern for retroperitoneal bleed"
+                },
+                {
+                    "condition": "retroperitoneal bleed",
+                    "certainty": "Ruled_Out",
+                    "source_quote": "no retroperitoneal bleed on preliminary read"
+                },
+                {
+                    "condition": "significant bleeding after his circumcision",
+                    "certainty": "Confirmed",
+                    "source_quote": "history of significant bleeding after his circumcision"
+                },
+                {
+                    "condition": "tendency to bruise easily",
+                    "certainty": "Confirmed",
+                    "source_quote": "had a tendency to bruise easily"
+                },
+                {
+                    "condition": "___ disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "found to have ___ disease"
+                },
+                {
+                    "condition": "hemophilia A",
+                    "certainty": "Confirmed",
+                    "source_quote": "was diagnosed with hemophilia A"
+                },
+                {
+                    "condition": "muscular hemorrhage along the flank",
+                    "certainty": "Confirmed",
+                    "source_quote": "demonstrated muscular hemorrhage along the flank"
+                },
+                {
+                    "condition": "Acute hemorrhage along right posterior flank musculature",
+                    "certainty": "Confirmed",
+                    "source_quote": "Acute hemorrhage along right posterior flank musculature"
+                },
+                {
+                    "condition": "Probable old hematoma along posterior left flank",
+                    "certainty": "Confirmed",
+                    "source_quote": "Probable old hematoma along posterior left flank"
+                },
+                {
+                    "condition": "multiple hematomas",
+                    "certainty": "Confirmed",
+                    "source_quote": "presents after snowboarding accident with multiple hematomas"
+                },
+                {
+                    "condition": "falling hemoglobin concerning for ongoing bleeding",
+                    "certainty": "Confirmed",
+                    "source_quote": "falling hemoglobin concerning for ongoing bleeding"
+                },
+                {
+                    "condition": "Acute muscular hematoma, right flank",
+                    "certainty": "Confirmed",
+                    "source_quote": "Acute muscular hematoma, right flank"
+                },
+                {
+                    "condition": "Hemophilia, factor VIII deficiency",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hemophilia, factor VIII deficiency"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "DDAVP IV",
+                    "status": "Past",
+                    "source_quote": "gave him one dose of DDAVP IV"
+                },
+                {
+                    "name": "DDAVP intranasally",
+                    "status": "Current",
+                    "source_quote": "The patient has been using DDAVP intranasally intermittently since the accident."
+                },
+                {
+                    "name": "desmopressin 0.3mg/kg IV",
+                    "status": "Past",
+                    "source_quote": "it was decided to give the patient desmopressin 0.3mg/kg IV"
+                },
+                {
+                    "name": "DDAVP",
+                    "status": "Past",
+                    "source_quote": "despite treatment with DDAVP"
+                },
+                {
+                    "name": "Desmopressin Nasal ___ mcg NAS PRN bleeding",
+                    "status": "Current",
+                    "source_quote": "Desmopressin Nasal ___ mcg NAS PRN bleeding"
+                },
+                {
+                    "name": "Acetaminophen 1000 mg PO Q8H pain",
+                    "status": "Current",
+                    "source_quote": "Acetaminophen 1000 mg PO Q8H pain"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "CT imaging of head/neck",
+                    "status": "Performed",
+                    "source_quote": "CT imaging of head/neck showed no intracranial hemorrhage"
+                },
+                {
+                    "name": "CTA neck",
+                    "status": "Performed",
+                    "source_quote": "A CTA neck showed a thickened right platysma muscle"
+                },
+                {
+                    "name": "shoulder plain films",
+                    "status": "Performed",
+                    "source_quote": "shoulder plain films didn't show acute abnormality"
+                },
+                {
+                    "name": "factor VIII assay",
+                    "status": "Performed",
+                    "source_quote": "A factor VIII assay was 139"
+                },
+                {
+                    "name": "vW level",
+                    "status": "Performed",
+                    "source_quote": "vW level was >200 per report"
+                },
+                {
+                    "name": "Repeat imaging",
+                    "status": "Performed",
+                    "source_quote": "Repeat imaging in the morning showed stable injuries."
+                },
+                {
+                    "name": "CTAP",
+                    "status": "Performed",
+                    "source_quote": "A CTAP was performed"
+                },
+                {
+                    "name": "circumcision",
+                    "status": "Performed",
+                    "source_quote": "his circumcision"
+                },
+                {
+                    "name": "wisdom tooth extraction",
+                    "status": "Performed",
+                    "source_quote": "wisdom tooth extraction"
+                },
+                {
+                    "name": "retested by a hematologist",
+                    "status": "Performed",
+                    "source_quote": "The patient was retested by a hematologist"
+                },
+                {
+                    "name": "FVIII activity has been checked",
+                    "status": "Performed",
+                    "source_quote": "His FVIII activity has been checked on multiple occasions"
+                },
+                {
+                    "name": "CT A/P",
+                    "status": "Performed",
+                    "source_quote": "___ CT A/P"
+                },
+                {
+                    "name": "CBC",
+                    "status": "Performed",
+                    "source_quote": "Initial labs demonstrated hemoglobin 10.6, though repeat was 9.7."
+                },
+                {
+                    "name": "Chemistries and coags",
+                    "status": "Performed",
+                    "source_quote": "Chemistries and coags were unremarkable."
+                },
+                {
+                    "name": "FVIII activity",
+                    "status": "Performed",
+                    "source_quote": "FVIII activity was 103."
+                },
+                {
+                    "name": "URINE",
+                    "status": "Performed",
+                    "source_quote": "___ 07:50PM URINE Color-Yellow"
+                },
+                {
+                    "name": "outpatient hemoglobin monitoring",
+                    "status": "Planned",
+                    "source_quote": "hematology recommended continued outpatient hemoglobin monitoring"
+                },
+                {
+                    "name": "CBC",
+                    "status": "Planned",
+                    "source_quote": "CBC on ___ or ___"
+                },
+                {
+                    "name": "Follow up with your regular doctor",
+                    "status": "Planned",
+                    "source_quote": "Follow up with your regular doctor early next week."
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "PatientDemographics": {
+                "Name": "___",
+                "UnitNo": "___",
+                "AdmissionDate": "___",
+                "DischargeDate": "___",
+                "DateOfBirth": "___",
+                "Sex": "M",
+                "Service": "MEDICINE"
+            },
+            "Allergies": {
+                "KnownAllergies": "No Known Allergies / Adverse Drug Reactions"
+            },
+            "AttendingPhysician": {
+                "Name": "___"
+            },
+            "ChiefComplaint": "Right flank bruising and pain s/p fall",
+            "MedicalHistory": {
+                "FactorVIIIdeficiency": "Mild",
+                "CircumcisionBleeding": "Significant bleeding requiring blood transfusion",
+                "BruisingTendency": "Throughout childhood",
+                "LateBleedingAfterWisdomToothExtraction": "Late bleeding despite DDAVP treatment",
+                "Diagnosis": "Hemophilia A",
+                "FVIIIActivity": "Sometimes normal, though has been as low as ~50"
+            },
+            "HistoryOfPresentIllness": {
+                "SnowboardingAccident": "Right neck swelling",
+                "ImagingResults": "No intracranial hemorrhage, thickened right platysma muscle with hematoma, active contrast extravasation, right shoulder hematoma",
+                "LaboratoryResults": "Hemoglobin decreased, stable injuries, CTAP demonstrated muscular hemorrhage",
+                "Medications": "Desmopressin, Acetaminophen",
+                "VitalSigns": "Initial: 99.2/87/124/75/18/100%/RA, Discharge: 98.0/100-120/40-58/66/20/99 on RA"
+            },
+            "VitalSigns": {
+                "Initial": "99.2/87/124/75/18/100%/RA",
+                "Discharge": "98.0/100-120/40-58/66/20/99 on RA"
+            },
+            "LaboratoryResults": {
+                "BloodCounts": "WBC, RBC, Hgb, Hct, MCV, MCH, MCHC, RDW, Plt",
+                "CoagulationStudies": "Neuts, Monos, Eos, Baso, PTT, FacVIII",
+                "Chemistries": "Glucose, UreaN, Creat, Na, K, Cl, HCO3, AnGap",
+                "Urine": "Color, Appear, Sp, Blood, Nitrite, Protein, Glucose, Ketone, Bilirub, Urobiln, pH, Leuks, Mucous",
+                "RBC": "WBC, Bacteri, Yeast, Epi"
+            },
+            "ImagingResults": {
+                "CTAP": "Acute hemorrhage along right posterior flank musculature, no active extravasation seen, probable old hematoma along posterior left flank"
+            },
+            "Medications": {
+                "Preadmission": "Accurate and complete",
+                "DesmopressinNasal": "Given",
+                "Acetaminophen": "1000 mg PO Q8H for pain",
+                "OutpatientLabWork": "CBC on specific dates"
+            },
+            "DischargeInstructions": {
+                "AvoidDangerousActivities": "Not to participate in any dangerous activities",
+                "BloodCountsMonitoring": "Get blood counts checked at specific site on specific dates",
+                "FollowUp": "Follow up with regular doctor early next week"
+            },
+            "DischargeDiagnosis": {
+                "Primary": "Acute muscular hematoma, right flank",
+                "Secondary": "Hemophilia, factor VIII deficiency"
+            },
+            "DischargeCondition": {
+                "MentalStatus": "Clear and coherent",
+                "LevelOfConsciousness": "Alert and interactive",
+                "ActivityStatus": "Ambulatory - Independent"
+            },
+            "FollowupInstructions": {
+                "Appointments": "Follow-up appointments as provided"
+            }
+        },
+        "Group_B_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "M"
+            },
+            "chief_complaint": "Right flank bruising and pain s/p fall",
+            "medical_history": [
+                {
+                    "condition": "Factor VIII deficiency",
+                    "status": "Present",
+                    "source_quote": "Mr. ___ is a ___ with history of factor VIII deficiency..."
+                },
+                {
+                    "condition": "Hemophilia A",
+                    "status": "Present",
+                    "source_quote": "He was retested by a hematologist associated with the ___ and was diagnosed with hemophilia A."
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "No Known Allergies / Adverse Drug Reactions",
+                    "source_quote": "No Known Allergies / Adverse Drug Reactions"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Right neck swelling",
+                    "status": "Present",
+                    "source_quote": "Mr. ___ is a ___ with history of factor VIII deficiency who presents with right neck swelling..."
+                },
+                {
+                    "name": "Loss of consciousness",
+                    "status": "Present",
+                    "source_quote": "The patient reports that he fell while snowboarding with loss of consciousness..."
+                },
+                {
+                    "name": "Pain",
+                    "status": "Present",
+                    "source_quote": "He does endorse pain in his right shoulder..."
+                },
+                {
+                    "name": "Decreased hemoglobin",
+                    "status": "Present",
+                    "source_quote": "Per report, his hemoglobin decreased from 13.2 on ___ to 11.6 on ___."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "Acute muscular hematoma, right flank",
+                    "certainty": "Confirmed",
+                    "source_quote": "CTAP in the ED demonstrated hematoma over his flank musculature..."
+                },
+                {
+                    "condition": "Hemophilia, factor VIII deficiency",
+                    "certainty": "Confirmed",
+                    "source_quote": "He was retested by a hematologist associated with the ___ and was diagnosed with hemophilia A."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Desmopressin Nasal",
+                    "status": "Current",
+                    "source_quote": "The patient was given desmopressin 0.3mg/kg IV."
+                },
+                {
+                    "name": "Acetaminophen",
+                    "status": "Current",
+                    "source_quote": "Medications on Admission: The Preadmission Medication list is accurate and complete. 1. Desmopressin Nasal ___ mcg NAS PRN bleeding Discharge Medications: 1. Acetaminophen 1000 mg PO Q8H pain"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "CTA neck",
+                    "status": "Performed",
+                    "source_quote": "A CTA neck showed a thickened right platysma muscle with surrounding hematoma..."
+                },
+                {
+                    "name": "CTAP",
+                    "status": "Performed",
+                    "source_quote": "CTAP in the ED demonstrated hematoma over his flank musculature..."
+                }
+            ]
+        },
+        "Group_C_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "M"
+            },
+            "chief_complaint": "Right flank bruising and pain s/p fall",
+            "medical_history": [
+                {
+                    "condition": "Factor VIII deficiency",
+                    "status": "Present",
+                    "source_quote": "Mr. ___ is a ___ with history of factor VIII deficiency..."
+                },
+                {
+                    "condition": "Hemophilia A",
+                    "status": "Present",
+                    "source_quote": "He was retested by a hematologist associated with the ___ and was diagnosed with hemophilia A."
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "No Known Allergies / Adverse Drug Reactions",
+                    "source_quote": "No Known Allergies / Adverse Drug Reactions"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "Right neck swelling",
+                    "status": "Present",
+                    "source_quote": "Mr. ___ is a ___ with history of factor VIII deficiency who presents with right neck swelling..."
+                },
+                {
+                    "name": "Loss of consciousness",
+                    "status": "Present",
+                    "source_quote": "The patient reports that he fell while snowboarding with loss of consciousness..."
+                },
+                {
+                    "name": "Pain",
+                    "status": "Present",
+                    "source_quote": "He does endorse pain in his right shoulder..."
+                },
+                {
+                    "name": "Decreased hemoglobin",
+                    "status": "Present",
+                    "source_quote": "Per report, his hemoglobin decreased from 13.2 on ___ to 11.6 on ___."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "Acute muscular hematoma, right flank",
+                    "certainty": "Confirmed",
+                    "source_quote": "CTAP in the ED demonstrated hematoma over his flank musculature..."
+                },
+                {
+                    "condition": "Hemophilia, factor VIII deficiency",
+                    "certainty": "Confirmed",
+                    "source_quote": "He was retested by a hematologist associated with the ___ and was diagnosed with hemophilia A."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Desmopressin Nasal",
+                    "status": "Current",
+                    "source_quote": "The patient was given desmopressin 0.3mg/kg IV."
+                },
+                {
+                    "name": "Acetaminophen",
+                    "status": "Current",
+                    "source_quote": "Medications on Admission: The Preadmission Medication list is accurate and complete. 1. Desmopressin Nasal ___ mcg NAS PRN bleeding Discharge Medications: 1. Acetaminophen 1000 mg PO Q8H pain"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "CTA neck",
+                    "status": "Performed",
+                    "source_quote": "A CTA neck showed a thickened right platysma muscle with surrounding hematoma..."
+                },
+                {
+                    "name": "CTAP",
+                    "status": "Performed",
+                    "source_quote": "CTAP in the ED demonstrated hematoma over his flank musculature..."
+                }
+            ]
+        },
+        "Group_C_revisions": 0,
+        "Group_C_final_feedback": "None"
+    },
+    {
+        "record_id": "28979390",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "renal mass",
+                    "certainty": "Suspected",
+                    "source_quote": "renal mass suspicious for RCC"
+                },
+                {
+                    "condition": "nonspecific right axis deviation",
+                    "certainty": "Confirmed",
+                    "source_quote": "nonspecific right axis deviation"
+                },
+                {
+                    "condition": "renal cell carcinoma",
+                    "certainty": "Confirmed",
+                    "source_quote": "renal cell carcinoma"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Hydrocodone-Acetaminophen",
+                    "status": "Current",
+                    "source_quote": "Hydrocodone-Acetaminophen"
+                },
+                {
+                    "name": "Docusate Sodium",
+                    "status": "Current",
+                    "source_quote": "Docusate Sodium"
+                },
+                {
+                    "name": "Tylenol",
+                    "status": "Current",
+                    "source_quote": "Tylenol"
+                },
+                {
+                    "name": "NSAID (aspirin, advil, motrin, ibuprofen)",
+                    "status": "Past",
+                    "source_quote": "NSAID (aspirin, advil, motrin, ibuprofen)"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "right laparascopic radical nephrectomy",
+                    "status": "Performed",
+                    "source_quote": "right laparascopic radical nephrectomy"
+                },
+                {
+                    "name": "cesarean section",
+                    "status": "Performed",
+                    "source_quote": "cesarean section"
+                },
+                {
+                    "name": "foley was removed",
+                    "status": "Performed",
+                    "source_quote": "foley was removed"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "Patient": {
+                "Name": "___",
+                "UnitNo": "___",
+                "AdmissionDate": "___",
+                "DischargeDate": "___",
+                "DateOfBirth": "___",
+                "Sex": "Female",
+                "Service": "Urology",
+                "Allergies": "No Known Allergies to Drugs",
+                "Attending": "___"
+            },
+            "ChiefComplaint": {
+                "Complaint": "renal mass",
+                "Procedure": "right laparascopic radical nephrectomy",
+                "HistoryOfPresentIllness": "34 y/o healthy female with incidental finding of right renal mass suspicious for RCC following MRI",
+                "PastMedicalHistory": "nonspecific right axis deviation, cesarean section",
+                "SocialHistory": "___",
+                "FamilyHistory": "no history of RCC"
+            },
+            "PertinentResults": {
+                "Blood": {
+                    "WBC": "7.6",
+                    "RBC": "3.82*",
+                    "Hgb": "11.9*",
+                    "Hct": "33.8*",
+                    "MCV": "89",
+                    "MCH": "31.2",
+                    "MCHC": "35.2*",
+                    "RDW": "12.8",
+                    "Plt": "___"
+                },
+                "BloodChemistry": {
+                    "Glucose": "150*",
+                    "UreaN": "10",
+                    "Creat": "0.9",
+                    "Na": "138",
+                    "K": "3.8",
+                    "Cl": "104",
+                    "HCO3": "27",
+                    "AnGap": "11"
+                },
+                "BriefHospitalCourse": "Patient was admitted to Urology after undergoing laparoscopic right radical nephrectomy. No concerning intraoperative events occurred; please see dictated operative note for details. The patient received perioperative antibiotic prophylaxis. The patient was transferred to the floor from the PACU in stable condition. On POD0, pain was well controlled on PCA, hydrated for urine output >30cc/hour, provided with pneumoboots and incentive spirometry for prophylaxis, and ambulated once. On POD1, foley was removed without difficulty, basic metabolic panel and complete blood count were checked, pain control was transitioned from PCA to oral analgesics, diet was advanced to a clears/toast and crackers diet. On POD2, diet was advanced as tolerated. The remainder of the hospital course was relatively unremarkable. The patient was discharged in stable condition, eating well, ambulating independently, voiding without difficulty, and with pain control on oral analgesics. On exam, incision was clean, dry, and intact, with no evidence of hematoma collection or infection. The patient was given explicit instructions to follow-up in clinic with ___ in 3 weeks."
+            },
+            "Medications": {
+                "Admission": "none",
+                "Discharge": [
+                    {
+                        "Name": "Hydrocodone-Acetaminophen",
+                        "Dosage": "___ mg",
+                        "Sig": "Tablets PO Q6H (every 6 hours) as needed for break through pain only (score >4)",
+                        "Disp": "60 Tablet(s)",
+                        "Refills": "0"
+                    },
+                    {
+                        "Name": "Docusate Sodium",
+                        "Dosage": "100 mg",
+                        "Sig": "One (1) Capsule PO BID (2 times a day)",
+                        "Disp": "60 Capsule(s)",
+                        "Refills": "2"
+                    }
+                ]
+            },
+            "Discharge": {
+                "Disposition": "Home",
+                "Diagnosis": "renal cell carcinoma",
+                "Condition": "stable",
+                "Instructions": "You may shower but do not bathe, swim or immerse your incision. Do not eat constipating foods for ___ weeks, drink plenty of fluids. Do not lift anything heavier than a phone book (10 pounds) or drive until you are seen by your Urologist in follow-up. Tylenol should be used as your first line pain medication. If your pain is not well controlled on Tylenol you have been prescribed a narcotic pain medication. Use in place of Tylenol. Do not exceed 4 gms of Tylenol in total daily. Do not drive or drink alcohol while taking narcotics. Resume all of your home medications, except hold NSAID (aspirin, advil, motrin, ibuprofen) until you see your urologist in follow-up. If you have fevers > 101.5 F, vomiting, or increased redness, swelling, or discharge from your incision, call your doctor or go to the nearest ER. Call Dr. ___ to set up follow-up appointment and if you have any urological questions. ___",
+                "FollowupInstructions": "___"
+            }
+        },
+        "Group_B_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "F"
+            },
+            "chief_complaint": "renal mass",
+            "medical_history": [
+                {
+                    "condition": "nonspecific right axis deviation",
+                    "status": "Present",
+                    "source_quote": "PMH: nonspecific right axis deviation"
+                },
+                {
+                    "condition": "cesarean section",
+                    "status": "Past",
+                    "source_quote": "PSH- cesarean section"
+                },
+                {
+                    "condition": "ALL-NKDA",
+                    "status": "Present",
+                    "source_quote": "ALL-NKDA"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "No Known Allergies to Drugs",
+                    "source_quote": "Patient recorded as having No Known Allergies to Drugs"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "renal mass",
+                    "status": "Present",
+                    "source_quote": "The patient was admitted to Urology after undergoing laparoscopic right radical nephrectomy."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "renal cell carcinoma",
+                    "certainty": "Confirmed",
+                    "source_quote": "The patient was admitted to Urology after undergoing laparoscopic right radical nephrectomy."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Hydrocodone-Acetaminophen",
+                    "status": "Discharge",
+                    "source_quote": "1. Hydrocodone-Acetaminophen ___ mg Tablet Sig: ___ Tablets PO Q6H (every 6 hours) as needed for break through pain only (score >4) . Disp:*60 Tablet(s)* Refills:*0*"
+                },
+                {
+                    "name": "Docusate Sodium",
+                    "status": "Discharge",
+                    "source_quote": "2. Docusate Sodium 100 mg Capsule Sig: One (1) Capsule PO BID (2 times a day). Disp:*60 Capsule(s)* Refills:*2*"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "right laparascopic radical nephrectomy",
+                    "status": "Performed",
+                    "source_quote": "Major Surgical or Invasive Procedure: right laparascopic radical nephrectomy- Dr. ___, Dr. ___"
+                }
+            ],
+            "discharge_instructions": {
+                "showering": "You may shower but do not bathe, swim or immerse your incision.",
+                "diet": "Do not eat constipating foods for ___ weeks, drink plenty of fluids",
+                "lifting": "Do not lift anything heavier than a phone book (10 pounds) or drive until you are seen by your Urologist in follow-up",
+                "pain_management": "Tylenol should be used as your first line pain medication. If your pain is not well controlled on Tylenol you have been prescribed a narcotic pain medication. Use in place of Tylenol. Do not exceed 4 gms of Tylenol in total daily",
+                "driving": "Do not drive or drink alcohol while taking narcotics",
+                "follow_up": "Resume all of your home medications, except hold NSAID (aspirin, advil, motrin, ibuprofen) until you see your urologist in follow-up",
+                "contact": "If you have fevers > 101.5 F, vomiting, or increased redness, swelling, or discharge from your incision, call your doctor or go to the nearest ER",
+                "appointment": "Call Dr. ___ to set up follow-up appointment and if you have any urological questions."
+            }
+        },
+        "Group_C_pred": {
+            "patient_demographics": {
+                "age": null,
+                "gender": "F"
+            },
+            "chief_complaint": "renal mass",
+            "medical_history": [
+                {
+                    "condition": "nonspecific right axis deviation",
+                    "status": "Present",
+                    "source_quote": "PMH: nonspecific right axis deviation"
+                },
+                {
+                    "condition": "cesarean section",
+                    "status": "Past",
+                    "source_quote": "PSH- cesarean section"
+                },
+                {
+                    "condition": "ALL-NKDA",
+                    "status": "Present",
+                    "source_quote": "ALL-NKDA"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "No Known Allergies to Drugs",
+                    "source_quote": "Patient recorded as having No Known Allergies to Drugs"
+                }
+            ],
+            "symptoms": [
+                {
+                    "name": "renal mass",
+                    "status": "Present",
+                    "source_quote": "The patient was admitted to Urology after undergoing laparoscopic right radical nephrectomy."
+                }
+            ],
+            "diagnoses": [
+                {
+                    "condition": "renal cell carcinoma",
+                    "certainty": "Confirmed",
+                    "source_quote": "The patient was admitted to Urology after undergoing laparoscopic right radical nephrectomy."
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Hydrocodone-Acetaminophen",
+                    "status": "Discharge",
+                    "source_quote": "1. Hydrocodone-Acetaminophen ___ mg Tablet Sig: ___ Tablets PO Q6H (every 6 hours) as needed for break through pain only (score >4) . Disp:*60 Tablet(s)* Refills:*0*"
+                },
+                {
+                    "name": "Docusate Sodium",
+                    "status": "Discharge",
+                    "source_quote": "2. Docusate Sodium 100 mg Capsule Sig: One (1) Capsule PO BID (2 times a day). Disp:*60 Capsule(s)* Refills:*2*"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "right laparascopic radical nephrectomy",
+                    "status": "Performed",
+                    "source_quote": "Major Surgical or Invasive Procedure: right laparascopic radical nephrectomy- Dr. ___, Dr. ___"
+                }
+            ],
+            "discharge_instructions": {
+                "showering": "You may shower but do not bathe, swim or immerse your incision.",
+                "diet": "Do not eat constipating foods for ___ weeks, drink plenty of fluids",
+                "lifting": "Do not lift anything heavier than a phone book (10 pounds) or drive until you are seen by your Urologist in follow-up",
+                "pain_management": "Tylenol should be used as your first line pain medication. If your pain is not well controlled on Tylenol you have been prescribed a narcotic pain medication. Use in place of Tylenol. Do not exceed 4 gms of Tylenol in total daily",
+                "driving": "Do not drive or drink alcohol while taking narcotics",
+                "follow_up": "Resume all of your home medications, except hold NSAID (aspirin, advil, motrin, ibuprofen) until you see your urologist in follow-up",
+                "contact": "If you have fevers > 101.5 F, vomiting, or increased redness, swelling, or discharge from your incision, call your doctor or go to the nearest ER",
+                "appointment": "Call Dr. ___ to set up follow-up appointment and if you have any urological questions."
+            }
+        },
+        "Group_C_revisions": 0,
+        "Group_C_final_feedback": "None"
+    },
+    {
+        "record_id": "27897940",
+        "truth": {
+            "diagnoses": [
+                {
+                    "condition": "Epistaxis",
+                    "certainty": "Confirmed",
+                    "source_quote": "Epistaxis"
+                },
+                {
+                    "condition": "Abdominal Aortic Aneurysm",
+                    "certainty": "Confirmed",
+                    "source_quote": "history of AAA"
+                },
+                {
+                    "condition": "Myocardial Infarction",
+                    "certainty": "Confirmed",
+                    "source_quote": "complicated by MI"
+                },
+                {
+                    "condition": "Hypertension",
+                    "certainty": "Confirmed",
+                    "source_quote": "hypertension"
+                },
+                {
+                    "condition": "Hyperlipidemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "hyperlipidemia"
+                },
+                {
+                    "condition": "Nasal fractures",
+                    "certainty": "Confirmed",
+                    "source_quote": "nasal fractures"
+                },
+                {
+                    "condition": "Nasal bone fracture",
+                    "certainty": "Confirmed",
+                    "source_quote": "nasal bone and septal fracture"
+                },
+                {
+                    "condition": "Nasal septal fracture",
+                    "certainty": "Confirmed",
+                    "source_quote": "nasal bone and septal fracture"
+                },
+                {
+                    "condition": "Abrasion to the bridge of his nose",
+                    "certainty": "Confirmed",
+                    "source_quote": "small abrasion to the bridge of his nose"
+                },
+                {
+                    "condition": "Nausea",
+                    "certainty": "Confirmed",
+                    "source_quote": "episode of nausea"
+                },
+                {
+                    "condition": "Hemoptysis",
+                    "certainty": "Confirmed",
+                    "source_quote": "coughed up some blood"
+                },
+                {
+                    "condition": "Lightheadedness",
+                    "certainty": "Confirmed",
+                    "source_quote": "began to feel lightheaded"
+                },
+                {
+                    "condition": "Hypotension",
+                    "certainty": "Confirmed",
+                    "source_quote": "noted to be hypotensive"
+                },
+                {
+                    "condition": "Bradycardia",
+                    "certainty": "Confirmed",
+                    "source_quote": "bradycardic"
+                },
+                {
+                    "condition": "Loss of consciousness",
+                    "certainty": "Confirmed",
+                    "source_quote": "brief loss of consciousness"
+                },
+                {
+                    "condition": "Syncope",
+                    "certainty": "Confirmed",
+                    "source_quote": "syncopal event"
+                },
+                {
+                    "condition": "Hemodynamic changes",
+                    "certainty": "Confirmed",
+                    "source_quote": "no further episodes of syncope or hemodynamic changes"
+                },
+                {
+                    "condition": "Focal consolidation at the left lung base",
+                    "certainty": "Confirmed",
+                    "source_quote": "focal consolidation at the left lung base"
+                },
+                {
+                    "condition": "Aspiration",
+                    "certainty": "Suspected",
+                    "source_quote": "possibly representing aspiration"
+                },
+                {
+                    "condition": "Pneumonia",
+                    "certainty": "Suspected",
+                    "source_quote": "developing pneumonia"
+                },
+                {
+                    "condition": "HTN",
+                    "certainty": "Confirmed",
+                    "source_quote": "HTN"
+                },
+                {
+                    "condition": "Hypercholesterolemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "Hypercholesterolemia"
+                },
+                {
+                    "condition": "Bruising under both eyes",
+                    "certainty": "Confirmed",
+                    "source_quote": "bruising under both eyes"
+                },
+                {
+                    "condition": "Swollen nose with mild tenderness",
+                    "certainty": "Confirmed",
+                    "source_quote": "swollen nose with mild tenderness"
+                },
+                {
+                    "condition": "Mild vascular engorgement",
+                    "certainty": "Confirmed",
+                    "source_quote": "mild vascular engorgement"
+                },
+                {
+                    "condition": "Bilateral apical pleural thickening",
+                    "certainty": "Confirmed",
+                    "source_quote": "bilateral apical pleural thickening"
+                },
+                {
+                    "condition": "Aortic arch calcifications",
+                    "certainty": "Confirmed",
+                    "source_quote": "aortic arch calcifications"
+                },
+                {
+                    "condition": "Mild left atrial dilation",
+                    "certainty": "Confirmed",
+                    "source_quote": "The left atrium is mildly dilated"
+                },
+                {
+                    "condition": "Mild regional left ventricular systolic dysfunction",
+                    "certainty": "Confirmed",
+                    "source_quote": "mild regional left ventricular systolic dysfunction"
+                },
+                {
+                    "condition": "Focal apical hypokinesis",
+                    "certainty": "Confirmed",
+                    "source_quote": "focal apical hypokinesis"
+                },
+                {
+                    "condition": "Mild aortic valve stenosis",
+                    "certainty": "Confirmed",
+                    "source_quote": "Mild aortic valve stenosis"
+                },
+                {
+                    "condition": "Mild aortic regurgitation",
+                    "certainty": "Confirmed",
+                    "source_quote": "Mild (1+) aortic regurgitation is seen"
+                },
+                {
+                    "condition": "Mildly thickened mitral valve leaflets",
+                    "certainty": "Confirmed",
+                    "source_quote": "The mitral valve leaflets are mildly thickened"
+                },
+                {
+                    "condition": "Trivial mitral regurgitation",
+                    "certainty": "Confirmed",
+                    "source_quote": "Trivial mitral regurgitation is seen"
+                },
+                {
+                    "condition": "Trivial/physiologic pericardial effusion",
+                    "certainty": "Confirmed",
+                    "source_quote": "trivial/physiologic pericardial effusion"
+                },
+                {
+                    "condition": "Coronary Artery Disease (CAD)",
+                    "certainty": "Suspected",
+                    "source_quote": "most c/w CAD (distal LAD distribution)"
+                },
+                {
+                    "condition": "NSTEMI",
+                    "certainty": "Confirmed",
+                    "source_quote": "NSTEMI"
+                },
+                {
+                    "condition": "Type II Myocardial Infarction (Demand Ischemia)",
+                    "certainty": "Suspected",
+                    "source_quote": "most likely secondary to demand ischemia (type II MI)"
+                },
+                {
+                    "condition": "Distal LAD disease",
+                    "certainty": "Suspected",
+                    "source_quote": "likely distal LAD disease based on wall motion abnormalities"
+                },
+                {
+                    "condition": "Hypoxemia",
+                    "certainty": "Confirmed",
+                    "source_quote": "mildly hypoxic in the ED"
+                },
+                {
+                    "condition": "Acute kidney injury",
+                    "certainty": "Confirmed",
+                    "source_quote": "Acute kidney injury"
+                },
+                {
+                    "condition": "Peripheral vascular disease",
+                    "certainty": "Confirmed",
+                    "source_quote": "Peripheral vascular disease"
+                }
+            ],
+            "medications": [
+                {
+                    "name": "Tdap",
+                    "status": "Current",
+                    "source_quote": "given Tdap"
+                },
+                {
+                    "name": "Amoxicillin-clavulanate",
+                    "status": "Past",
+                    "source_quote": "amoxicillin-clavulanate for antibiotic prophylaxis"
+                },
+                {
+                    "name": "Ondansetron",
+                    "status": "Current",
+                    "source_quote": "ondansetron"
+                },
+                {
+                    "name": "NS",
+                    "status": "Current",
+                    "source_quote": "500cc NS"
+                },
+                {
+                    "name": "Metoprolol Tartrate",
+                    "status": "Current",
+                    "source_quote": "Metoprolol Tartrate 75 mg PO TID"
+                },
+                {
+                    "name": "Clopidogrel",
+                    "status": "Current",
+                    "source_quote": "Clopidogrel 75 mg PO DAILY"
+                },
+                {
+                    "name": "Pravastatin",
+                    "status": "Past",
+                    "source_quote": "Pravastatin 80 mg PO QPM"
+                },
+                {
+                    "name": "Atorvastatin",
+                    "status": "Current",
+                    "source_quote": "Atorvastatin 40 mg PO QPM"
+                },
+                {
+                    "name": "Aspirin",
+                    "status": "Current",
+                    "source_quote": "Aspirin 81 mg PO DAILY"
+                },
+                {
+                    "name": "Acetaminophen",
+                    "status": "Current",
+                    "source_quote": "Acetaminophen 650 mg PO Q8H:PRN pain"
+                },
+                {
+                    "name": "Ibuprofen",
+                    "status": "Ruled_Out",
+                    "source_quote": "ibuprofen"
+                },
+                {
+                    "name": "Oxymetazoline",
+                    "status": "Current",
+                    "source_quote": "Oxymetazoline 1 SPRY NU BID:PRN nosebleed"
+                }
+            ],
+            "procedures": [
+                {
+                    "name": "AAA repair",
+                    "status": "Performed",
+                    "source_quote": "AAA s/p repair"
+                },
+                {
+                    "name": "CT scan of the head, neck, and face",
+                    "status": "Performed",
+                    "source_quote": "CT scan of the head, neck, and face were remarkable"
+                },
+                {
+                    "name": "Bilateral RhinoRockets placement",
+                    "status": "Performed",
+                    "source_quote": "bilateral RhinoRockets were placed"
+                },
+                {
+                    "name": "CXR",
+                    "status": "Performed",
+                    "source_quote": "A CXR demonstrated a focal consolidation"
+                },
+                {
+                    "name": "Echocardiogram",
+                    "status": "Performed",
+                    "source_quote": "An echocardiogram demonstrated aortic stenosis"
+                },
+                {
+                    "name": "Outpatient stress echo",
+                    "status": "Planned",
+                    "source_quote": "Outpatient stress echo for futher evaluation distal LAD disease"
+                },
+                {
+                    "name": "Repeat echocardiogram",
+                    "status": "Planned",
+                    "source_quote": "Repeat echocardiogram in ___ years to monitor mild AS/AR"
+                },
+                {
+                    "name": "Repeat chest x-ray",
+                    "status": "Planned",
+                    "source_quote": "Repeat chest x-ray in ___ weeks to ensure resolution of the LLL infiltrative process"
+                },
+                {
+                    "name": "Follow-up with ENT or Plastic Surgery for later evaluation of nasal fractures",
+                    "status": "Planned",
+                    "source_quote": "Consider follow-up with ENT or Plastic Surgery for later evaluation of nasal fractures"
+                },
+                {
+                    "name": "Repeat CBC",
+                    "status": "Planned",
+                    "source_quote": "Repeat CBC in one week to ensure stability of HCT and platelets"
+                }
+            ]
+        },
+        "Group_A_pred": {
+            "Patient": {
+                "Name": "___",
+                "UnitNo": "___",
+                "AdmissionDate": "___",
+                "DischargeDate": "___",
+                "DateOfBirth": "___",
+                "Sex": "M",
+                "Service": "MEDICINE"
+            },
+            "Allergies": {
+                "Allergies": "No Known Allergies / Adverse Drug Reactions"
+            },
+            "Attending": "___",
+            "ChiefComplaint": "Epistaxis",
+            "MajorSurgicalOrInvasiveProcedure": "None",
+            "HistoryOfPresentIllness": {
+                "AAA": "s/p repair",
+                "MI": "Yes",
+                "Hypertension": "Yes",
+                "Hyperlipidemia": "Yes",
+                "NasalFractures": "Yes",
+                "EpistaxisSecondaryToFall": "Yes"
+            },
+            "SymptomsAndEvents": {
+                "PersistentNosebleed": "Yes",
+                "TraumaToTheFace": "Yes",
+                "Nausea": "Yes",
+                "CoughingUpBlood": "Yes",
+                "BriefLossOfConsciousness": "Yes",
+                "HypotensionAndBradycardia": "Yes",
+                "PersistentEpistaxis": "Yes",
+                "CTScanOfHeadNeckAndFace": "Nasal bone and septal fractures",
+                "Syncope": "Yes",
+                "LossOfConsciousness": "Yes",
+                "EyesRollingBackIntoHead": "Yes",
+                "NoFurtherEpisodesOfSyncopeOrHemodynamicChanges": "Yes"
+            },
+            "VitalSigns": {
+                "Temperature": "98.9°F",
+                "HeartRate": "92 bpm",
+                "BloodPressure": "140/77 mmHg",
+                "RespiratoryRate": "18 breaths/min",
+                "OxygenSaturation": "100%/RA"
+            },
+            "LaboratoryResults": {
+                "WhiteBloodCell": "11.3 (91%N)",
+                "Hemoglobin": "14.1/40.2",
+                "Platelets": "147",
+                "BloodUreaNitrogenCreatinine": "36/1.5",
+                "Hematocrit": "Stable",
+                "Urinalysis": "Negative",
+                "CardiacMarkers": {
+                    "CK": "594*",
+                    "CK-MB": "Elevated",
+                    "MBIndex": "Elevated",
+                    "cTropnT": "Elevated"
+                },
+                "Glucose": "159*",
+                "UreaNitrogen": "36*",
+                "Creatinine": "1.5*",
+                "Sodium": "141",
+                "Potassium": "4.1",
+                "Chloride": "106",
+                "Bicarbonate": "21*",
+                "AnionGap": "18"
+            },
+            "ImagingResults": {
+                "CTScanOfHeadNeckAndFace": "Nasal bone and septal fractures",
+                "ChestXray": "Focal consolidation at the left lung base",
+                "Echocardiogram": {
+                    "MildRegionalSystolicDysfunction": "Yes",
+                    "MildAorticValveStenosis": "Yes",
+                    "MildAorticRegurgitation": "Yes"
+                }
+            },
+            "Diagnosis": {
+                "NasalFracture": "Yes",
+                "Epistaxis": "Yes",
+                "NSTEMI": "Yes",
+                "Hypoxemia": "Yes",
+                "AcuteKidneyInjury": "Yes",
+                "PeripheralVascularDisease": "Yes"
+            },
+            "Medications": {
+                "Clopidogrel": "75 mg PO DAILY",
+                "MetoprololTartrate": "50 mg PO TID",
+                "Pravastatin": "80 mg PO QPM",
+                "Acetaminophen": "650 mg PO Q8H:PRN pain",
+                "Aspirin": "81 mg PO DAILY",
+                "MetoprololTartrate75mg": "75 mg PO TID",
+                "Atorvastatin": "40 mg PO QPM",
+                "Oxymetazoline": "1 SPRY NU BID:PRN nosebleed"
+            },
+            "DischargeInstructions": {
+                "FollowUpWithPCPForStressTest": "Yes",
+                "UseOxymetolazoneNasalSprayIfBleedingRecurs": "Yes",
+                "RepeatChestXrayInWeeks": "___",
+                "ConsiderFollowUpWithENTOrPlasticSurgeryForNasalFractures": "Yes",
+                "RepeatCBCInWeeks": "1",
+                "ConsiderConversionOfMetoprololTartrateToSuccinate": "Yes"
+            },
+            "FollowUpInstructions": "___"
+        },
+        "Group_B_pred": {
+            "diagnoses": [],
+            "medications": [],
+            "procedures": [],
+            "patient_demographics": {}
+        },
+        "Group_C_pred": "Error: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}}",
+        "Group_C_revisions": 0
+    }
+]

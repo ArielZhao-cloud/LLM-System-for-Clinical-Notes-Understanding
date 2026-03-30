@@ -1,0 +1,569 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oncology AI Multi-Agent Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+            .card { border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; }
+            .card-header { background-color: #2c3e50; color: white; font-weight: bold; }
+            .section-title { border-left: 5px solid #3498db; padding-left: 10px; margin: 20px 0 10px; color: #2c3e50; }
+            .badge-corrected { background-color: #e67e22; }
+            pre { background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #dee2e6; white-space: pre-wrap; }
+            .assessment-text { font-style: italic; color: #34495e; line-height: 1.6; }
+            .plan-box { background-color: #e8f4fd; border-left: 5px solid #2980b9; padding: 15px; }
+            .sticky-top { background: rgba(255,255,255,0.9); backdrop-filter: blur(5px); padding: 10px 0; border-bottom: 1px solid #ddd; }
+        </style>
+    </head>
+    <body>
+        <div class="sticky-top">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h2 class="mb-0">🩺 Oncology Agent Dashboard</h2>
+                <span class="badge bg-primary">Total Samples: 10</span>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+    
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #0</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Stage IIIb Non-Small Cell Lung Cancer (NSCLC)",
+    "secondary": [
+      "Post-obstructive pneumonia",
+      "Chronic Obstructive Pulmonary Disease (COPD)",
+      "Hypertension",
+      "Hyperlipidemia",
+      "Chronic low back pain"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [
+      "Vancomycin/Zosyn (antibiotics)",
+      "Levofloxacin (antibiotic)",
+      "Nadolol (for hypertension)",
+      "BiPAP (respiratory support)"
+    ],
+    "past": [
+      "Chemotherapy and Radiation (XRT/Chemo) for NSCLC",
+      "Bronchoscopy with lavage",
+      "Zosyn for MSSA post-obstructive pneumonia"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient with Stage IIIb Non-Small Cell Lung Cancer (NSCLC) presenting with significant acute and chronic comorbidities that critically inform the oncological assessment and treatment planning.<br><br>The primary oncologic diagnosis is locally advanced, unresectable Stage IIIb NSCLC. The patient is currently in a post-treatment phase following prior chemotherapy and radiation (XRT/Chemo). The absence of reported tumor-specific biomarkers (e.g., PD-L1, EGFR, ALK, ROS1) in the extracted data is a notable gap, as their status is essential for determining eligibility for targeted therapies or immunotherapy in the recurrent or metastatic setting. Obtaining this biomarker profile is a high-priority next step to guide subsequent systemic therapy options.<br><br>The clinical picture is currently dominated by a significant acute complication: **post-obstructive pneumonia**, requiring intensive antibiotic management (Vancomycin/Zosyn, Levofloxacin) and BiPAP respiratory support. This indicates potential tumor progression or inadequate response to prior treatment, causing bronchial obstruction. Active infection is an absolute contraindication to initiating or continuing most systemic cancer therapies (chemotherapy, immunotherapy, targeted agents) due to the high risk of life-threatening sepsis and immunosuppression. Therefore, the immediate clinical priority is the resolution of this infectious process.<br><br>The patient's comorbidities have a profound impact on treatment tolerance and strategy:<br>1.  **Chronic Obstructive Pulmonary Disease (COPD):** This is the most impactful comorbidity. It compounds the respiratory compromise from both the lung cancer and the post-obstructive pneumonia. It limits pulmonary reserve, increases the risk of radiation-induced pneumonitis, and may contraindicate or necessitate dose modifications for pneumotoxic chemotherapeutic agents. Pulmonary function tests are crucial for assessing fitness for further treatment.<br>2.  **Cardiovascular Comorbidities (Hypertension, Hyperlipidemia):** While managed with Nadolol, these conditions require careful monitoring during any systemic therapy, particularly with agents that can cause hypertension (e.g., VEGF inhibitors) or cardiotoxicity.<br>3.  **Chronic Low Back Pain:** Requires evaluation to rule out metastatic bone disease versus a benign etiology, as this would change the disease stage and treatment intent.<br><br>In summary, this patient with Stage IIIb NSCLC is in a medically precarious state due to an active, severe post-obstructive pneumonia superimposed on significant underlying COPD. The immediate focus must be on managing the acute infection and optimizing cardiopulmonary function. A comprehensive reassessment, including biomarker testing and restaging imaging, is required once the acute illness resolves to determine the feasibility and optimal pathway for subsequent oncologic management.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>A patient with Stage IIIb (locally advanced, unresectable) NSCLC, status post prior chemotherapy and radiation, now presents with **post-obstructive pneumonia** requiring IV antibiotics and BiPAP support. Significant comorbidities include COPD, hypertension, and hyperlipidemia. Tumor biomarker status (PD-L1, EGFR, ALK, ROS1) is unknown. Acute infection and limited pulmonary reserve dominate the clinical picture, precluding immediate systemic cancer therapy.<br><br>**Guideline Context:**  <br>NCCN Guidelines® for Non-Small Cell Lung Cancer (Version 1.2026) for Stage III disease, management of recurrent/progressive disease, and principles of supportive care.<br><br>**Treatment Plan:**  <br><br>**Phase 1: Acute Stabilization & Reassessment (Immediate – Next 1-2 Weeks)**<br>1.  **Manage Post-Obstructive Pneumonia:**<br>    *   Continue broad-spectrum IV antibiotics per infectious disease guidance.<br>    *   Maintain respiratory support (BiPAP/oxygen) as needed.<br>    *   Consider interventional pulmonology consultation for possible bronchoscopy to relieve obstruction (if clinically appropriate) and obtain tissue for biomarker testing.<br>2.  **Comorbidity Optimization:**<br>    *   **Pulmonary:** Formal pulmonary function tests (PFTs) with DLCO once acute infection resolves to quantify baseline COPD severity and assess tolerance for future therapy.<br>    *   **Cardiac:** Continue current management of HTN/HLD. Baseline echocardiogram may be considered if future cardiotoxic agents are planned.<br>    *   **Pain:** Obtain MRI of the spine to evaluate chronic low back pain for possible metastatic disease.<br>3.  **Oncologic Re-evaluation:**<br>    *   **Biomarker Testing:** Obtain tissue (via bronchoscopy, if safe, or CT-guided biopsy) or liquid biopsy for comprehensive molecular profiling: **PD-L1 (IHC), EGFR, ALK, ROS1, BRAF V600E, KRAS G12C, MET exon 14 skipping, RET, NTRK, HER2.** Next-generation sequencing (NGS) is preferred.<br>    *   **Restaging:** Once clinically stable, obtain **CT chest/abdomen/pelvis with IV contrast and brain MRI** to assess response to prior chemoradiation and evaluate for distant progression.<br><br>**Phase 2: Definitive Systemic & Local Therapy Planning (Upon Infection Resolution & Staging Completion)**<br>*Treatment pathway depends on reassessed disease status and biomarker results.*<br><br>**A. If Disease is Still Confined to Chest (Locally Recurrent/Progressive, Unresectable):**<br>*   **PD-L1 ≥1%:** Consider consolidative or systemic therapy with **durvalumab** (if not received after prior chemoradiation and within the appropriate timeframe). If progression occurs on/after durvalumab, treat as metastatic disease (see below).<br>*   **PD-L1 <1% or Contraindication to Immunotherapy:** Consider second-line systemic therapy per metastatic guidelines, or evaluate feasibility of additional local therapy (see below).<br><br>**B. If Metastatic Disease is Confirmed:**<br>*   **Targeted Therapy Options (If Actionable Driver Identified):**<br>    *   **EGFR exon 19 del/L858R:** Osimertinib (preferred).<br>    *   **ALK rearrangement:** Alectinib, brigatinib, or lorlatinib (preferred).<br>    *   **ROS1 rearrangement:** Entrectinib or lorlatinib.<br>    *   **BRAF V600E mutation:** Dabrafenib + trametinib.<br>    *   **KRAS G12C mutation:** Sotorasib or adagrasib.<br>    *   **Other (MET, RET, NTRK, HER2):** Use corresponding NCCN-recommended targeted agent.<br>*   **Immunotherapy ± Chemotherapy Options (No Actionable Driver, or after targeted therapy options exhausted):**<br>    *   **PD-L1 ≥50%:** Pembrolizumab monotherapy (preferred) or combination immunotherapy/chemotherapy.<br>    *   **PD-L1 1-49%:** Combination immunotherapy/chemotherapy (e.g., pembrolizumab + platinum-doublet chemo, or other NCCN-recommended regimens).<br>    *   **PD-L1 <1%:** Combination immunotherapy/chemotherapy or chemotherapy alone.<br>    *   **Special Consideration for COPD/Infection History:** Immunotherapy carries risk of pneumonitis, which may be exacerbated by underlying COPD. Vigilant monitoring is required. Active infection is a contraindication to initiation.<br><br>**C. Local Therapy Considerations:**<br>*   **Radiation Therapy (RT):** Consider for palliation of symptomatic local disease (e.g., airway obstruction, pain, bleeding) or for oligoprogressive sites on systemic therapy. Use advanced techniques (e.g., SBRT) to minimize lung toxicity in a patient with COPD.<br>*   **Surgery:** Unlikely given initial Stage IIIb designation and prior chemoradiation, but could be re-evaluated in a highly selected scenario of localized recurrence.<br><br>**Phase 3: Supportive Care & Monitoring (Ongoing)**<br>1.  **Pulmonary Rehabilitation:** Enroll in program to optimize pulmonary function and exercise tolerance.<br>2.  **Infectious Disease Prophylaxis:** Consider *Pneumocystis jirovecii* pneumonia (PJP) prophylaxis if on prolonged high-dose steroids (e.g., for immunotherapy-related pneumonitis).<br>3.  **Symptom Management:**<br>    *   **Dyspnea:** Continue optimal COPD management (inhaled bronchodilators/corticosteroids). Assess for need of supplemental oxygen.<br>    *   **Pain:** Manage per WHO analgesic ladder based on MRI findings.<br>    *   **Nutrition:** Dietary consultation for cancer-related weight loss/anorexia.<br>4.  **Monitoring During Therapy:**<br>    *   **Clinical:** Frequent assessment for respiratory symptoms (disease vs. pneumonitis vs. COPD exacerbation vs. infection).<br>    *   **Imaging:** CT chest every 2-4 cycles of systemic therapy, or as clinically indicated.<br>    *   **Labs:** CBC, CMP prior to each treatment cycle. Monitor for endocrinopathies if on immunotherapy.<br>5.  **Advance Care Planning:** Discuss goals of care, prognosis, and palliative care involvement early given advanced cancer and significant comorbidities.<br><br>**Key Considerations:**<br>*   **Timing:** No systemic cancer therapy should be initiated until the active post-obstructive pneumonia is fully resolved and the patient is off significant respiratory support.<br>*   **Toxicity Risk:** The patient's COPD significantly increases the risk of pulmonary toxicity from both immunotherapy (pneumonitis) and additional radiation. A multidisciplinary discussion (medical oncology, radiation oncology, pulmonology) is essential before proceeding.<br>*   **Biomarkers are Critical:** The treatment path is entirely dependent on the results of comprehensive biomarker testing.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #1</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Suspected central left lower lobe obstructing mass/tumor with large left pleural effusion and lung collapse",
+    "secondary": [
+      "Recurrent pneumonia",
+      "Left pleural effusion",
+      "Left lower lobe collapse",
+      "Partial left upper lobe collapse",
+      "Mild mediastinal and left hilar lymphadenopathy"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [
+      "Chest tube placement for pleural effusion drainage",
+      "IV morphine for pain management"
+    ],
+    "past": [
+      "Azithromycin (antibiotic)",
+      "Levaquin (levofloxacin) (antibiotic)",
+      "Augmentin (amoxicillin/clavulanate) (antibiotic)",
+      "Bronchoscopy (scheduled/procedure)"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient presenting with a suspected advanced primary lung malignancy. The imaging findings are highly concerning for a centrally located, obstructing tumor in the left lower lobe, leading to significant downstream complications including post-obstructive pneumonia, lobar collapse, and a large malignant-appearing pleural effusion. The presence of mild mediastinal and hilar lymphadenopathy raises suspicion for locoregional nodal involvement. The recurrent nature of the pneumonias is a classic presentation of an obstructing endobronchial lesion.<br><br>**Analysis of Biomarkers and Relationship to Diagnosis:** No specific tumor biomarkers (e.g., PD-L1, EGFR, ALK) or serum markers (e.g., CEA) are available in the provided data. This represents a critical gap in the oncological assessment. Obtaining tissue via the scheduled bronchoscopy for histopathological diagnosis and comprehensive molecular profiling is the immediate next step. The biomarker profile will be essential for definitive diagnosis, prognostication, and guiding targeted or immunotherapeutic strategies.<br><br>**Synthesis of Comorbidities and Impact on Treatment:** While specific comorbidities like COPD or CAD are not listed in the extracted data, the clinical scenario implies significant cardiopulmonary compromise. The large pleural effusion and lung collapse have substantially reduced functional lung capacity, creating a high-risk baseline for any surgical intervention or thoracic radiotherapy. This compromised respiratory reserve would also lower tolerance for systemic therapies that can cause pulmonary toxicity (e.g., certain chemotherapies, immunotherapy-related pneumonitis). A thorough pre-treatment assessment of pulmonary function and cardiac status is imperative. Management must aggressively address the pleural effusion (as initiated with chest tube drainage) to optimize lung expansion and improve physiological reserve prior to initiating definitive cancer therapy.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>A patient presents with a suspected advanced primary lung malignancy, characterized by a centrally located, obstructing left lower lobe tumor causing post-obstructive pneumonia, lobar collapse, and a large malignant pleural effusion. Mild mediastinal/hilar lymphadenopathy suggests locoregional nodal involvement. No biomarker data (PD-L1, EGFR, ALK, etc.) are available. The patient’s cardiopulmonary status is compromised by the effusion and collapse, reducing tolerance for therapies with pulmonary toxicity and increasing perioperative risk.<br><br>**Guideline Context:**  <br>NCCN Guidelines® for Non-Small Cell Lung Cancer (NSCLC), Version 1.2026, and NCCN Guidelines for Malignant Pleural Effusion. Key principles:  <br>- Tissue diagnosis and comprehensive molecular profiling are required before systemic therapy.  <br>- Management of symptomatic effusion is a priority to improve functional status.  <br>- Treatment is stage-driven and biomarker-directed.  <br>- Performance status and organ function must guide therapy selection.<br><br>**Treatment Plan:**<br><br>**1. Immediate Diagnostic & Stabilization Phase**  <br>- **Diagnostic Procedure:** Proceed with scheduled bronchoscopy with biopsy/brushings/washings for:  <br>  - Histology (NSCLC vs. SCLC, subtype).  <br>  - Required molecular testing: PD-L1 (IHC), EGFR, ALK, ROS1, BRAF V600E, KRAS G12C, NTRK, MET exon 14 skipping, RET, HER2 (ERBB2).  <br>  - Next-generation sequencing (NGS) on tissue or liquid biopsy if tissue insufficient.  <br>- **Pleural Effusion Management:**  <br>  - Continue chest tube drainage. Consider tunneled indwelling pleural catheter or pleurodesis for recurrent/symptomatic effusion.  <br>  - Send pleural fluid for cytology, cell block, and molecular testing if initial tissue inadequate.  <br>- **Supportive Care:**  <br>  - Aggressive management of post-obstructive pneumonia with culture-directed antibiotics.  <br>  - Pulmonary rehabilitation and optimization of nutrition.  <br>  - Assess performance status (ECOG), pulmonary function tests, and cardiac evaluation.<br><br>**2. Systemic Therapy (Based on Anticipated NSCLC Histology & Biomarkers)**  <br>*Initiate after histologic confirmation and biomarker results.*  <br>- **If PD-L1 ≥50%, no actionable driver mutation:**  <br>  - **First-line:** Pembrolizumab monotherapy (preferred) or other approved anti-PD-1/PD-L1 agents.  <br>- **If PD-L1 1–49%, no actionable driver mutation:**  <br>  - **First-line:** Pembrolizumab + platinum-based doublet chemotherapy (carboplatin/cisplatin + pemetrexed for non-squamous; carboplatin/cisplatin + paclitaxel/nab-paclitaxel ± bevacizumab for squamous).  <br>- **If actionable driver mutation present (e.g., EGFR, ALK, ROS1, etc.):**  <br>  - Use targeted therapy per NCCN recommendations (e.g., osimertinib for EGFR; alectinib/lorlatinib for ALK). Immunotherapy is generally avoided initially.  <br>- **If PD-L1 <1%, no driver mutation:**  <br>  - Platinum-doublet chemotherapy ± immunotherapy per NCCN options (e.g., nivolumab + ipilimumab + chemo, or chemo alone if poor tolerance).  <br>- **Adjustments for Compromised Cardiopulmonary Reserve:**  <br>  - Favor carboplatin over cisplatin if renal or cardiac concerns.  <br>  - Monitor closely for immunotherapy-related pneumonitis. Consider prophylactic steroids if radiation is planned concurrently.  <br>  - Use growth factor support as needed.<br><br>**3. Local Therapy**  <br>- **Radiation Therapy:**  <br>  - Consider palliative RT to the primary tumor for symptom control (hemoptysis, obstruction, pain).  <br>  - Definitive chemoradiation is unlikely if effusion is malignant (stage IV), but may be considered if effusion is proven non-malignant and disease is stage III.  <br>- **Surgery:**  <br>  - Not indicated initially given suspected advanced stage (malignant effusion). If downstaging occurs with systemic therapy, reassess resectability in multidisciplinary tumor board.<br><br>**4. Monitoring & Supportive Care**  <br>- **Response Assessment:** CT chest/abdomen every 2–3 cycles of therapy; consider PET for ambiguous cases.  <br>- **Toxicity Monitoring:**  <br>  - Baseline and periodic pulmonary function tests, especially if on immunotherapy or pneumotoxic chemo.  <br>  - Cardiac monitoring if on anthracyclines or certain targeted agents.  <br>  - Routine labs, renal/hepatic function, thyroid function (on immunotherapy).  <br>- **Supportive Measures:**  <br>  - Early palliative care involvement for symptom management (dyspnea, cough, fatigue).  <br>  - Venous thromboembolism prophylaxis (high risk in lung cancer).  <br>  - Nutritional support, pain management, and psychosocial care.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #2</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Metastatic breast cancer",
+    "secondary": [
+      "Bone metastasis (clivus, left sphenoid greater wing, sacrum, right ilium)"
+    ],
+    "characteristics": [
+      "ER+",
+      "PR+",
+      "HER2-"
+    ]
+  },
+  "biomarkers": [
+    "ER+",
+    "PR+",
+    "HER2-"
+  ],
+  "treatments": {
+    "current": [
+      {
+        "type": "Systemic Therapy",
+        "name": "Faslodex (fulvestrant)",
+        "status": "ongoing"
+      },
+      {
+        "type": "Systemic Therapy",
+        "name": "Palbociclib",
+        "status": "ongoing"
+      },
+      {
+        "type": "Analgesic",
+        "name": "Oxycodone 20mg q4hr",
+        "status": "ongoing"
+      }
+    ],
+    "past": [
+      {
+        "type": "Radiation Therapy",
+        "name": "Palliative XRT",
+        "details": "2Gy in five fractions to sacral mass"
+      }
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient with metastatic hormone receptor-positive (ER+, PR+), HER2-negative breast cancer. The disease has metastasized to multiple osseous sites, including the clivus, left sphenoid wing, sacrum, and right ilium, indicating a high burden of skeletal disease.<br><br>The biomarker profile is the cornerstone of the current treatment strategy. The positivity for estrogen and progesterone receptors defines this as a luminal subtype, making the disease amenable to endocrine therapy. The ongoing dual-agent regimen of fulvestrant (an estrogen receptor degrader) and palbociclib (a CDK4/6 inhibitor) represents a standard first-line systemic treatment for metastatic HR+/HER2- breast cancer, aimed at achieving durable disease control. The HER2-negative status further confirms the appropriateness of this non-chemotherapy approach.<br><br>The pattern of bone metastases carries significant clinical implications. Lesions in weight-bearing bones like the sacrum and ilium pose a risk for pathological fracture and require close monitoring. The clival metastasis is of particular concern due to its proximity to critical neural structures, necessitating vigilance for symptoms of cranial nerve involvement. The patient's ongoing requirement for scheduled oxycodone underscores the presence of significant tumor-related bone pain, which has been partially addressed with prior palliative radiotherapy to the sacrum.<br><br>For treatment planning, key comorbidities to consider include:<br>*   **Chronic Obstructive Pulmonary Disease (COPD):** May increase the risk of pulmonary complications from infections (e.g., pneumonia) which can occur with CDK4/6 inhibitors due to associated neutropenia. It may also influence the management of dyspnea, which could be multifactorial (metastatic disease, COPD, or treatment effect).<br>*   **Coronary Artery Disease (CAD):** Requires careful cardiovascular assessment and monitoring, as certain endocrine therapies can affect lipid profiles and, rarely, contribute to cardiovascular risk. Pain management with opioids also necessitates caution in patients with cardiovascular disease.<br><br>In summary, this patient has advanced, symptomatic luminal breast cancer managed with guideline-concordant endocrine-based therapy. The primary clinical focus is on optimizing disease control and pain management while vigilantly monitoring for skeletal-related events and managing the potential impact of underlying COPD and CAD on treatment tolerance and overall health status.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>The patient has metastatic HR+/HER2- breast cancer with multiple osseous metastases (clivus, left sphenoid wing, sacrum, right ilium) and significant bone pain requiring opioids. Current systemic therapy is fulvestrant + palbociclib (first-line endocrine-based regimen). Comorbidities include COPD and CAD, which influence monitoring and supportive care.<br><br>**Guideline Context:**  <br>NCCN Guidelines® for Breast Cancer (v1.2026) for metastatic HR+/HER2- disease recommend endocrine therapy + a CDK4/6 inhibitor as preferred first-line treatment unless visceral crisis or rapidly progressive symptomatic disease is present. Bone metastases require bone-modifying agents and consideration of local therapy for symptomatic or high-risk sites. Management should address comorbidities, symptom control, and monitoring for treatment-related toxicities.<br><br>**Treatment Plan:**<br><br>**1. Systemic Therapy**  <br>- **Continue current regimen:** Fulvestrant 500 mg IM on days 1, 15, 29, then every 28 days + Palbociclib 125 mg orally daily for 21 days, then 7 days off (28-day cycle).  <br>- **Rationale:** This is standard first-line therapy per NCCN. No change is indicated unless disease progression or intolerable toxicity occurs.  <br>- **Monitoring:**  <br>  - CBC weekly for first 2 cycles, then prior to each cycle (palbociclib-induced neutropenia risk).  <br>  - Liver function tests, renal function, and electrolytes periodically.  <br>  - Assessment of cardiovascular risk factors (lipid panel, blood pressure) every 3–6 months given CAD history.<br><br>**2. Local Therapy**  <br>- **Radiation Oncology Consultation:**  <br>  - Evaluate clivus/sphenoid lesions for stereotactic radiotherapy given proximity to cranial nerves and risk of neurological compromise.  <br>  - Consider additional palliative RT to right ilium or other painful sites not previously irradiated if pain is inadequately controlled.  <br>- **Orthopedic Surgery Consultation:**  <br>  - Assess sacral and right iliac lesions for fracture risk. Consider prophylactic stabilization if high risk (e.g., lytic lesion >2.5 cm, >50% cortical involvement, pain with weight-bearing).  <br><br>**3. Bone-Targeted Therapy**  <br>- **Initiate bone-modifying agent:**  <br>  - Zoledronic acid 4 mg IV every 12 weeks or denosumab 120 mg SC every 4 weeks.  <br>  - Provide calcium (1000–1200 mg/day) and vitamin D (600–800 IU/day) supplementation.  <br>  - Monitor renal function (prior to each zoledronic acid dose) and dental health (risk of osteonecrosis of jaw).  <br><br>**4. Supportive Care & Monitoring**  <br>- **Pain Management:**  <br>  - Continue opioid regimen with scheduled oxycodone; reassess pain score at each visit.  <br>  - Consider adjunctive analgesics (e.g., NSAIDs if no CAD contraindication, gabapentin for neuropathic components).  <br>  - Palliative care consultation for comprehensive pain and symptom management.  <br>- **Comorbidity Management:**  <br>  - **COPD:** Monitor for dyspnea (distinguish between COPD exacerbation, disease progression, or pulmonary infection). Encourage pneumococcal and influenza vaccination. Use caution with corticosteroids for palbociclib-related neutropenia fever in setting of COPD.  <br>  - **CAD:** Continue cardioprotective medications; monitor for cardiac symptoms. Palbociclib has low cardiac risk, but fulvestrant may affect lipids.  <br>- **Monitoring for Disease Response/Progression:**  <br>  - Imaging (CT chest/abdomen/pelvis with bone scan or PET/CT) every 3–4 months.  <br>  - Assess for new bone pain or neurological symptoms (especially cranial nerve deficits from clival disease) at each visit.  <br>- **Toxicity Management:**  <br>  - **Neutropenia:** Manage per NCCN guidelines; dose reduce or interrupt palbociclib for grade 3/4 neutropenia.  <br>  - **Nausea/fatigue:** Provide anticipatory guidance and symptomatic management.  <br><br>**5. Patient Education & Follow-up**  <br>- Educate on signs of infection, fracture (new pain, inability to bear weight), or neurological changes.  <br>- Encourage smoking cessation (if applicable) for COPD and CAD.  <br>- Schedule follow-up with medical oncology every 4 weeks initially, then every 8–12 weeks if stable.  <br><br>**6. Future Considerations**  <br>- Upon progression on first-line endocrine + CDK4/6 inhibitor, consider next-line options per NCCN:  <br>  - Alternative endocrine therapy (e.g., exemestane + everolimus)  <br>  - Chemotherapy (e.g., paclitaxel, capecitabine, eribulin) for symptomatic visceral progression.  <br>- Repeat biopsy at progression to assess for receptor status change.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #3</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Invasive ductal carcinoma of left breast",
+    "secondary": [
+      "Left renal artery infarction",
+      "Splenic artery infarction"
+    ]
+  },
+  "biomarkers": {
+    "ER": "Positive (>95%)",
+    "PR": "Positive (>95%)",
+    "HER2": "Equivocal by IHC (FISH pending)",
+    "genetic_testing": "No mutations identified"
+  },
+  "treatments": {
+    "current": [
+      "Warfarin anticoagulation"
+    ],
+    "past": [
+      "Left partial mastectomy and sentinel lymph node biopsy",
+      "TPA (tissue plasminogen activator) for left renal artery",
+      "Lovenox bridge therapy"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This patient presents with a history of **invasive ductal carcinoma of the left breast**, status post left partial mastectomy and sentinel lymph node biopsy. The oncological profile is dominated by a strongly hormone receptor-positive phenotype, with both **Estrogen Receptor (ER) and Progesterone Receptor (PR) highly positive (>95%)**. This defines a **Luminal A-like** molecular subtype, indicating a high likelihood of response to endocrine therapy (e.g., tamoxifen or aromatase inhibitors), which will be a cornerstone of adjuvant treatment. The **HER2 status is currently equivocal by IHC**, with FISH results pending. This result is critically important, as it will determine the potential addition of HER2-targeted therapies (e.g., trastuzumab) to the treatment regimen. The absence of identified pathogenic mutations on genetic testing is reassuring from a hereditary cancer risk perspective but does not alter the immediate treatment strategy based on the tumor's receptor status.<br><br>Significantly, the patient's clinical course is complicated by major **vascular comorbidities**, specifically a recent **left renal artery infarction and splenic artery infarction**, necessitating therapeutic anticoagulation (Warfarin, with past Lovenox bridge and TPA administration). These conditions represent a **major impact on cancer treatment planning**. They introduce substantial risks for perioperative complications, may contraindicate or require careful modification of certain chemotherapeutic agents (particularly those associated with vascular toxicity or thrombotic risk), and complicate the management of central venous access devices. The need for ongoing anticoagulation will also influence the timing and safety of any future surgical interventions or biopsies.<br><br>In summary, the primary oncological strategy will be adjuvant endocrine therapy, with HER2-directed therapy contingent on pending FISH results. However, the **major vascular comorbidities are the dominant factor influencing overall risk assessment and treatment feasibility**, requiring close multidisciplinary coordination between oncology, cardiology/vascular medicine, and hematology to optimize both cancer outcomes and patient safety.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>The patient has a history of ER/PR-positive (>95%), HER2-equivocal (IHC) invasive ductal carcinoma of the left breast, status post left partial mastectomy and sentinel lymph node biopsy, with pending FISH results for HER2. Major vascular comorbidities—recent left renal and splenic artery infarctions—require ongoing therapeutic anticoagulation (Warfarin), significantly impacting treatment planning and risk assessment.<br><br>**Guideline Context:**  <br>NCCN Guidelines® for Breast Cancer (Version 1.2026) emphasize treatment decisions based on tumor stage, receptor status (ER/PR, HER2), and patient comorbidities. For hormone receptor-positive (HR+), HER2-negative early-stage breast cancer, adjuvant endocrine therapy is the cornerstone. For HER2-positive disease, HER2-targeted therapy (e.g., trastuzumab ± pertuzumab) is added. Chemotherapy is considered based on recurrence risk (e.g., Oncotype DX score, nodal status, tumor features). Comorbidities, especially active thrombotic events or need for anticoagulation, require multidisciplinary management to balance cancer treatment efficacy with safety.<br><br>**Treatment Plan:**<br><br>**1. Systemic Therapy**<br>   - **Adjuvant Endocrine Therapy:** Initiate regardless of HER2 status.<br>     - **Option 1 (Premenopausal):** Tamoxifen for 5–10 years ± ovarian suppression (GnRH agonist) if high-risk features present.<br>     - **Option 2 (Postmenopausal):** Aromatase inhibitor (anastrozole, letrozole, or exemestane) for 5–10 years.<br>     - *Note:* Aromatase inhibitors may increase cardiovascular risk; consider tamoxifen if vascular risk is paramount, pending cardiology input.<br>   - **HER2-Targeted Therapy:** Await FISH results.<br>     - If **HER2-positive:** Add adjuvant trastuzumab for 1 year (± pertuzumab if high-risk, e.g., node-positive). Coordinate with cardiology due to potential cardiac toxicity and vascular comorbidities. Echocardiogram baseline and periodic monitoring required.<br>     - If **HER2-negative:** No HER2-targeted therapy indicated.<br>   - **Adjuvant Chemotherapy:** Decision pending full pathology (tumor size, grade, nodal status, Ki-67) and genomic assay (e.g., Oncotype DX) if indicated per NCCN. If chemotherapy is recommended:<br>     - **Regimen Selection:** Avoid regimens with high thrombotic risk (e.g., cisplatin) or significant vascular toxicity (e.g., bevacizumab not indicated in adjuvant setting). Consider anthracycline/taxane-based regimens only if benefit outweighs vascular risk, with cardiology clearance.<br>     - **Anticoagulation Management:** Warfarin requires careful monitoring during myelosuppressive therapy. Consider LMWH bridge if INR unstable. Avoid central venous access devices if possible to reduce thrombosis risk; if necessary, coordinate with hematology for anticoagulation management.<br><br>**2. Local Therapy**<br>   - **Surgery:** Partial mastectomy already completed. If re-excision or axillary dissection is needed based on final margins or nodal status, coordinate with surgery and hematology to manage anticoagulation perioperatively (hold warfarin, bridge with LMWH per protocol).<br>   - **Radiation Therapy (RT):** Adjuvant breast RT is standard after breast-conserving surgery. Discuss with radiation oncology regarding timing relative to anticoagulation and vascular events. No major contraindication to RT, but ensure stable anticoagulation before starting.<br><br>**3. Monitoring & Supportive Care**<br>   - **Multidisciplinary Coordination:** Regular consultation with cardiology/vascular medicine, hematology, and oncology to optimize anticoagulation, monitor vascular health, and adjust cancer therapy as needed.<br>   - **Cardiac Monitoring:** Baseline echocardiogram before HER2-targeted therapy (if indicated) and repeat every 3–4 months during treatment. Monitor for symptoms of ischemia or infarction.<br>   - **Bone Health:** For aromatase inhibitor therapy, baseline DEXA scan and consider calcium/vitamin D supplementation ± bisphosphonate/denosumab if osteoporotic.<br>   - **Surveillance:** Follow NCCN surveillance guidelines: history/physical every 4–6 months for 5 years, then annually; annual mammography; assess adherence and side effects of endocrine therapy.<br>   - **Supportive Measures:**  <br>     - Manage endocrine therapy side effects (e.g., vasomotor symptoms, arthralgia, sexual health).  <br>     - Thromboprophylaxis: Continue therapeutic anticoagulation as prescribed; educate on bleeding/thrombosis signs.  <br>     - Lifestyle counseling: heart-healthy diet, smoking cessation, weight management, moderate exercise as tolerated.<br><br>**4. Special Considerations**<br>   - **HER2 Equivocal:** If FISH remains equivocal, consider repeat testing or alternative assays per NCCN. Treatment decisions should be based on clarified HER2 status.<br>   - **Vascular Comorbidities:** These dominate risk assessment. Avoid therapies that increase thrombotic risk. Prioritize endocrine therapy; chemotherapy only if high recurrence risk and medically cleared.<br>   - **Genetic Counseling:** No pathogenic mutations identified, but discuss family history and consider further counseling if indicated.<br><br>**Next Steps:**<br>1. Obtain HER2 FISH results.<br>2. Finalize pathology report (margins, nodal status, tumor grade, Ki-67).<br>3. Multidisciplinary meeting with cardiology, hematology, surgery, radiation oncology.<br>4. Decide on chemotherapy based on full risk assessment (consider genomic testing if intermediate risk).<br>5. Initiate endocrine therapy promptly after multidisciplinary review.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #4</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": [
+      "L1 compression fracture"
+    ],
+    "secondary": [
+      "Hypertension",
+      "Obstructive sleep apnea (OSA)",
+      "History of DVT/PE",
+      "Chronic obstructive pulmonary disease (COPD)",
+      "Asthma",
+      "Peripheral artery disease (PAD)",
+      "Gout",
+      "Depression",
+      "Benign prostatic hyperplasia (BPH)",
+      "Hyperlipidemia",
+      "History of TIA/CVA",
+      "Left carotid stenosis"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [
+      "Coumadin (warfarin)",
+      "CPAP for OSA",
+      "Pain management (unspecified, previously tried Percocet and Valium)"
+    ],
+    "past": [
+      "L1 kyphoplasty",
+      "Upper back surgery x2",
+      "Lumbar spine surgery x2",
+      "Right rotator cuff surgery",
+      "Left knee surgery",
+      "Bilateral greater saphenous radiofrequency ablation"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This patient presents with a complex medical history, now complicated by an L1 compression fracture. The oncological assessment is primarily focused on evaluating this new finding, as the provided data does not indicate an active cancer diagnosis. The key clinical considerations are the etiology of the fracture and the significant comorbidities that would profoundly influence any potential treatment pathway.<br><br>**1. Assessment of L1 Compression Fracture:** The primary concern is determining the underlying cause of the vertebral fracture. Given the patient's extensive history of spinal surgeries and the absence of noted trauma, the differential must include pathological versus osteoporotic etiologies. A pathological fracture secondary to metastatic disease or multiple myeloma must be ruled out, despite no active cancer being listed. The prior L1 kyphoplasty indicates this is a recurrent or persistent issue, heightening the need for a definitive diagnosis through advanced imaging (e.g., MRI spine) and possibly biopsy.<br><br>**2. Analysis of Biomarkers and Diagnosis:** No tumor biomarkers are reported. The critical diagnostic step is to establish the nature of the L1 lesion. If imaging suggests malignancy, obtaining tissue for histopathology would be imperative to guide any oncologic management. The relationship between the fracture and the diagnosis is currently undefined; clarifying this is the central task.<br><br>**3. Synthesis of Comorbidities Impacting Treatment:** The patient's comorbidities present substantial barriers to both diagnostic procedures and potential cancer-directed therapies.<br>*   **Cardiovascular/Thromboembolic:** **History of DVT/PE** and current **Coumadin** therapy is a major contraindication for invasive procedures without meticulous perioperative bridging. **Peripheral artery disease (PAD), Left carotid stenosis, and History of TIA/CVA** indicate significant vascular disease, increasing perioperative stroke and cardiovascular risk and potentially limiting the use of specific chemotherapeutic or anti-angiogenic agents.<br>*   **Pulmonary:** **COPD and Asthma** compromise pulmonary reserve, increasing anesthesia risk and susceptibility to pulmonary toxicity from certain chemotherapies or radiation.<br>*   **Other:** **Hypertension and Hyperlipidemia** require optimization to reduce cardiovascular strain during treatment. **Obstructive Sleep Apnea (OSA)** managed with CPAP necessitates careful perioperative planning. **Depression** can affect treatment adherence and tolerance. **Gout** may be exacerbated by some therapies. **Benign Prostatic Hyperplasia (BPH)** is relevant for symptoms management and certain hormonal treatments if a prostate cancer were discovered.<br><br>**Conclusion:** The immediate priority is a comprehensive workup to determine the etiology of the L1 compression fracture. Any consideration of oncologic treatment is entirely contingent upon a confirmed malignant diagnosis. The extensive comorbid conditions, particularly the anticoagulation for DVT/PE and the significant cardiopulmonary disease, mandate a highly coordinated, multidisciplinary approach involving oncology, neurosurgery/spine surgery, hematology, cardiology, pulmonology, and anesthesia to optimize safety and tailor any future therapeutic plan.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>The patient presents with a recurrent L1 compression fracture status-post prior kyphoplasty, without an established active cancer diagnosis. The immediate priority is to determine the etiology (pathologic vs. osteoporotic) of the fracture. Significant comorbidities—including anticoagulation for DVT/PE, history of TIA/CVA, carotid stenosis, COPD/asthma, and other cardiovascular risks—dominate the clinical picture and will profoundly influence diagnostic and therapeutic safety. No oncologic treatment is indicated until a malignant diagnosis is confirmed.<br><br>**Guideline Context:**  <br>This plan follows NCCN Guidelines® (2026 v1) principles for:  <br>1. **Diagnostic Workup of Suspected Bone Metastases** (across relevant tumor types).  <br>2. **Multidisciplinary Management of Bone Health** (NCCN Guidelines for Supportive Care).  <br>3. **General risk-adapted treatment planning** in patients with major comorbidities.  <br>Specific systemic therapy recommendations would require a confirmed tissue diagnosis and staging.<br><br>**Treatment Plan:**<br><br>**I. Immediate Diagnostic & Stabilization Phase**  <br>*Goal: Establish etiology of L1 fracture and manage symptoms safely.*  <br><br>1. **Local Therapy & Diagnostic Procedures:**  <br>   - **Imaging:** Urgent MRI spine with contrast (if renal function permits) to characterize the L1 lesion, assess spinal canal compromise, and evaluate for other bony lesions.  <br>   - **Biopsy:** If imaging suggests malignancy, perform CT-guided biopsy of the L1 vertebral body. **Critical peri-procedural coordination with hematology/anticoagulation management is required for bridging of Coumadin.**  <br>   - **Orthopedic/Neurosurgical Spine Consultation:** For assessment of mechanical stability, need for bracing, and potential surgical intervention if unstable or progressive neurologic symptoms develop.  <br>   - **Bone Health:**  <br>     - DEXA scan to assess for osteoporosis.  <br>     - Initiate calcium/vitamin D supplementation unless contraindicated.  <br>     - Hold bone-modifying agents (e.g., bisphosphonates, denosumab) until malignancy is ruled out or diagnosis is confirmed (then choose based on primary tumor type).<br><br>2. **Supportive Care & Comorbidity Optimization:**  <br>   - **Pain Management:** Multimodal analgesia (e.g., acetaminophen, judicious use of NSAIDs considering renal/cardiovascular risk, short-course opioids if severe). Avoid NSAIDs if on therapeutic anticoagulation.  <br>   - **Anticoagulation Management:** Coordinate with hematology/cardiology for peri-diagnostic procedure bridging plan (typically transition to low-molecular-weight heparin).  <br>   - **Comorbidity Optimization:**  <br>     - **Cardiology/Pulmonary Clearance:** For any planned procedure requiring anesthesia.  <br>     - **Medication Review:** Ensure optimal management of HTN, hyperlipidemia, COPD/asthma, depression, and gout.  <br>   - **Mobility & Rehabilitation:** Physical therapy evaluation for safe mobilization with appropriate bracing.<br><br>**II. Conditional Systemic & Local Therapy Plan**  <br>*Contingent on biopsy confirming malignancy and completion of staging.*  <br><br>1. **If Diagnosis is Metastatic Carcinoma (e.g., Lung, Breast, Prostate, etc.):**  <br>   - **Systemic Therapy:** Choice will be entirely determined by:  <br>     - **Primary tumor type, histology, and biomarker profile** (e.g., ER/PR/HER2 for breast; PD-L1, EGFR, ALK for lung; AR signaling for prostate).  <br>     - **Performance status and organ function** adjusted for comorbidities:  <br>       - Avoid cardiotoxic agents (e.g., anthracyclines) given cardiovascular history.  <br>       - Avoid bleomycin or other high pulmonary toxicity drugs given COPD/asthma.  <br>       - Use caution with anti-angiogenic agents (e.g., bevacizumab) given history of TIA/CVA, carotid stenosis, and thromboembolism.  <br>     - **Immunotherapy** (if indicated by tumor type): Generally acceptable but monitor for immune-related pneumonitis (pulmonary history) and colitis (given age/comorbidities).  <br>   - **Local Therapy for L1 Lesion:**  <br>     - **Radiation Therapy (RT):** Consider palliative RT to L1 for pain control or to treat impending cord compression if not surgical candidate.  <br>     - **Surgery:** Reserved for mechanical instability, progressive neurologic deficit, or failure of RT. Requires extensive preoperative cardiopulmonary and anticoagulation clearance.<br><br>2. **If Diagnosis is Multiple Myeloma or Lymphoma:**  <br>   - **Systemic Therapy:** Follow NCCN Guidelines for these malignancies, selecting regimens based on fitness (likely “non-intensive” approaches). Avoid steroids if poorly controlled diabetes or significant osteoporosis.  <br>   - **Local Therapy:** RT to L1 would be primary local modality; surgery rarely indicated.<br><br>3. **If Diagnosis is Osteoporotic/Vbenign:**  <br>   - Discontinue oncologic considerations and manage via osteoporosis treatment, pain control, and rehabilitation.<br><br>**III. Monitoring & Supportive Care Throughout**  <br><br>1. **Monitoring:**  <br>   - **Disease:** Follow imaging/tumor markers per specific malignancy guidelines.  <br>   - **Treatment Toxicity:** Enhanced monitoring for cardiotoxicity (e.g., regular LVEF assessment if using relevant agents), pulmonary symptoms, and neurotoxicity.  <br>   - **Comorbidities:** Close coordination with primary care and specialists for ongoing management of cardiovascular, pulmonary, and psychiatric health.<br><br>2. **Supportive Care (Integrate per NCCN Supportive Care Guidelines):**  <br>   - **Bone Health:** If malignancy confirmed, initiate bone-modifying agent (e.g., denosumab or zoledronic acid) with dental clearance prior, adjusted for renal function.  <br>   - **Anticoagulation:** Long-term management plan for DVT/PE, considering potential drug-drug interactions with systemic therapy.  <br>   - **Psychosocial Support:** Address depression and anxiety related to diagnosis and treatment.  <br>   - **Nutrition & Physical Therapy:** Maintain mobility and mitigate sarcopenia.<br><br>**Summary:** The plan is staged: **First**, a definitive diagnostic workup for the L1 fracture with rigorous peri-procedural management of comorbidities. **Second**, if malignancy is confirmed, a highly tailored, multidisciplinary treatment plan selecting systemic and local therapies that minimize risk given the patient’s specific cardiovascular, thromboembolic, and pulmonary vulnerabilities. All decisions should be made in a tumor board setting with involvement of all relevant specialties.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #5</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Rectal adenocarcinoma, stage IIC (cT4N0M0)",
+    "secondary": [
+      "Cerebrovascular accident (suspected, presenting with left-sided weakness and speech difficulty)"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [
+      "Adjuvant chemotherapy (two cycles completed, specific agent not named in note)"
+    ],
+    "past": [
+      "Neoadjuvant chemoradiation with infusional 5-FU (or similar)",
+      "Abdominoperineal resection (with splenic flexure mobilization, incisional hernia repair with mesh, component separation, abdominoplasty, CyberKnife fiducial placement)"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient with a history of locally advanced rectal adenocarcinoma, stage IIC (cT4N0M0), who has undergone a comprehensive and aggressive multimodal treatment regimen. The management included neoadjuvant chemoradiation followed by an abdominoperineal resection (APR) with complex reconstruction. The patient is currently receiving adjuvant chemotherapy, with two cycles completed.<br><br>The primary oncological concern is the high-risk nature of the initial presentation (cT4). The completion of adjuvant therapy is critical to mitigate the risk of distant recurrence. The absence of reported biomarker data (e.g., microsatellite instability [MSI] status, RAS/RAF mutation status) is a significant gap in the treatment planning framework. For rectal cancer, these biomarkers are not typically used to guide adjuvant therapy but are prognostic and would be essential for planning future systemic therapy in the event of recurrent or metastatic disease. Determination of MSI status is also standard for hereditary cancer syndrome assessment.<br><br>From a comorbidity and treatment tolerance perspective, the suspected recent cerebrovascular accident (CVA) presenting with left-sided weakness and speech difficulty is the dominant clinical factor. This acute neurological event introduces substantial complexity:<br>1.  It may necessitate a delay, dose modification, or alteration in the adjuvant chemotherapy regimen, depending on the patient's functional recovery and residual deficits.<br>2.  It raises concerns about the patient's ability to tolerate potential chemotherapy-related side effects (e.g., dehydration, infection, falls).<br>3.  It requires coordinated care with Neurology and possibly Rehabilitation Medicine.<br><br>The patient's surgical history of a major abdominal procedure with mesh placement and component separation is also relevant for future treatment considerations, such as the planning of radiation fields if needed for recurrence, and for monitoring surgical site integrity.<br><br>**In summary,** the patient is in the adjuvant treatment phase for a high-risk rectal cancer. The immediate clinical priority is the multidisciplinary management of the acute cerebrovascular event and its impact on the patient's functional status and ability to safely continue systemic cancer therapy. Obtaining and integrating standard tumor biomarker data is recommended for comprehensive long-term management planning.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:** A patient with stage IIC (cT4N0M0) rectal adenocarcinoma has completed neoadjuvant chemoradiation, abdominoperineal resection (APR), and two cycles of adjuvant chemotherapy. The primary current concern is a suspected recent cerebrovascular accident (CVA) with left-sided weakness and speech difficulty, which critically impacts the safety and feasibility of continuing adjuvant therapy. The high-risk initial tumor stage underscores the importance of completing adjuvant treatment, but the acute neurological event is the dominant factor requiring immediate multidisciplinary management. Standard tumor biomarker data (MSI, RAS/RAF) is unavailable but is essential for prognostic stratification and planning future therapy.<br><br>**Guideline Context:** NCCN Guidelines for Rectal Cancer (v.1.2026). Key principles applied:<br>1.  **Adjuvant Therapy for Stage II/III Disease:** For patients who received neoadjuvant chemoradiation and surgery, adjuvant chemotherapy is recommended, typically with a fluoropyrimidine (capecitabine) or FOLFOX/CAPEOX, based on preoperative stage and patient tolerance.<br>2.  **Treatment Modifications:** Guidelines emphasize treatment decisions based on performance status, comorbidities, and recovery from prior therapy. Acute, debilitating events like a CVA warrant treatment interruption and re-evaluation.<br>3.  **Biomarker Testing:** Mismatch repair/microsatellite instability (MMR/MSI) testing is recommended for all colorectal cancers for prognostic information and assessment for Lynch syndrome. RAS and BRAF mutation testing is standard for metastatic disease but is also informative for prognosis in stage II/III disease.<br>4.  **Multidisciplinary Care:** Management of treatment complications and comorbid conditions is a core component of cancer care.<br><br>**Treatment Plan:**<br><br>**1. Immediate and Systemic Therapy (Adjuvant Chemotherapy):**<br>*   **Current Action:** **Immediately suspend adjuvant chemotherapy** due to the acute CVA.<br>*   **Neurological Evaluation:** Urgent coordination with Neurology for definitive diagnosis (confirm CVA vs. other etiology), imaging (MRI brain), initiation of appropriate acute management (e.g., antiplatelet/anticoagulant therapy if indicated), and assessment of functional deficits.<br>*   **Re-evaluation for Chemotherapy:** Prior to considering resumption of chemotherapy, the patient must undergo a comprehensive assessment involving Oncology, Neurology, and possibly Physical Medicine & Rehabilitation. Criteria for reconsideration should include:<br>    *   Stabilization of neurological status.<br>    *   Adequate recovery of functional performance status (goal of ECOG 0-1).<br>    *   Assessment of ability to manage chemotherapy-related toxicities (e.g., risk of falls from neuropathy or dehydration).<br>*   **Modified Adjuvant Plan:** If the patient recovers sufficiently:<br>    *   **Regimen:** Given the high-risk cT4N0 stage, a total of 6 months of perioperative chemotherapy (including neoadjuvant and adjuvant phases) is often considered. With two adjuvant cycles completed, the goal would be to complete additional cycles.<br>    *   **Choice of Agent:** Given the recent CVA, **capecitabine monotherapy** may be a safer option than oxaliplatin-based regimens (e.g., FOLFOX/CAPEOX), as it avoids the cumulative neurotoxicity of oxaliplatin, which could impede neurological recovery and increase fall risk. Dose may need to be reduced based on functional status and tolerance.<br>    *   **Alternative:** If functional recovery is incomplete or concerns remain, a discussion regarding the risks/benefits of foregoing further adjuvant chemotherapy is necessary, as the benefit of adjuvant therapy after neoadjuvant treatment and complete resection is subject to patient-specific factors.<br><br>**2. Local Therapy:**<br>*   **Surgery:** The primary local therapy (APR) is complete. No further surgical intervention is indicated at this time.<br>*   **Radiation Therapy:** No indication for additional radiation currently. The prior neoadjuvant chemoradiation to the pelvis is definitive local treatment.<br><br>**3. Necessary Monitoring and Supportive Care:**<br>*   **Neurological Rehabilitation:** Referral to a structured rehabilitation program (inpatient or outpatient based on severity) is critical for maximizing functional recovery from the CVA.<br>*   **Oncology Surveillance:** Standard surveillance for stage II rectal cancer per NCCN guidelines should be planned, deferred only by the acute recovery period. This includes:<br>    *   History and physical exam every 3-6 months for 2 years, then every 6 months for a total of 5 years.<br>    *   CEA levels at each visit (if initially elevated).<br>    *   CT chest/abdomen/pelvis annually for 5 years.<br>    *   Colonoscopy in 1 year, then as indicated.<br>*   **Biomarker Testing:** Obtain **MMR/MSI status** and **RAS/RAF mutation status** on the tumor specimen. This is critical for:<br>    *   Lynch syndrome assessment (germline testing if MMR-deficient/MSI-H).<br>    *   Prognostic stratification (MSI-H has favorable prognosis in localized disease).<br>    *   Informing future systemic therapy options should metastatic recurrence occur.<br>*   **Supportive Care:**<br>    *   **Fall Prevention:** Formal fall risk assessment, home safety evaluation, and physical therapy for gait training.<br>    *   **Medication Review:** Comprehensive review of all medications (including new antiplatelets/anticoagulants) for interactions with chemotherapy and side effect profiles.<br>    *   **Nutritional Support:** Assessment by a dietitian, especially if dysphagia is present post-CVA.<br>    *   **Psychosocial Support:** Referral to social work and/or psycho-oncology given the dual burden of cancer recovery and a major neurological event.<br><br>**4. Long-term Planning:**<br>*   A multidisciplinary tumor board review is recommended to integrate input from Medical Oncology, Surgical Oncology, Radiation Oncology, Neurology, and Rehabilitation.<br>*   Develop a clear, patient-centered plan outlining conditions for resuming cancer therapy, balanced with the priorities of neurological recovery and quality of life.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #6</span>
+                    <span class="badge badge-corrected">Critic Corrected</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "IgG lambda multiple myeloma",
+    "secondary": [
+      "COPD exacerbation",
+      "Emphysema",
+      "Hypertension",
+      "Hyperthyroidism",
+      "Pulmonary embolism (concern/differential diagnosis)",
+      "New lung nodule (on CTA)"
+    ]
+  },
+  "biomarkers": {
+    "molecular": [
+      "IgG lambda (multiple myeloma subtype)"
+    ],
+    "other": []
+  },
+  "treatments": {
+    "current": [
+      "Hospital admission for acute dyspnea management",
+      "Steroid burst (for recent COPD exacerbation)",
+      "Azithromycin (for recent COPD exacerbation)"
+    ],
+    "past": [
+      "Revlimid (lenalidomide) for multiple myeloma (noted as cause of hypercoagulability concern)"
+    ],
+    "procedures": [
+      "VQ scan (performed)",
+      "CTA chest (performed, showed new lung nodule)"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient with a known diagnosis of **IgG lambda multiple myeloma**, currently presenting with a complex acute medical picture that necessitates a comprehensive oncological assessment prior to resuming or modifying systemic therapy.<br><br>The **biomarker profile** is central to the diagnosis, confirming a plasma cell dyscrasia with **IgG lambda** paraprotein production. This subtype is associated with standard multiple myeloma risk stratification and treatment pathways. The history of Revlimid (lenalidomide) treatment is notable, as this immunomodulatory agent is a known risk factor for **hypercoagulability**, which directly informs the current diagnostic workup.<br><br>The clinical picture is significantly complicated by **multiple active comorbidities and new findings**. The recent **COPD exacerbation** (managed with steroids and azithromycin) and underlying **emphysema** are major considerations for treatment tolerance, particularly for therapies with pulmonary toxicity or in the setting of future infections. The concurrent concern for **pulmonary embolism** (prompting a VQ scan) and the discovery of a **new lung nodule on CTA** create a critical diagnostic dilemma. This nodule must be characterized to differentiate between a metastatic lesion (from multiple myeloma or a secondary primary malignancy), an infectious process (given the immunocompromised state from both myeloma and its treatment), or a benign entity. **Hypertension** and **hyperthyroidism** are additional comorbidities that require optimization, as they can influence cardiovascular tolerance to various anti-myeloma regimens and supportive care medications.<br><br>In summary, the immediate oncological priorities are: 1) Diagnostic clarification of the new lung nodule, 2) Resolution of the acute cardiopulmonary issues (COPD exacerbation and ruled-out/in pulmonary embolism), and 3) Re-assessment of the multiple myeloma disease status. Treatment planning must be undertaken with careful consideration of the patient's pulmonary reserve, hypercoagulable risk profile, and the need to manage all chronic conditions concurrently. A multidisciplinary approach involving oncology, pulmonology, and hematology is essential.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:** A patient with IgG lambda multiple myeloma, previously treated with lenalidomide, presents with an acute, complex medical picture. Key issues include a recent COPD exacerbation, a clinical concern for pulmonary embolism prompting imaging, and the discovery of a new lung nodule on CTA. Comorbidities of hypertension and hyperthyroidism require concurrent management. The immediate priorities are diagnostic clarification of the lung nodule, resolution of acute cardiopulmonary issues, and re-assessment of myeloma status before resuming or modifying systemic therapy. Treatment planning must account for pulmonary compromise, hypercoagulable risk from prior lenalidomide, and multiple comorbidities.<br><br>**Guideline Context:** NCCN Guidelines for Multiple Myeloma (Version 1.2026). This plan integrates principles for **Relapsed/Refractory Disease** (as the patient has prior lenalidomide exposure) and emphasizes a **multidisciplinary approach** for patients with complex comorbidities and diagnostic uncertainties. Guidance on supportive care, infection prophylaxis, and management of therapy-related complications is also applied.<br><br>**Treatment Plan:**<br><br>**Phase 1: Immediate Diagnostic & Stabilization (Next 1-2 Weeks)**<br>*   **Diagnostic Workup:**<br>    1.  **Lung Nodule Characterization:** Obtain tissue biopsy of the lung nodule (CT-guided or bronchoscopic) for histopathology, cytogenetics, and microbiology (including fungal and AFB stains/cultures) to rule out metastasis (plasmacytoma vs. second primary) versus infection.<br>    2.  **Myeloma Re-staging:** Obtain serum protein electrophoresis (SPEP) with immunofixation, serum free light chains (FLC), quantitative immunoglobulins, and a skeletal survey or low-dose whole-body CT to assess current disease burden. A bone marrow biopsy should be considered if it will change therapy selection.<br>    3.  **Cardiopulmonary:** Complete the workup for pulmonary embolism (VQ scan results). Optimize COPD management in conjunction with Pulmonology.<br>*   **Supportive Care & Comorbidity Management:**<br>    1.  **Anticoagulation:** Given history of lenalidomide and clinical suspicion for PE, initiate therapeutic anticoagulation per standard protocols if PE is confirmed, considering renal function and bleeding risk. If PE is ruled out, consider prophylactic anticoagulation upon restarting any immunomodulatory drug (IMiD).<br>    2.  **Infection Prophylaxis:** Continue or initiate antiviral (e.g., acyclovir/valacyclovir) and antibacterial (e.g., levofloxacin or TMP-SMX) prophylaxis given immunocompromised state and recent COPD exacerbation. Consider PJP prophylaxis if on high-dose steroids.<br>    3.  **Comorbidities:** Optimize blood pressure control and manage hyperthyroidism with Endocrinology.<br>    4.  **Bone Health:** Continue bisphosphonate (e.g., zoledronic acid or denosumab) monthly, with monitoring of renal function and calcium.<br><br>**Phase 2: Systemic Therapy for Relapsed Myeloma (Upon Resolution of Acute Issues & Diagnostic Clarity)**<br>*   **Selection Principle:** Choose a regimen with a favorable efficacy and toxicity profile considering **reduced pulmonary reserve** and **hypercoagulable risk**. Avoid IMiD-based regimens (lenalidomide, pomalidomide) if hypercoagulable risk is deemed high, unless paired with full anticoagulation.<br>*   **Recommended Regimen (Category 1 Preferred Options):** A **proteasome inhibitor (PI)-based triplet regimen** is preferred.<br>    *   **Daratumumab + Bortezomib + Dexamethasone (DVd):** A strong consideration. Daratumumab (subcutaneous preferred) has a favorable hematologic toxicity profile. Bortezomib has minimal pulmonary toxicity. Use weekly subcutaneous bortezomib to reduce neuropathy risk. Dexamethasone dose should be minimized (e.g., 20 mg weekly) given COPD/steroid exposure history.<br>    *   **Carfilzomib + Dexamethasone + Daratumumab (DKd):** An alternative if a more potent PI is desired. **Requires careful cardiopulmonary monitoring** due to carfilzomib's risk of dyspnea, hypertension, and cardiac events. Not first-line given this patient's COPD and hypertension.<br>    *   **Bortezomib + Cyclophosphamide + Dexamethasone (VCd):** A cost-effective, lower-intensity option if daratumumab is not accessible.<br>*   **Alternative (If IMiD is Strongly Indicated):** **Daratumumab + Lenalidomide + Dexamethasone (DRd)** only if PE is definitively ruled out and the patient is committed to full therapeutic anticoagulation. Requires vigilant monitoring for thrombosis and pulmonary symptoms.<br><br>**Phase 3: Local Therapy & Consolidation**<br>*   **Lung Nodule:** Treatment depends on biopsy results.<br>    *   *Solitary Plasmacytoma:* Consider localized radiation therapy (RT) for definitive control.<br>    *   *Second Primary Malignancy:* Treatment per appropriate oncology guidelines (e.g., Lung NCCN).<br>    *   *Infection:* Treat with appropriate antimicrobials; hold myeloma therapy if severe.<br>*   **Symptomatic Bony Lesions:** Palliative RT for pain or impending fracture.<br><br>**Phase 4: Monitoring & Long-Term Supportive Care**<br>*   **Disease Monitoring:** Monthly SPEP, FLC, and quantitative immunoglobulins during active therapy. Every 3-4 months when stable.<br>*   **Toxicity Monitoring:**<br>    *   **Pulmonary:** Baseline PFTs if not recent. Monitor for new or worsening dyspnea, especially with carfilzomib or daratumumab (infusion-related reactions).<br>    *   **Cardiac:** Regular blood pressure monitoring (especially with carfilzomib, steroids). Baseline ECHO if using carfilzomib.<br>    *   **Renal:** Monitor serum creatinine and adjust bisphosphonates/anticoagulation accordingly.<br>    *   **Hematologic:** CBC with differential weekly for first cycle, then monthly.<br>    *   **Infectious:** Monitor for signs of infection; maintain prophylaxis.<br>*   **Vaccinations:** Ensure administration of COVID-19, influenza, pneumococcal, and shingles vaccines (recombinant preferred) when clinically appropriate.<br>*   **Multidisciplinary Follow-up:** Regular coordination with Pulmonology, Cardiology/Endocrinology, and Primary Care for comorbidity management.<br><br>**Disclaimer:** This plan is based on the provided clinical summary and standard guidelines. Final treatment decisions must be made by the treating physician team in direct consultation with the patient, considering full clinical data and patient preferences.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #7</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Esophageal adenocarcinoma (recurrent)",
+    "secondary": [
+      "Barrett's esophagus",
+      "Coronary artery disease",
+      "Hypertension",
+      "Bladder cancer (status post resection)",
+      "Hypothyroidism",
+      "Low grade lymphoma",
+      "GERD",
+      "Atrial fibrillation",
+      "History of CVA"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [],
+    "past": [
+      "EGD (esophagogastroduodenoscopy)",
+      "Coronary stent placement",
+      "Bladder cancer resection"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient with recurrent esophageal adenocarcinoma, a complex oncological history, and significant comorbidities that will critically influence management decisions.<br><br>The primary diagnosis of recurrent esophageal adenocarcinoma, arising in the setting of long-standing Barrett's esophagus and GERD, indicates an aggressive disease course requiring prompt re-evaluation. The absence of reported biomarkers (e.g., HER2, PD-L1, MSI status) in the extracted data represents a significant gap. Comprehensive biomarker profiling is essential to guide therapeutic selection, as it can identify eligibility for targeted therapies (e.g., trastuzumab for HER2+) or immunotherapies, which may offer more tailored and potentially less toxic options compared to standard chemotherapy.<br><br>The patient's comorbidities present a substantial impact on treatment planning. **Cardiovascular disease** (Coronary Artery Disease with prior stent placement, Atrial Fibrillation, Hypertension, and History of CVA) increases perioperative and systemic therapy risks, necessitating close cardiology co-management and potentially modifying the choice or dosing of chemotherapeutic agents. **Chronic pulmonary disease (COPD)**, if present and symptomatic, would further compromise functional reserve for any surgical consideration or increase the risk of pulmonary complications from anesthesia or certain drugs. The history of **Bladder Cancer (status post-resection)** and **Low-Grade Lymphoma** requires ongoing surveillance but may also influence the selection of chemotherapeutic agents to avoid cumulative organ toxicity or secondary malignancy risk. **Hypothyroidism** requires stable management to avoid compounding cancer-related fatigue.<br><br>In summary, this patient's care requires a multidisciplinary approach involving oncology, cardiology, pulmonology, and endocrinology. The immediate priorities are: 1) Restaging of the recurrent esophageal cancer to define the extent of disease, 2) Obtaining comprehensive biomarker testing on tumor tissue, and 3) A formal assessment of cardiopulmonary and functional reserve to determine fitness for potential curative-intent therapy (which may include re-resection or definitive chemoradiation) versus palliative systemic therapy. Treatment plans must be carefully balanced against the cumulative burden of multiple active and historical medical conditions.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:** Patient with recurrent esophageal adenocarcinoma in the setting of Barrett's esophagus and GERD. Significant comorbidities include coronary artery disease (s/p stent), atrial fibrillation, hypertension, history of CVA, COPD, history of bladder cancer (s/p resection), low-grade lymphoma, and hypothyroidism. Critical data gaps include current disease stage (local vs. metastatic) and biomarker status (HER2, PD-L1 CPS, MSI/dMMR). Multidisciplinary management is essential due to competing health risks.<br><br>**Guideline Context:** NCCN Guidelines for Esophageal and Esophagogastric Junction Cancers (Version 1.2026). Recommendations are adapted for recurrent disease and heavily influenced by performance status, comorbidity burden, and biomarker profile.<br><br>**Treatment Plan:**<br><br>**I. Immediate Diagnostic & Staging Workup (Prerequisite to Therapy)**<br>1.  **Comprehensive Restaging:**<br>    *   **Imaging:** PET/CT scan plus diagnostic chest/abdominal/pelvic CT with contrast. Brain MRI is indicated given history of CVA and to evaluate for metastases.<br>    *   **Pathology Review & Biomarker Testing:** Obtain tissue via endoscopic biopsy (preferred) or review archival specimen. Mandatory testing includes:<br>        *   HER2 (IHC/FISH)<br>        *   PD-L1 Combined Positive Score (CPS)<br>        *   Mismatch Repair/Microsatellite Instability (MMR/MSI) status<br>    *   **Cardiopulmonary Risk Assessment:**<br>        *   Formal cardiology evaluation with optimization of medical management (antiplatelet/anticoagulation plan in context of potential procedures).<br>        *   Pulmonary function tests and pulmonology consultation given COPD history.<br><br>**II. Systemic Therapy Recommendations (Based on Biomarker Findings & Fitness)**<br>*The patient's cardiovascular history may necessitate dose modifications, avoidance of certain agents (e.g., high-dose anthracyclines), and requires close collaboration with cardiology.*<br>*   **Scenario A: HER2-Positive (IHC 3+ or IHC 2+/FISH+):**<br>    *   **Preferred Regimen (if fit for combination therapy):** Trastuzumab + Pembrolizumab + Fluoropyrimidine (5-FU or capecitabine) + Oxaliplatin. Consider substituting cisplatin with oxaliplatin given renal/ototoxicity concerns and CAD.<br>    *   **Alternative (if less fit):** Trastuzumab + Pembrolizumab + Fluoropyrimidine.<br>*   **Scenario B: HER2-Negative, PD-L1 CPS ≥10:**<br>    *   **Preferred Regimen:** Nivolumab + Fluoropyrimidine + Oxaliplatin **OR** Pembrolizumab + Fluoropyrimidine + Platinum (cisplatin or oxaliplatin).<br>*   **Scenario C: HER2-Negative, PD-L1 CPS <10 or Untested:**<br>    *   **Standard Chemotherapy:** Fluoropyrimidine (5-FU or capecitabine) + Oxaliplatin. Consider FOLFOX. FLOT (5-FU, leucovorin, oxaliplatin, docetaxel) may be too aggressive given comorbidities.<br>*   **Scenario D: MSI-H/dMMR or TMB-H:**<br>    *   **Preferred Regimen:** Pembrolizumab or Nivolumab as single-agent immunotherapy, regardless of PD-L1 status.<br>*   **Supportive Considerations:** Given CAD/A-fib, avoid bevacizumab. Consider prophylactic growth factor support (e.g., pegfilgrastim) with myelosuppressive regimens.<br><br>**III. Local Therapy Recommendations (Based on Restaging)**<br>1.  **Locoregional Recurrence (Isolated to anastomosis/mediastinum, no distant mets):**<br>    *   **If medically operable and patient is a surgical candidate** after cardiopulmonary clearance: Consider re-resection.<br>    *   **Definitive Chemoradiation:** Preferred if not a surgical candidate. Concurrent radiation (50-50.4 Gy) with fluoropyrimidine-based chemotherapy (e.g., 5-FU or capecitabine +/- oxaliplatin). Radiation planning must account for prior surgical and radiation fields.<br>2.  **Metastatic Disease:**<br>    *   Systemic therapy (as above) is the primary modality.<br>    *   **Palliative Local Therapies:** Consider for symptom control (e.g., dysphagia, bleeding):<br>        *   **Radiation Therapy**<br>        *   **Endoscopic Interventions:** Stent placement, ablation, or dilation.<br><br>**IV. Monitoring & Supportive Care**<br>1.  **Treatment Monitoring:** CT imaging every 2-3 cycles to assess response. Monitor for immune-related adverse events (if on immunotherapy) and cardiotoxicity (especially with trastuzumab).<br>2.  **Comorbidity Management:**<br>    *   **Cardiology:** Continuous coordination for management of antiplatelet/anticoagulation during therapy/procedures. Baseline and periodic echocardiograms if on trastuzumab.<br>    *   **Pulmonology:** Optimize COPD management. Monitor for pneumonitis, especially with immunotherapy or radiation.<br>    *   **Endocrinology:** Maintain euthyroid state; monitor for thyroid dysfunction with immunotherapy.<br>3.  **Supportive Care:**<br>    *   **Nutrition:** Formal nutrition assessment. Consider early dietitian involvement and placement of feeding tube (J-tube) if significant dysphagia or weight loss.<br>    *   **Pain Management:** Oncology pain service consultation as needed.<br>    *   **Palliative Care:** Early integration for symptom management, psychosocial support, and assistance with goals-of-care discussions.<br>4.  **Surveillance for Other Malignancies:** Continue age-appropriate screening and follow-up for history of bladder cancer and low-grade lymphoma.<br><br>**V. Multidisciplinary Team Required:** Thoracic Surgery, Medical Oncology, Radiation Oncology, Cardiology, Pulmonology, Gastroenterology, Pathology, Nutrition, Palliative Care.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #8</span>
+                    <span class="badge badge-corrected">Critic Corrected</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "New-onset persistent binocular diplopia (double vision) when looking to the right",
+    "secondary": [
+      "Stage IV esophageal cancer (currently off treatment)",
+      "Hypertension (HTN)",
+      "Hyperlipidemia (HLD)",
+      "Prediabetes",
+      "Melanoma",
+      "Hemochromatosis"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [],
+    "past": [
+      "PEG tube exchange",
+      "Fentanyl patch (recently reduced dose)"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This patient presents with a new, concerning neurological symptom—persistent binocular diplopia on rightward gaze—in the context of a history of Stage IV esophageal cancer, currently off active treatment. The primary clinical imperative is to urgently determine the etiology of this diplopia, with metastatic disease to the cranial nerves, cavernous sinus, or brainstem being the leading differential given the oncological history. A paraneoplastic syndrome, while less common, must also be considered.<br><br>The absence of reported specific tumor biomarkers (e.g., HER2, PD-L1, MSI status) in the extracted data limits a granular assessment of the original esophageal cancer's biology and potential targeted treatment options. However, the stage and current treatment hiatus frame the clinical scenario, suggesting either prior exhaustion of standard lines of therapy or a shift to best supportive care.<br><br>Comorbidities significantly impact the overall risk profile and would influence any future cancer-directed or supportive treatment decisions. **Hypertension** and **prediabetes** require careful management, especially with corticosteroids, which are often used in neuro-oncological emergencies or for symptom palliation and can exacerbate both conditions. **Hyperlipidemia** is a general cardiovascular risk factor. A history of **melanoma** necessitates ongoing dermatologic surveillance and may influence the selection of certain immunotherapies. **Hemochromatosis** requires monitoring of iron studies and hepatic function, as both the disease and its associated organ dysfunction (particularly liver and heart) can affect chemotherapy metabolism and tolerance. The recent reduction of the **fentanyl patch** dose suggests an active effort to manage opioid requirements, which must be carefully balanced with adequate analgesia, especially if new pain from a potential metastasis develops.<br><br>In summary, this is a patient with advanced esophageal cancer presenting with a high-risk neurological symptom suggestive of possible disease progression. Management requires urgent neurological and oncological evaluation (likely including neuroimaging) to establish a diagnosis, while all comorbid conditions must be actively co-managed to optimize the patient's overall fitness for any subsequent interventions, whether aimed at disease control or symptom palliation.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>A patient with a history of Stage IV esophageal cancer (specific histology and biomarker status unknown) currently off active treatment presents with new, persistent binocular diplopia on rightward gaze, raising high suspicion for intracranial metastasis (e.g., cranial nerve involvement, cavernous sinus, or brainstem) or, less likely, a paraneoplastic syndrome. Comorbidities include hypertension, prediabetes, hyperlipidemia, history of melanoma, hemochromatosis, and chronic pain managed with a fentanyl patch (recently reduced). The immediate priority is urgent diagnostic evaluation to determine the etiology of diplopia, as this will dictate all subsequent management.<br><br>**Guideline Context:**  <br>Based on NCCN Guidelines® for Esophageal and Esophagogastric Junction Cancers (2026 v1) and NCCN Guidelines for Central Nervous System Cancers (2026 v1). For Stage IV disease, treatment is guided by histology, biomarker status, prior therapies, performance status, and site of progression. Management of new neurological symptoms in this setting requires rapid imaging to rule out metastatic disease, followed by site-specific and systemic therapy considerations.<br><br>**Treatment Plan:**<br><br>**1. Urgent Diagnostic & Staging Workup**<br>*   **Neuroimaging:** **Urgent MRI brain with dedicated orbits and cavernous sinus protocol, with and without contrast.** If MRI is contraindicated, perform contrast-enhanced CT head, though it is inferior for posterior fossa and cranial nerve assessment.<br>*   **Systemic Restaging:** If neuroimaging confirms metastatic disease, consider restaging with **CT chest/abdomen/pelvis with contrast** (or PET/CT if no recent scan) to assess overall disease burden.<br>*   **Laboratories:** CBC, CMP, lipid panel, HbA1c, iron studies (ferritin, transferrin saturation), TSH/free T4 (to assess for endocrine causes of diplopia).<br>*   **Biomarker Reevaluation:** If tissue is available and not previously tested, request **HER2, PD-L1 (CPS), and MSI/MMR testing** on the primary or a prior metastasis to guide systemic therapy. Consider paraneoplastic panel (anti-Hu, anti-Yo, etc.) if imaging is negative and suspicion remains.<br><br>**2. Local Therapy for Central Nervous System (CNS) Involvement**<br>*   **If Single/Metastasis:**  <br>    *   **Stereotactic Radiosurgery (SRS)** is preferred for a limited number of small-to-moderate sized brain metastases, particularly in eloquent areas (e.g., brainstem). For a cavernous sinus lesion causing cranial neuropathy, SRS is also a primary consideration.<br>    *   **Surgical resection** may be considered for a solitary, symptomatic, accessible lesion for histologic confirmation and rapid symptom relief, followed by postoperative SRS to the resection cavity.<br>*   **If Multiple Brain Metastases:**  <br>    *   **Whole Brain Radiation Therapy (WBRT)** with hippocampal avoidance (if feasible) or **SRS to all lesions** (if limited in number, typically ≤10) are options. Memantine and hippocampal-avoidance WBRT should be used to mitigate neurocognitive effects.<br>    *   For leptomeningeal disease (if suspected), consider MRI spine and LP for cytology; treatment may involve focal RT to symptomatic sites or systemic therapy with high CNS penetration.<br><br>**3. Systemic Therapy (Based on NCCN Esophageal Guidelines)**<br>*   **Prerequisites:** Initiation depends on performance status, comorbidity management, and extent of extracranial disease. **Biomarker status is critical.**<br>*   **If HER2-positive (IHC 3+ or IHC 2+/ISH+):**  <br>    *   **Preferred:** Trastuzumab deruxtecan (if not previously used).<br>    *   **Other Options:** Trastuzumab + pembrolizumab + chemotherapy (if PD-L1 CPS ≥10 and immunotherapy-naïve); or trastuzumab + chemotherapy.<br>*   **If HER2-negative, PD-L1 CPS ≥10:**  <br>    *   **Preferred:** Nivolumab + chemotherapy (fluoropyrimidine + platinum) OR pembrolizumab + chemotherapy.<br>    *   **Subsequent Therapy:** If progression on prior immunotherapy, switch to non-immunotherapy regimen.<br>*   **If HER2-negative, PD-L1 CPS <10 or unknown:**  <br>    *   **Preferred:** Chemotherapy doublet (e.g., FOLFOX, CAPOX, or fluoropyrimidine + platinum).<br>    *   **Consideration:** In select cases with CNS metastases, regimens with higher CNS penetration (e.g., capecitabine, high-dose methotrexate? - use with extreme caution) may be considered, though evidence is limited in esophageal cancer.<br>*   **If MSI-H/dMMR or TMB-H:**  <br>    *   **Preferred:** Pembrolizumab or nivolumab (regardless of PD-L1 status).<br><br>**4. Supportive Care & Comorbidity Management**<br>*   **Neurological Symptoms:**  <br>    *   Start **dexamethasone** (e.g., 4-8 mg IV/PO twice daily) urgently if significant edema/mass effect is present on imaging. Taper rapidly to the lowest effective dose to manage symptoms, given comorbidities.<br>    *   Manage diplopia with patching or prism lenses as needed via ophthalmology/neuro-ophthalmology referral.<br>*   **Comorbidity Optimization:**  <br>    *   **Hypertension/Prediabetes/Hyperlipidemia:** Monitor BP and glucose closely with corticosteroid use. Intensify antihypertensive and statin therapy as needed. Start metformin if hyperglycemia develops and lifestyle measures fail.<br>    *   **Hemochromatosis:** Monitor LFTs and iron studies; coordinate with hepatology/GI for phlebotomy or chelation if indicated, especially prior to systemic therapy.<br>    *   **History of Melanoma:** Continue regular dermatologic surveillance, especially if immunotherapy is used.<br>*   **Pain Management:** Reassess pain control frequently, especially with new CNS diagnosis. Adjust fentanyl patch dose or add breakthrough analgesics as needed in consultation with palliative care/pain management.<br>*   **Palliative Care:** **Immediate referral** to interdisciplinary palliative care for complex symptom management, goals of care discussion, and psychosocial support.<br><br>**5. Monitoring & Follow-Up**<br>*   **Neurological:** Frequent clinical assessments for changes in diplopia, headache, mental status, or new focal deficits.<br>*   **Imaging:** Follow-up MRI brain 4-8 weeks after local CNS therapy, then every 2-4 months depending on stability. Regular restaging of extracranial disease per treatment response.<br>*   **Treatment Tolerance:** Weekly labs during initial systemic therapy cycles, with close monitoring for myelosuppression, nephrotoxicity, hepatotoxicity (exacerbated by hemochromatosis), and immunotherapy-related adverse events.<br>*   **Goals of Care Discussion:** Essential to clarify patient's preferences regarding aggressive intervention vs. focus on quality of life and symptom control, given Stage IV disease and new potentially life-limiting complication.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Patient Case #9</span>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="section-title">1. Structured Data (JSON)</h5>
+                            <pre><code>{
+  "diagnosis": {
+    "primary": "Recurrent pituitary abscess",
+    "secondary": [
+      "Breast cancer (status post mastectomy)",
+      "Diabetes insipidus",
+      "Hyperlipidemia"
+    ]
+  },
+  "biomarkers": [],
+  "treatments": {
+    "current": [
+      "Fioricet (for headache)",
+      "Desmopressin (for diabetes insipidus)"
+    ],
+    "past": [
+      "Transphenoidal drainage of pituitary abscess",
+      "Craniotomy for open drainage of pituitary abscess",
+      "Long-term antibiotics (Ceftazidime, Moxifloxacin, Metronidazole) for >5 months, discontinued",
+      "Right mastectomy for breast cancer",
+      "Chemotherapy for breast cancer",
+      "Hip surgery",
+      "Right knee surgery",
+      "Appendectomy",
+      "Tonsillectomy"
+    ]
+  }
+}</code></pre>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="section-title">2. Clinical Assessment (Agent 2)</h5>
+                            <div class="assessment-text p-3 border rounded">
+                                **Clinical Summary:**<br><br>This is a patient with a complex oncological and surgical history, now presenting with a **recurrent pituitary abscess**. The primary oncological diagnosis is a history of **breast cancer**, status post definitive local therapy (right mastectomy) and systemic therapy (chemotherapy). There is no evidence of active breast cancer in the provided data, placing the patient in a surveillance phase for that malignancy.<br><br>The current clinical picture is dominated by the recurrent intracranial infection. The history of multiple neurosurgical interventions (transphenoidal and open craniotomy drainage) and prolonged, multi-agent antibiotic therapy suggests a refractory or complicated course. The absence of reported tumor biomarkers (e.g., ER, PR, HER2 for breast cancer) in the extracted data limits the granularity of the prior cancer prognosis and potential for targeted therapies, though standard chemotherapy was administered.<br><br>**Analysis of Comorbidities and Impact on Treatment:**<br>The patient's comorbidities are significant and directly influence management options for any condition, including potential cancer recurrence.<br>1.  **Diabetes Insipidus:** A consequence of the pituitary abscess/surgery, requiring chronic desmopressin. This indicates permanent posterior pituitary dysfunction. Management of any future systemic therapy (e.g., chemotherapy) must account for the risk of dehydration and electrolyte imbalance, necessitating careful fluid balance monitoring.<br>2.  **Recurrent Pituitary Abscess:** This active, serious infection is an absolute contraindication to any immunosuppressive or myelosuppressive cancer therapy (e.g., chemotherapy, immunotherapy). It must be fully controlled prior to considering any such treatments. It also complicates the use of corticosteroids, which are often used in oncology for symptom management or as part of regimens.<br>3.  **Hyperlipidemia:** A common metabolic comorbidity that requires ongoing management but does not typically preclude most cancer therapies. However, it is a consideration for overall cardiovascular risk, especially if hormonal therapies (like aromatase inhibitors for breast cancer) are contemplated in the future, as some can affect lipid profiles.<br><br>**Synthesis:**<br>The immediate clinical priority is the management of the recurrent pituitary abscess, which supersedes all considerations for adjuvant or metastatic breast cancer therapy due to its life-threatening nature and the contraindication it presents. The patient's treatment history indicates significant physiological resilience but also a propensity for complex post-surgical courses. Any future oncological treatment planning must be undertaken with a multidisciplinary team including neurosurgery, infectious disease, and endocrinology to account for the compromised pituitary function and the history of refractory infection. The patient's functional status, given the history of multiple major surgeries (hip, knee, neurosurgical), should also be assessed prior to initiating any aggressive systemic cancer therapy.
+                            </div>
+                            
+                            <h5 class="section-title">3. Treatment Recommendations (Agent 3)</h5>
+                            <div class="plan-box rounded">
+                                **Clinical Summary:**  <br>The patient has a history of breast cancer treated with right mastectomy and chemotherapy, currently with no evidence of active disease. The dominant active problem is a recurrent pituitary abscess, requiring repeated neurosurgical drainage and prolonged antibiotics. Key comorbidities include diabetes insipidus (on desmopressin) and hyperlipidemia. The active intracranial infection is a critical contraindication to immunosuppressive or myelosuppressive systemic cancer therapy. The immediate priority is infection control; any future cancer-directed therapy must be deferred until the infection is fully resolved and managed with multidisciplinary input.<br><br>**Guideline Context:**  <br>NCCN Guidelines Breast Cancer (2026 v1) for surveillance after definitive treatment, and management of recurrent/metastatic disease when applicable. Systemic therapy selection depends on hormone receptor (ER/PR) and HER2 status, which are not specified here. For active intracranial infection, standard principles of oncology care require postponing immunosuppressive therapies until infection is controlled.<br><br>**Treatment Plan:**  <br><br>**1. Immediate Priority – Management of Recurrent Pituitary Abscess**  <br>   - **Local Therapy:**  <br>     - Urgent multidisciplinary consultation with neurosurgery and infectious disease for possible surgical drainage (transsphenoidal or craniotomy) given recurrent presentation.  <br>     - Obtain cultures from drainage to guide targeted antibiotic therapy.  <br>   - **Systemic Therapy:**  <br>     - Continue culture-directed intravenous antibiotics under infectious disease guidance. Consider prolonged suppressive oral antibiotics after IV course if deemed necessary.  <br>   - **Supportive Care/Monitoring:**  <br>     - Strict monitoring of fluid balance and electrolytes due to diabetes insipidus; adjust desmopressin as needed.  <br>     - Avoid corticosteroids unless absolutely necessary for cerebral edema or adrenal insufficiency, and only with concurrent antibiotic coverage.  <br>     - Regular imaging (MRI pituitary) to assess response to treatment.  <br><br>**2. Breast Cancer Surveillance & Future Systemic Therapy Considerations**  <br>   - **Systemic Therapy:**  <br>     - **Targeted Therapy:** Not indicated at this time. If breast cancer recurs, testing for ER/PR, HER2, and genomic profiling (if eligible) will guide selection (e.g., endocrine therapy, CDK4/6 inhibitors, anti-HER2 agents).  <br>     - **Immunotherapy:** Contraindicated while active infection is present.  <br>     - **Chemotherapy:** Contraindicated until infection fully resolved and patient has recovered from surgical interventions.  <br>   - **Local Therapy:**  <br>     - No additional local therapy indicated for breast cancer at this time.  <br>   - **Monitoring:**  <br>     - Continue routine breast cancer surveillance per NCCN: history and physical every 6–12 months, annual mammography (contralateral breast), and consider breast MRI if high risk (risk factors not specified here).  <br>     - For pituitary abscess: monitor for symptoms of recurrence (headache, vision changes, polyuria).  <br><br>**3. Supportive Care & Comorbidity Management**  <br>   - **Diabetes Insipidus:** Maintain desmopressin; educate patient on signs of dehydration/hyponatremia. Monitor electrolytes closely during any future systemic therapy.  <br>   - **Hyperlipidemia:** Continue statin therapy as tolerated; monitor lipids periodically.  <br>   - **Endocrine Function:** Assess anterior pituitary function (thyroid, adrenal, gonadal axes) and replace hormones as needed.  <br>   - **Performance Status & Rehabilitation:** Given multiple prior surgeries, assess functional status before any future cancer therapy; involve physical therapy as needed.  <br><br>**4. Multidisciplinary Coordination**  <br>   - Required specialties: neurosurgery, infectious disease, endocrinology, medical oncology, and pharmacy.  <br>   - Timing of cancer therapy: only after documented resolution of infection, adequate healing from neurosurgical interventions, and multidisciplinary clearance.  <br><br>**5. Patient Education & Follow-Up**  <br>   - Educate on signs of infection recurrence and breast cancer recurrence.  <br>   - Ensure close outpatient follow-up with all involved specialties.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <footer class="text-center py-4 text-muted">
+            Generated by Gemini Oncology Multi-Agent System © 2026
+        </footer>
+    </body>
+    </html>
+    
