@@ -1,80 +1,75 @@
 # Interactive Oncology Clinical Decision Support System (CDSS)
-Welcome to the Interactive Oncology CDSS repository. This project implements a multimodal AI-assisted clinical workflow to support precision oncology decision-making.
 
-Powered by the **DSPy framework** and large language models, the system connects complex NCCN clinical guidelines with real-time patient care, supported by a dual-view architecture for both clinicians and patients.
+Welcome to the Interactive Oncology CDSS repository. This project contains a multimodal, AI-assisted clinical workflow designed to augment precision oncology decision-making. 
 
----
+Powered by the DSPy framework and large language models, this system bridges the gap between complex NCCN clinical guidelines and real-time patient care, featuring a unique dual-view architecture for both healthcare providers and patients.
 
 ## Key Features
-- **Dual Copilot Architecture**
-  Switch seamlessly between:
-  - *Doctor Workspace*: Professional, evidence-based, clinical jargon
-  - *Patient Portal*: Empathetic, accessible language (8th-grade reading level)
 
-- **Deterministic Clinical Guardrails**
-  Rule-based safety checks (e.g., Creatinine Clearance alerts) run before LLM inference to ensure clinical safety.
+* **Dual Copilot Architecture:** Seamlessly toggle between a "Doctor Workspace" (professional, jargon-heavy, evidence-based) and a "Patient Portal" (empathetic, accessible, 8th-grade reading level).
+* **Deterministic Guardrails:** Implements hardcoded, rules-based safety intercepts (e.g., Creatinine Clearance alerts) prior to LLM invocation to ensure clinical safety.
+* **State-Locking EHR Simulation:** Features an interactive Regimen Builder that synchronizes state across provider and patient views upon physician sign-off.
+* **Modular RAG Pipeline:** Utilizes DSPy signatures to enforce strict, multi-step clinical reasoning, minimizing hallucination and maximizing guideline adherence.
 
-- **State-Locking EHR Simulation**
-  Interactive Regimen Builder with synchronized state between clinician and patient interfaces after physician sign-off.
+## Software Requirements & Tech Stack
 
-- **Modular RAG Pipeline**
-  Structured DSPy signatures enforce step-by-step clinical reasoning, reducing hallucinations and improving guideline adherence.
-
----
-
-## Tech Stack & Requirements
-- **Python**: 3.11+
-- **Core Frameworks**: `streamlit`, `dspy-ai`
-- **LLM**: Zhipu GLM‑4 (API‑based)
-
----
+* **Python Version:** Python 3.11+
+* **Core Frameworks:** `streamlit`, `dspy-ai`
+* **LLM Provider:** DeepSeek (Configured via API)
 
 ## Repository Structure
+
 ```text
 .
-├── app.py                              # Main Streamlit interactive frontend
-├── modular_rag_pipeline.py             # DSPy agent orchestration & RAG logic
-├── multi_agent_pipeline.py             # LLM configuration & base extractors
-├── modular_rag_evaluator.py            # Evaluation & ablation study metrics
+├── app.py                              # (Core) The main Streamlit interactive frontend application
+├── modular_rag_pipeline.py             # (Core) DSPy agent orchestration and RAG retrieval logic
+├── multi_agent_pipeline.py             # (Core) Underlying LLM configurations and base extractors
+├── modular_rag_evaluator.py            # (Core) Evaluation script for ablation studies and metrics
 │
-├── archive/                            # Early prototypes & dev scripts
-├── data/                               # Raw MIMIC sample datasets
-├── oncology_final_reports_adv_rag.json # Processed MIMIC reports
+├── archive/                            # Early development prototypes, dummy tools, and raw data scripts
+├── data/                               # Contains raw MIMIC samples
+├── oncology_final_reports_adv_rag.json # Processed MIMIC samples
 ├── oncology_raw_samples.json           # Extracted raw MIMIC samples
 ├── requirements.txt                    # Python dependencies
 └── LICENSE                             # MIT License
 ```
 
----
-
 ## Quick Start Guide
 
 ### 1. Environment Setup
-Create and activate a virtual environment:
+
+Set up a clean Python virtual environment and activate it:
+
 ```bash
 python3 -m venv medvenv
-source medvenv/bin/activate  # Windows: medvenv\Scripts\activate
+source medvenv/bin/activate  # On Windows use: medvenv\Scripts\activate
 ```
 
-Install dependencies:
+Install the necessary dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 2. API Configuration
-Create a `.env` file in the root directory and add your Zhipu API key:
+
+Create a `.env` file in the root directory of this repository and add your DeepSeek API key:
+
 ```text
-ZHIPU_API_KEY="your_api_key_here"
+DEEPSEEK_API_KEY="your_api_key_here"
 ```
 
-### 3. Run the Application
+### 3. Launching the Application
+
+To run the interactive Clinical Decision Support System, execute the following command in your terminal:
+
 ```bash
 streamlit run app.py
 ```
-The system will launch in your browser at `http://localhost:8501`.
 
----
+The application will automatically open in your default web browser (typically at `http://localhost:8501`).
 
 ## Evaluation & Ablation Studies
-`modular_rag_evaluator.py` supports automated metric evaluation on MIMIC‑IV datasets.
-This module is independent of the main `app.py` frontend interface.
+
+For academic and evaluation purposes, the `modular_rag_evaluator.py` script is provided to run automated metrics across the extracted MIMIC-IV clinical datasets. Note: This is separate from the primary `app.py` interface.
+```
