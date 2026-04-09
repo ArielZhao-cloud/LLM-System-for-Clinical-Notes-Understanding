@@ -72,4 +72,3 @@ The application will automatically open in your default web browser (typically a
 ## Evaluation & Ablation Studies
 
 For academic and evaluation purposes, the `modular_rag_evaluator.py` script is provided to run automated metrics across the extracted MIMIC-IV clinical datasets. Note: This is separate from the primary `app.py` interface.
-```
