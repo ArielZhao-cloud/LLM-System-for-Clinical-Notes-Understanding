@@ -2,13 +2,13 @@
 
 Welcome to the Interactive Oncology CDSS repository. This project contains a multimodal, AI-assisted clinical workflow designed to augment precision oncology decision-making. 
 
-Powered by the DSPy framework and large language models, this system bridges the gap between complex NCCN clinical guidelines and real-time patient care, featuring a unique dual-view architecture for both healthcare providers and patients.
+Powered by the DSPy framework and large language models, this system bridges the gap between complex NCCN clinical guidelines and real-time patient care, providing a pure, professional-grade workspace for oncologists.
 
 ## Key Features
 
-* **Dual Copilot Architecture:** Seamlessly toggle between a "Doctor Workspace" (professional, jargon-heavy, evidence-based) and a "Patient Portal" (empathetic, accessible, 8th-grade reading level).
+* **Expert Clinical Workspace:** A highly focused, professional interface tailored for oncologists, delivering evidence-based, actionable treatment plans without patient-facing distractions.
 * **Deterministic Guardrails:** Implements hardcoded, rules-based safety intercepts (e.g., Creatinine Clearance alerts) prior to LLM invocation to ensure clinical safety.
-* **State-Locking EHR Simulation:** Features an interactive Regimen Builder that synchronizes state across provider and patient views upon physician sign-off.
+* **EHR Order Simulation:** Features an interactive Regimen Builder that allows physicians to adjust, sign, and securely "transmit" multi-drug regimens.
 * **Modular RAG Pipeline:** Utilizes DSPy signatures to enforce strict, multi-step clinical reasoning, minimizing hallucination and maximizing guideline adherence.
 
 ## Software Requirements & Tech Stack
@@ -72,3 +72,4 @@ The application will automatically open in your default web browser (typically a
 ## Evaluation & Ablation Studies
 
 For academic and evaluation purposes, the `modular_rag_evaluator.py` script is provided to run automated metrics across the extracted MIMIC-IV clinical datasets. Note: This is separate from the primary `app.py` interface.
+```
