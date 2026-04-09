@@ -15,7 +15,7 @@ Powered by the DSPy framework and large language models, this system bridges the
 
 * **Python Version:** Python 3.11+
 * **Core Frameworks:** `streamlit`, `dspy-ai`
-* **LLM Provider:** DeepSeek (Configured via API)
+* **LLM Provider:** DeepSeek-V3 (Configured via API)
 
 ## Repository Structure
 
@@ -72,4 +72,3 @@ The application will automatically open in your default web browser (typically a
 ## Evaluation & Ablation Studies
 
 For academic and evaluation purposes, the `modular_rag_evaluator.py` script is provided to run automated metrics across the extracted MIMIC-IV clinical datasets. Note: This is separate from the primary `app.py` interface.
-```
