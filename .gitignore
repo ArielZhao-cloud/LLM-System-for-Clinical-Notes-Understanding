@@ -1,3 +1,4 @@
+# Environment variables
 .env
 .DS_Store
 *.log
@@ -7,12 +8,21 @@ medvenv/
 
 
 # Byte-compiled / optimized / DLL files
+# Python cache and compiled files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+*.pyo
+*.pyd
 
 # C extensions
 *.so
+# Local databases and large data files
+/chroma_db/
+/Data/
+*.csv
+*.joblib
 
 # Distribution / packaging
 .Python
@@ -31,6 +41,13 @@ wheels/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
+# Generated output files
+/grobid_outputs/
+/pdfs/
+oncology_final_reports.json
+extracted_database.json
+mimic_silver_standard.json
+oncology_dashboard.html
 
 *.egg
 MANIFEST
@@ -175,3 +192,7 @@ Data/
 *.csv
 *.pdf
 *.db
+# IDE and OS specific files
+.idea/
+.vscode/
+.DS_Store
