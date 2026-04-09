@@ -10,8 +10,8 @@ from modular_rag_pipeline import run_modular_rag_pipeline
 from research_evaluator import ExpertAuditSignature, evaluate_group
 
 load_dotenv()
-BASE_INPUT_FILE = "oncology_final_reports.json"
-ADVANCED_OUTPUT_FILE = "oncology_final_reports_adv_rag.json"
+BASE_INPUT_FILE = "/Users/haotingzhaooutlook.com/Desktop/T3/oncology_final_reports.json"
+ADVANCED_OUTPUT_FILE = "/Users/haotingzhaooutlook.com/Desktop/T3/oncology_final_reports_adv_rag.json"
 
 evaluator_llm = dspy.OpenAI(
     model='deepseek-chat', api_key=os.getenv("DEEPSEEK_API_KEY"),
