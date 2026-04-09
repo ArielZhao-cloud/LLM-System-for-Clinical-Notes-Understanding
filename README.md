@@ -1,112 +1,74 @@
-# Repository for: Autonomous AI Agents for Clinical Decision Making in Oncology
-⚠️ This repository is currently under construction. Usage might change in the future. 
+# Interactive Oncology Clinical Decision Support System (CDSS)
 
-⚠️ The current agent implementation uses test functions for the image segmentation and genetic modeling tasks as the original implementation requires external repositories that are challenging to setup. We are working on a solution to simplify their setup in the very near future. The provided test functions (```agent_tools_dummy.py```) are implemented as agent tools without any changes to their original implementation (```agent_tools.py```) and have therefore *no* influence on the LLM-Agents behaviour.
+Welcome to the Interactive Oncology CDSS repository. This project contains a multimodal, AI-assisted clinical workflow designed to augment precision oncology decision-making. 
 
-![Local Image](./overview.png)
+Powered by the DSPy framework and large language models, this system bridges the gap between complex NCCN clinical guidelines and real-time patient care, featuring a unique dual-view architecture for both healthcare providers and patients.
 
-## Software Requirements
-All experiments were run on an Apple MacBook Pro M2 Max 96GB 2023.
-No special hardware is required, if you wish to run certain models with hardware acceleration, it is recommended to have a CUDA-compatible GPU to speed up the process.
+## Key Features
 
-## General Setup Instructions
+* **Dual Copilot Architecture:** Seamlessly toggle between a "Doctor Workspace" (professional, jargon-heavy, evidence-based) and a "Patient Portal" (empathetic, accessible, 8th-grade reading level).
+* **Deterministic Guardrails:** Implements hardcoded, rules-based safety intercepts (e.g., Creatinine Clearance alerts) prior to LLM invocation to ensure clinical safety.
+* **State-Locking EHR Simulation:** Features an interactive Regimen Builder that synchronizes state across provider and patient views upon physician sign-off.
+* **Modular RAG Pipeline:** Utilizes DSPy signatures to enforce strict, multi-step clinical reasoning, minimizing hallucination and maximizing guideline adherence.
 
-Please follow the steps below:
+## Software Requirements & Tech Stack
 
-#### 1. **Python Installation**:
-Install Python from source. We used Python 3.11.6 throughout this project. 
-#### 2. **Dependency Installation**: 
+* **Python Version:** Python 3.11+
+* **Core Frameworks:** `streamlit`, `dspy-ai`
+* **LLM Provider:** Zhipu GLM-4 (Configured via API)
 
-Clone this repository:
-  ```
-  git clone https://github.com/Dyke-F/LLM_RAG_Agent.git
-  ```
+## Repository Structure
 
-This process might take around 1 minute.
+```text
+.
+├── app.py                              # (Core) The main Streamlit interactive frontend application
+├── modular_rag_pipeline.py             # (Core) DSPy agent orchestration and RAG retrieval logic
+├── multi_agent_pipeline.py             # (Core) Underlying LLM configurations and base extractors
+├── modular_rag_evaluator.py            # (Core) Evaluation script for ablation studies and metrics
+│
+├── archive/                            # Early development prototypes, dummy tools, and raw data scripts
+├── data/                               # Contains raw MIMIC samples
+├── oncology_final_reports_adv_rag.json # Processed MIMIC samples
+├── oncology_raw_samples.json           # Extracted raw MIMIC samples
+├── requirements.txt                    # Python dependencies
+└── LICENSE                             # MIT License
 
-Set up a clean python3 virtual environment, i.e. 
+## Quick Start Guide
 
-  ```
-  python3 -m venv medvenv
-  source medvenv/bin/activate
-  ```
+### 1. Environment Setup
 
-Install necessary dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
+Set up a clean Python virtual environment and activate it:
 
-3. **Repository Structure**:
-```
-.env
-RAGent/DSPY.
-├── agent_tools_dummy.py                 # dummy implementation of agent tools returning defaults for fast debugging and demonstrations
-├── agent_tools.py                       # Actual implementation of the agent tools. 
-├── chroma_db_retriever.py               # Retriever Class for RAG, modified from DSPY's implementation to run via HTTP Client.
-├── citation_utils.py                    # Utility function for Citation Checking in the Agent's output.
-├── deduplicate_data.py                  # Remove duplicated files (if exist).
-├── embed.py                             # Core script to generate text embeddings from medical texts and create a permanent Chroma db storage.
-├── filter_data_sources.py               # Script to preprocess and clean data to relevant topics.
-├── loguru_logger.py                     # Implementation of the main logger.
-├── med_agent.py                         # Implementation of the MedAgent class from LLama-Indexes OpenAI Agent class.
-├── patient_cases.py                     # Patient cases for the experiments.
-├── preprocess_logger.py                 # Implementation of the preprocessing logger.
-├── preprocess_sources.py                # Unify data and add IDs.
-├── rag_config.py                        # Configuration file with defaults for the embedding and db creation.
-├── rag_logger.py                        # Logger for retrieval.
-├── rag_utils.py                         # Utility functions for RAG metadata etc.
-├── rag.py                               # Main implementation of embeddings and RAG class and loaders.
-├── run_experiment.ipynb                 # Main notebook to run an experiment.
-├── scrape_meditron.py                   # Download and convert meditron guidelines data.
-├── signatures.py                        # DSPY signatures (Prompts).
-└── utils.py                             # Utility functions for display etc.
+```bash
+python3 -m venv medvenv
+source medvenv/bin/activate  # On Windows use: medvenv\Scripts\activate
 ```
 
-## Setup
+Install the necessary dependencies:
 
-This repository requires access to the following APIs: GPT-4 and GPT-4V, Cohere Reranking, Google Search and Querying the OncoKB. If you do not have one, create an account and generate an API key for each. While OpenAI and Cohere require a paid tier, the Google Search API is free. For OncoKB an academic license can be requiested for research purposes. Check for further information here:
-- https://openai.com/blog/openai-api 
-- https://dashboard.cohere.com/welcome/register
-- https://developers.google.com/custom-search/v1/introduction?hl=de
-- https://www.oncokb.org/api-access
-
-
-After generating an API key, copy it and place it in a **.env** file in the main directory of this repository.
-The ```.env``` file should look like this:
-
-```
-OPENAI_API_KEY="sk-******************" # Place your API key here
-COHERE_API_KEY="*********************" # Place your API key here
-GOOGLE_API_KEY="*********************" # Place your API key here
-GOOGLE_SEARCH_ENGINE="***************" # Place your backend here
+```bash
+pip install -r requirements.txt
 ```
 
-## Experiments
-#### 1. Download medical guidelines.
+### 2. API Configuration
 
-For instance, meditron guidelines are available at: https://huggingface.co/datasets/epfl-llm/guidelines. You can use the ```scrape_meditron.py``` file for this. Please define your download directory.
+Create a `.env` file in the root directory of this repository and add your Zhipu API key:
 
-#### 2. Data Cleaning (Optional):
+```text
+ZHIPU_API_KEY="your_api_key_here"
+```
 
-Given your data, you might want to perform optional data cleaning or pre-processing. This step is highlighy dependant on your data source and can vary a lot. 
-    Examples for data cleaning can be found here: ```https://github.com/epfLLM/meditron/blob/main/gap-replay/guidelines/clean.py```. We have used modifications and own implementations for data cleaning.
+### 3. Launching the Application
 
-  ⚠️ The only requirement is that your data is stored as ```.jsonl``` file with at least one document that has a field ```clean_data``` and eventually contains metadata fields.
+To run the interactive Clinical Decision Support System, execute the following command in your terminal:
 
+```bash
+streamlit run app.py
+```
 
-#### 3. Preprocess the data: 
-- I. Run the ```filter_data_sources.py``` file to filter the data for a specific topic (based on keywords) by either modifying the file or setting the ```--keywords``` argument. Define each data source as ```--to_filter``` to apply filtering or as ```--to_copy``` to ignore filtering if you have multiple .jsonl data files in the "data/" directory.
-- II. Run ```deduplicate_data.py``` by seetting an ```--in_directory``` and ```--out_directory``` and the data files in the respective directory you want to apply deduplication to.
-- III. Run ```preprocess_sources.py``` to add IDs and prepare the metadata for embedding by setting ```--directory```.
+The application will automatically open in your default web browser (typically at `http://localhost:8501`).
 
-#### 4. Generate text embeddings and storage.
-  - I. Eventually modify ```rag_config.py``` as desired. The ```RAGConfig``` class contains comments that explain each possible setting.
-  - II. Set the metadata that shall be used during embedding in ```rag_utils.py``` in MetadataFields. The name shall be the file name for your data (i.e. if your data is called ```guidelines.jsonl```) then place ```GUIDELINES``` as a name and set all fields you want as your metadata as they are named in the dataset ```.jsonl``` file. Also your dataset ```.jsonl``` file must have a field named ```clean_text```, which is the main text for embedding. This field must be manually created beforehand or set during data cleaning. 
-  - III. Via Terminal execute: ```chroma run --path ...``` where ```--path``` equals the default_client_path in rag_config.RAGConfig.
-  - IV. Once a ChromaDB HTTP client is setup, in a new terminal run: ```python3 embed.py --to_embed ...``` where ```to_embed```lists all datafiles you want to generate embeddings for.
+## Evaluation & Ablation Studies
 
-5. Define your test cases in ```patient_cases.py```. Upload any relevant data (like CT images) into a directory called ```Imaging```.
-6. Execute and eventually modify the cells in ```run_experiment.ipynb``` to test the agent on the respective patient (by filename). This file provides a minimal working implementation of the agent calling test-tools. These tools do not actually run in the background, but provide the exact same interface to the model. We work on releasing a full-working solution in the coming weeks.
-
-
-⚠️ DSPY naturally caches results, which we observe could lead to unexpected behaviour when composing modules. You can disable this behaviour by setting ```cache_turn_on = False``` in ```dsp/modules/cache_utils.py``` and force deletion of the cache directory through ```rm -rf cachedir_joblib``` (located in the home directory).
+For academic and evaluation purposes, the `modular_rag_evaluator.py` script is provided to run automated metrics across the extracted MIMIC-IV clinical datasets. Note: This is separate from the primary `app.py` interface.
+```
